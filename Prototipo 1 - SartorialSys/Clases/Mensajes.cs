@@ -11,7 +11,7 @@ namespace Prototipo_1___SartorialSys.Clases
     {
         internal static void emitirMensaje(string mensaje)
         {
-            MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK);
+            MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

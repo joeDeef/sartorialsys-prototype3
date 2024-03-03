@@ -1,6 +1,6 @@
 ﻿namespace Prototipo_1___SartorialSys
 {
-    partial class main_Menu
+    partial class frmMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main_Menu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnEmpleados = new FontAwesome.Sharp.IconButton();
             this.btnAdministracion = new FontAwesome.Sharp.IconButton();
@@ -42,11 +42,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlHome = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnLogout = new FontAwesome.Sharp.IconButton();
             this.btnBarras = new FontAwesome.Sharp.IconButton();
             this.pnlEscritorio = new System.Windows.Forms.Panel();
-            this.lblHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
             this.horafecha = new System.Windows.Forms.Timer(this.components);
             this.pnlMenu.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -70,7 +71,7 @@
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(213, 611);
+            this.pnlMenu.Size = new System.Drawing.Size(213, 752);
             this.pnlMenu.TabIndex = 0;
             // 
             // btnEmpleados
@@ -265,13 +266,24 @@
             // pnlHome
             // 
             this.pnlHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(189)))), ((int)(((byte)(165)))));
+            this.pnlHome.Controls.Add(this.label1);
             this.pnlHome.Controls.Add(this.btnLogout);
             this.pnlHome.Controls.Add(this.btnBarras);
             this.pnlHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHome.Location = new System.Drawing.Point(213, 0);
             this.pnlHome.Name = "pnlHome";
-            this.pnlHome.Size = new System.Drawing.Size(729, 80);
+            this.pnlHome.Size = new System.Drawing.Size(1263, 80);
             this.pnlHome.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(106, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(120, 25);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Bienvenido: ";
             // 
             // btnLogout
             // 
@@ -283,7 +295,7 @@
             this.btnLogout.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.btnLogout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(671, 0);
+            this.btnLogout.Location = new System.Drawing.Point(1205, 0);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Rotation = 180D;
             this.btnLogout.Size = new System.Drawing.Size(58, 80);
@@ -319,23 +331,8 @@
             this.pnlEscritorio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlEscritorio.Location = new System.Drawing.Point(213, 80);
             this.pnlEscritorio.Name = "pnlEscritorio";
-            this.pnlEscritorio.Size = new System.Drawing.Size(729, 531);
+            this.pnlEscritorio.Size = new System.Drawing.Size(1263, 672);
             this.pnlEscritorio.TabIndex = 2;
-            // 
-            // lblHora
-            // 
-            this.lblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblHora.AutoSize = true;
-            this.lblHora.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.lblHora.Location = new System.Drawing.Point(239, 188);
-            this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(231, 44);
-            this.lblHora.TabIndex = 0;
-            this.lblHora.Text = "Hora Actual";
-            this.lblHora.Click += new System.EventHandler(this.lblHora_Click);
             // 
             // lblFecha
             // 
@@ -347,27 +344,44 @@
             this.lblFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.lblFecha.Location = new System.Drawing.Point(243, 235);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(133, 23);
+            this.lblFecha.Size = new System.Drawing.Size(167, 28);
             this.lblFecha.TabIndex = 1;
             this.lblFecha.Text = "Fecha Actual";
+            // 
+            // lblHora
+            // 
+            this.lblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblHora.AutoSize = true;
+            this.lblHora.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.lblHora.Location = new System.Drawing.Point(198, 179);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(294, 56);
+            this.lblHora.TabIndex = 0;
+            this.lblHora.Text = "Hora Actual";
+            this.lblHora.Click += new System.EventHandler(this.lblHora_Click);
             // 
             // horafecha
             // 
             this.horafecha.Enabled = true;
             this.horafecha.Tick += new System.EventHandler(this.horafecha_Tick);
             // 
-            // main_Menu
+            // frmMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(942, 611);
+            this.ClientSize = new System.Drawing.Size(1476, 752);
             this.Controls.Add(this.pnlEscritorio);
             this.Controls.Add(this.pnlHome);
             this.Controls.Add(this.pnlMenu);
-            this.Name = "main_Menu";
+            this.Name = "frmMenu";
+            this.Text = "SartorialSys";
             this.pnlMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlHome.ResumeLayout(false);
+            this.pnlHome.PerformLayout();
             this.pnlEscritorio.ResumeLayout(false);
             this.pnlEscritorio.PerformLayout();
             this.ResumeLayout(false);
@@ -394,5 +408,6 @@
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Timer horafecha;
+        private System.Windows.Forms.Label label1;
     }
 }

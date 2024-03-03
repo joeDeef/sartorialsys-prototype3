@@ -79,17 +79,23 @@
     <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Clases\Validaciones.cs" />
     <Compile Include="Clases\ValidarCedula.cs" />
-    <Compile Include="Formularios\main_Menu.cs">
+    <Compile Include="Formularios\frmAgregarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\main_Menu.Designer.cs">
-      <DependentUpon>main_Menu.cs</DependentUpon>
+    <Compile Include="Formularios\frmAgregarProducto.Designer.cs">
+      <DependentUpon>frmAgregarProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Login.cs">
+    <Compile Include="Formularios\frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="Formularios\frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmInventario.cs">
       <SubType>Form</SubType>
@@ -121,11 +127,11 @@
     <Compile Include="Formularios\frmEmpleados.Designer.cs">
       <DependentUpon>frmEmpleados.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\frmVentasYFacturacion.cs">
+    <Compile Include="Formularios\frmVentas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\frmVentasYFacturacion.Designer.cs">
-      <DependentUpon>frmVentasYFacturacion.cs</DependentUpon>
+    <Compile Include="Formularios\frmVentas.Designer.cs">
+      <DependentUpon>frmVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmAdministracion.cs">
       <SubType>Form</SubType>
@@ -133,28 +139,28 @@
     <Compile Include="Formularios\frmAdministracion.Designer.cs">
       <DependentUpon>frmAdministracion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\frmAdministracionUsuario.cs">
+    <Compile Include="Formularios\frmAdmUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\frmAdministracionUsuario.Designer.cs">
-      <DependentUpon>frmAdministracionUsuario.cs</DependentUpon>
+    <Compile Include="Formularios\frmAdmUsuario.Designer.cs">
+      <DependentUpon>frmAdmUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\frmAdministracionParametros.cs">
+    <Compile Include="Formularios\frmAdmParametros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\frmAdministracionParametros.Designer.cs">
-      <DependentUpon>frmAdministracionParametros.cs</DependentUpon>
+    <Compile Include="Formularios\frmAdmParametros.Designer.cs">
+      <DependentUpon>frmAdmParametros.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Formularios\frmProductos.resx">
-      <DependentUpon>frmProductos.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\frmAgregarProducto.resx">
+      <DependentUpon>frmAgregarProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\main_Menu.resx">
-      <DependentUpon>main_Menu.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmInventario.resx">
       <DependentUpon>frmInventario.cs</DependentUpon>
@@ -171,17 +177,17 @@
     <EmbeddedResource Include="Formularios\frmEmpleados.resx">
       <DependentUpon>frmEmpleados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmVentasYFacturacion.resx">
-      <DependentUpon>frmVentasYFacturacion.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\frmVentas.resx">
+      <DependentUpon>frmVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmAdministracion.resx">
       <DependentUpon>frmAdministracion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmAdministracionUsuario.resx">
-      <DependentUpon>frmAdministracionUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\frmAdmUsuario.resx">
+      <DependentUpon>frmAdmUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmAdministracionParametros.resx">
-      <DependentUpon>frmAdministracionParametros.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\frmAdmParametros.resx">
+      <DependentUpon>frmAdmParametros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -59,10 +59,10 @@ namespace Prototipo_1___SartorialSys
             this.btnIniciarSesión.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIniciarSesión.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciarSesión.ForeColor = System.Drawing.Color.LightGray;
-            this.btnIniciarSesión.Location = new System.Drawing.Point(293, 217);
-            this.btnIniciarSesión.Margin = new System.Windows.Forms.Padding(2);
+            this.btnIniciarSesión.Location = new System.Drawing.Point(391, 267);
+            this.btnIniciarSesión.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIniciarSesión.Name = "btnIniciarSesión";
-            this.btnIniciarSesión.Size = new System.Drawing.Size(303, 40);
+            this.btnIniciarSesión.Size = new System.Drawing.Size(404, 49);
             this.btnIniciarSesión.TabIndex = 3;
             this.btnIniciarSesión.Text = "Acceder";
             this.btnIniciarSesión.UseVisualStyleBackColor = false;
@@ -71,10 +71,9 @@ namespace Prototipo_1___SartorialSys
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(75, 274);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(100, 337);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 13);
+            this.label4.Size = new System.Drawing.Size(106, 16);
             this.label4.TabIndex = 8;
             this.label4.Text = "Copyrigth © 2024";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -84,9 +83,10 @@ namespace Prototipo_1___SartorialSys
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(401, 32);
+            this.label1.Location = new System.Drawing.Point(535, 39);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 36);
+            this.label1.Size = new System.Drawing.Size(116, 44);
             this.label1.TabIndex = 1;
             this.label1.Text = "Login";
             // 
@@ -97,15 +97,17 @@ namespace Prototipo_1___SartorialSys
             this.panel1.Controls.Add(this.label4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 315);
+            this.panel1.Size = new System.Drawing.Size(333, 388);
             this.panel1.TabIndex = 10;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(23, 55);
+            this.pictureBox1.Location = new System.Drawing.Point(31, 68);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 200);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -119,11 +121,13 @@ namespace Prototipo_1___SartorialSys
             this.txtUsuario.CausesValidation = false;
             this.txtUsuario.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.Color.DimGray;
-            this.txtUsuario.Location = new System.Drawing.Point(293, 99);
+            this.txtUsuario.Location = new System.Drawing.Point(391, 122);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(303, 26);
+            this.txtUsuario.Size = new System.Drawing.Size(403, 30);
             this.txtUsuario.TabIndex = 9;
             this.txtUsuario.Text = "USUARIO";
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged_1);
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
             this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 
@@ -133,12 +137,14 @@ namespace Prototipo_1___SartorialSys
             this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtContraseña.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.ForeColor = System.Drawing.Color.DimGray;
-            this.txtContraseña.Location = new System.Drawing.Point(293, 144);
+            this.txtContraseña.Location = new System.Drawing.Point(391, 177);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(303, 26);
+            this.txtContraseña.Size = new System.Drawing.Size(403, 30);
             this.txtContraseña.TabIndex = 8;
             this.txtContraseña.Text = "CONTRASEÑA";
             this.txtContraseña.Enter += new System.EventHandler(this.txtContraseña_Enter);
+            this.txtContraseña.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtContraseña_KeyDown);
             this.txtContraseña.Leave += new System.EventHandler(this.txtContraseña_Leave);
             // 
             // btnSalir
@@ -154,9 +160,10 @@ namespace Prototipo_1___SartorialSys
             this.btnSalir.IconColor = System.Drawing.Color.Gray;
             this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSalir.IconSize = 23;
-            this.btnSalir.Location = new System.Drawing.Point(616, 0);
+            this.btnSalir.Location = new System.Drawing.Point(821, 0);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(15, 15);
+            this.btnSalir.Size = new System.Drawing.Size(20, 18);
             this.btnSalir.TabIndex = 16;
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.ibtnClose_Click);
@@ -172,19 +179,20 @@ namespace Prototipo_1___SartorialSys
             this.icbtnMinimizar.IconColor = System.Drawing.Color.DimGray;
             this.icbtnMinimizar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.icbtnMinimizar.IconSize = 26;
-            this.icbtnMinimizar.Location = new System.Drawing.Point(595, 0);
+            this.icbtnMinimizar.Location = new System.Drawing.Point(793, 0);
+            this.icbtnMinimizar.Margin = new System.Windows.Forms.Padding(4);
             this.icbtnMinimizar.Name = "icbtnMinimizar";
-            this.icbtnMinimizar.Size = new System.Drawing.Size(15, 15);
+            this.icbtnMinimizar.Size = new System.Drawing.Size(20, 18);
             this.icbtnMinimizar.TabIndex = 17;
             this.icbtnMinimizar.UseVisualStyleBackColor = true;
             this.icbtnMinimizar.Click += new System.EventHandler(this.icbtnMinimizar_Click);
             // 
             // frmInicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(633, 315);
+            this.ClientSize = new System.Drawing.Size(844, 388);
             this.Controls.Add(this.icbtnMinimizar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.txtContraseña);
@@ -194,7 +202,7 @@ namespace Prototipo_1___SartorialSys
             this.Controls.Add(this.btnIniciarSesión);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmInicio";
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

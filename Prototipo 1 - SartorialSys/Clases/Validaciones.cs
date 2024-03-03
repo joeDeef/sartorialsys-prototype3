@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using System;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -37,8 +37,5 @@ namespace Prototipo_1___SartorialSys.Clases
             string patronPass = @"^09\d{8}$";
             return Regex.IsMatch(telefono, patronPass);
         }
-
-        // Mètodo validar contraseña
-
     }
 }

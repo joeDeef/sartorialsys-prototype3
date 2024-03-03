@@ -10,13 +10,21 @@ namespace Prototipo_1___SartorialSys.Clases
 {
     internal class Login
     {
-        internal static bool verificarCredenciales(string usuario, string contraseña)
+        internal static bool estanCrendencialesVacias(string usuario, string contraseña)
         {
-            if (estanVaciosLosCampos(usuario, contraseña))
+            if ((usuario == "" && contraseña == "") || (usuario == "USUARIO") && (contraseña == "CONTRASEÑA"))
             {
-                Mensajes.emitirMensaje("Los campos no pueden estar vacíon - Por favor llenar");
-                return false;
+                return true;
             }
+            if (contraseña == "CONTRASEÑA" || usuario == "USUARIO")
+            {
+                return true;
+            }
+            return false;
+        }
+
+        internal static bool sonCorrectasLasCredenciales(string usuario, string contraseña)
+        {
             string strConn = ConexionBaseDeDatos.getConexion();
             string strComm = null;
             SqlConnection conn = null;
@@ -35,14 +43,14 @@ namespace Prototipo_1___SartorialSys.Clases
                         Mensajes.emitirMensaje("Usuario no registrado");
                         return false;
                     }
-                    if (!estaActivo(usuario))
+                    if (!estaActivo(rdr))
                     {
-                        Mensajes.emitirMensaje("Usuario no existente");
+                        Mensajes.emitirMensaje("Usuario no activo");
                         return false;
                     }
                     if (contraseña != rdr.GetString(1))
                     {
-                        Mensajes.emitirMensaje("Contraseñas Incorrectas");
+                        Mensajes.emitirMensaje("Contraseña Incorrecta");
                         return false;
                     }
                 }
@@ -50,38 +58,9 @@ namespace Prototipo_1___SartorialSys.Clases
             return true;
         }
 
-        private static bool estaActivo(string usuario)
+        private static bool estaActivo(SqlDataReader reader)
         {
-            string strConn = ConexionBaseDeDatos.getConexion();
-            string strComm = null;
-            SqlConnection conn = null;
-            SqlCommand comm = null;
-            bool activo;
-            using (conn = new SqlConnection(strConn))
-            {
-                conn.Open();
-                strComm = "SELECT * FROM usuarios WHERE usuario = '" + usuario + "'";
-                using (comm = new SqlCommand(strComm, conn))
-                {
-                    SqlDataReader rdr = comm.ExecuteReader();
-                    rdr.Read();
-                    activo = rdr.GetBoolean(4);
-                }
-            }
-            return activo;
-        }
-
-        private static bool estanVaciosLosCampos(string usuario, string contraseña)
-        {
-            if ((usuario == "" && contraseña == "") || (usuario == "USUARIO") && (contraseña == "CONTRASEÑA"))
-            {
-                return true;
-            }
-            if (contraseña == "CONTRASEÑA" || usuario == "USUARIO")
-            {
-                return true;
-            }
-            return false;
+            return reader.GetBoolean(4);
         }
     }
 }

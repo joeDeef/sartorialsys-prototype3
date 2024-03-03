@@ -26,19 +26,22 @@ namespace Prototipo_1___SartorialSys
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            if (!Login.verificarCredenciales(txtUsuario.Text, txtContraseña.Text))
+            if (Login.estanCrendencialesVacias(txtUsuario.Text, txtContraseña.Text))
+            {
+                Mensajes.emitirMensaje("Los campos no pueden estar vacíon - Por favor llenar");
+                return;
+            }
+            if (!Login.sonCorrectasLasCredenciales(txtUsuario.Text, txtContraseña.Text))
             {
                 txtUsuario.Text = "USUARIO";
                 txtUsuario.ForeColor = Color.LightGray;
                 txtContraseña.Text = "CONTRASEÑA";
                 txtContraseña.ForeColor = Color.DimGray;
+                return;
             }
-            else
-            {
                 this.Visible = false;
-                main_Menu menu = new main_Menu(txtUsuario.Text);
+                frmMenu menu = new frmMenu(txtUsuario.Text);
                 menu.ShowDialog();
-            }
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -59,14 +62,6 @@ namespace Prototipo_1___SartorialSys
         private void btnSalir_MouseLeave(object sender, EventArgs e)
         {
             btnSalir.BackColor = Color.Red;
-        }
-
-        private void txtContraseña_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                btnIniciarSesión.PerformClick();
-            }
         }
 
         private void frmInicio_FormClosing(object sender, FormClosingEventArgs e)
@@ -172,6 +167,19 @@ namespace Prototipo_1___SartorialSys
         private void icbtnMinimizar_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void txtUsuario_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtContraseña_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+            btnIniciarSesión.PerformClick();
+            }
         }
     }
 }

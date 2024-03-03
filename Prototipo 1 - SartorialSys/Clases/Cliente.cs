@@ -32,12 +32,11 @@ namespace Prototipo_1___SartorialSys.Clases
                     }
                     if(!rdr.GetBoolean(6))
                     {
-                        Mensajes.emitirMensaje("No existe registro");
+                        Mensajes.emitirMensaje("Cliente no activo");
                         return datosCliente;
                     }
                     else
                     {
-                        
                         datosCliente[0] = rdr.GetString(0);
                         datosCliente[1] = rdr.GetString(1);
                         datosCliente[2] = rdr.GetString(2);

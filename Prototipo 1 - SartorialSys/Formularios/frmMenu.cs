@@ -14,7 +14,7 @@ using Prototipo_1___SartorialSys.Clases;
 namespace Prototipo_1___SartorialSys
 {
 
-    public partial class main_Menu : Form
+    public partial class frmMenu : Form
     {
         //Fields
         private IconButton currentBtn;
@@ -23,7 +23,7 @@ namespace Prototipo_1___SartorialSys
         private string usuario;
 
         //
-        public main_Menu(string usuario_actual)
+        public frmMenu(string usuario_actual)
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
@@ -31,6 +31,7 @@ namespace Prototipo_1___SartorialSys
             pnlMenu.Controls.Add(leftBorderBtn);
             this.usuario = usuario_actual;
             Form currentchildForm;
+            label1.Text += usuario_actual;
 
         }
         //Structure
