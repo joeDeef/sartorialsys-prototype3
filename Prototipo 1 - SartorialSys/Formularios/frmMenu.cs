@@ -55,17 +55,6 @@ namespace Prototipo_1___SartorialSys
                 currentBtn.BackColor = Color.FromArgb(37, 36, 81);
                 currentBtn.ForeColor = color;
                 currentBtn.IconColor = color;
-
-//               if (pnlMenu.Width == 213)
-//               {
-//                   currentBtn.TextAlign = ContentAlignment.MiddleCenter;
-//                   currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
-//                   currentBtn.ImageAlign = ContentAlignment.MiddleRight;
-//               }
-
-                
-
-                //LeftBorderBtn
                 leftBorderBtn.BackColor = color;
                 leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
                 leftBorderBtn.Visible = true;

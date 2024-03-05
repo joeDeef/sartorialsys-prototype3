@@ -14,7 +14,24 @@ namespace Prototipo_1___SartorialSys
             this.usuario = usuario;
         }
 
+        public frmClientes()
+        {
+            InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.Sizable;
+        }
+
+        public frmClientes(string cedula, int v)
+        {
+            InitializeComponent();
+            FormBorderStyle = FormBorderStyle.Sizable;
+            tabClientes.SelectedIndex = 2;
+            txtParametroActualizar.Text = cedula;
+            btnBuscarActualizar.PerformClick();
+        }
+
         Validaciones val = new Validaciones();
+        private int v;
+
         private void btnRegresar_Click(object sender, EventArgs e)
         {
         }

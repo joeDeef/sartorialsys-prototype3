@@ -40,6 +40,8 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbEstadoPago = new System.Windows.Forms.ComboBox();
+            this.label53 = new System.Windows.Forms.Label();
             this.btnActualizarInformacion = new FontAwesome.Sharp.IconButton();
             this.label40 = new System.Windows.Forms.Label();
             this.txtCorreoRegistrar = new System.Windows.Forms.TextBox();
@@ -71,18 +73,19 @@
             this.txtCedulaRegistrar = new System.Windows.Forms.TextBox();
             this.tabConsultar = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.txtNumeroFacturaBusqueda = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtNumeroFacturaConsultar = new System.Windows.Forms.TextBox();
-            this.btnCancelarBusqueda = new System.Windows.Forms.Button();
-            this.btnBuscarConsultar = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.tabEliminar = new System.Windows.Forms.TabPage();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label10 = new System.Windows.Forms.Label();
+            this.txtEstadoPagoBusqueda = new System.Windows.Forms.TextBox();
+            this.label54 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label46 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtTotalBusqueda = new System.Windows.Forms.TextBox();
+            this.txtIvaBusqueda = new System.Windows.Forms.TextBox();
+            this.label45 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtCorreoBusqueda = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -104,24 +107,20 @@
             this.label43 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.txtCedulaBusqueda = new System.Windows.Forms.TextBox();
-            this.label45 = new System.Windows.Forms.Label();
-            this.txtTotalBusqueda = new System.Windows.Forms.TextBox();
-            this.txtIvaBusqueda = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label46 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.txtNFacturaBuscarAnular = new System.Windows.Forms.TextBox();
-            this.btnCancelarEliminar = new System.Windows.Forms.Button();
-            this.btnBuscarAnular = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txtNumeroFacturaBusqueda = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtNumeroFacturaConsultar = new System.Windows.Forms.TextBox();
+            this.btnCancelarBusqueda = new System.Windows.Forms.Button();
+            this.btnBuscarConsultar = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.tabEliminar = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.txtEstadoPagoAnular = new System.Windows.Forms.TextBox();
+            this.label55 = new System.Windows.Forms.Label();
+            this.btnAnular = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -157,33 +156,34 @@
             this.label51 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.txtNumeroFacturaAnular = new System.Windows.Forms.TextBox();
-            this.btnAnular = new FontAwesome.Sharp.IconButton();
-            this.cmbEstadoPago = new System.Windows.Forms.ComboBox();
-            this.label53 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
-            this.txtEstadoPagoBusqueda = new System.Windows.Forms.TextBox();
-            this.txtEstadoPagoAnular = new System.Windows.Forms.TextBox();
-            this.label55 = new System.Windows.Forms.Label();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnConsultarEstadoPago = new System.Windows.Forms.Button();
-            this.label56 = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtNFacturaBuscarAnular = new System.Windows.Forms.TextBox();
+            this.btnCancelarEliminar = new System.Windows.Forms.Button();
+            this.btnBuscarAnular = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.label58 = new System.Windows.Forms.Label();
-            this.cmbEstadoPagoConsulta = new System.Windows.Forms.ComboBox();
-            this.label59 = new System.Windows.Forms.Label();
-            this.label60 = new System.Windows.Forms.Label();
-            this.btnConsultarPorFechas = new System.Windows.Forms.Button();
-            this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
-            this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
             this.label61 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
+            this.btnConsultarPorFechas = new System.Windows.Forms.Button();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.cmbEstadoPagoConsulta = new System.Windows.Forms.ComboBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnConsultarEstadoPago = new System.Windows.Forms.Button();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.tabClientes.SuspendLayout();
             this.tabRegistrar.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -191,18 +191,18 @@
             this.groupBox1.SuspendLayout();
             this.tabConsultar.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.tabEliminar.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.tabEliminar.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.groupBox6.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabClientes
@@ -361,6 +361,28 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
+            // cmbEstadoPago
+            // 
+            this.cmbEstadoPago.FormattingEnabled = true;
+            this.cmbEstadoPago.Items.AddRange(new object[] {
+            "Pagado",
+            "No Pagado"});
+            this.cmbEstadoPago.Location = new System.Drawing.Point(370, 502);
+            this.cmbEstadoPago.Name = "cmbEstadoPago";
+            this.cmbEstadoPago.Size = new System.Drawing.Size(210, 28);
+            this.cmbEstadoPago.TabIndex = 38;
+            this.cmbEstadoPago.Text = "Seleccione";
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.Location = new System.Drawing.Point(44, 503);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(127, 20);
+            this.label53.TabIndex = 37;
+            this.label53.Text = "Estado de Pago";
+            // 
             // btnActualizarInformacion
             // 
             this.btnActualizarInformacion.IconChar = FontAwesome.Sharp.IconChar.None;
@@ -372,6 +394,7 @@
             this.btnActualizarInformacion.TabIndex = 36;
             this.btnActualizarInformacion.Text = "Actualizar";
             this.btnActualizarInformacion.UseVisualStyleBackColor = true;
+            this.btnActualizarInformacion.Click += new System.EventHandler(this.btnActualizarInformacion_Click);
             // 
             // label40
             // 
@@ -702,127 +725,128 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             // 
-            // label19
+            // txtEstadoPagoBusqueda
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(53, 96);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(158, 20);
-            this.label19.TabIndex = 2;
-            this.label19.Text = "Número de Factura:";
+            this.txtEstadoPagoBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstadoPagoBusqueda.Location = new System.Drawing.Point(354, 599);
+            this.txtEstadoPagoBusqueda.Name = "txtEstadoPagoBusqueda";
+            this.txtEstadoPagoBusqueda.ReadOnly = true;
+            this.txtEstadoPagoBusqueda.Size = new System.Drawing.Size(310, 27);
+            this.txtEstadoPagoBusqueda.TabIndex = 67;
             // 
-            // label21
+            // label54
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(321, 38);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(157, 24);
-            this.label21.TabIndex = 1;
-            this.label21.Text = "Detalles de Venta";
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.Location = new System.Drawing.Point(38, 596);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(132, 20);
+            this.label54.TabIndex = 66;
+            this.label54.Text = "Estado de Pago:";
             // 
-            // txtNumeroFacturaBusqueda
+            // panel2
             // 
-            this.txtNumeroFacturaBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumeroFacturaBusqueda.Location = new System.Drawing.Point(296, 96);
-            this.txtNumeroFacturaBusqueda.Name = "txtNumeroFacturaBusqueda";
-            this.txtNumeroFacturaBusqueda.ReadOnly = true;
-            this.txtNumeroFacturaBusqueda.Size = new System.Drawing.Size(310, 27);
-            this.txtNumeroFacturaBusqueda.TabIndex = 0;
+            this.panel2.Controls.Add(this.label46);
+            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(670, 22);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(688, 696);
+            this.panel2.TabIndex = 65;
             // 
-            // groupBox3
+            // label46
             // 
-            this.groupBox3.Controls.Add(this.txtNumeroFacturaConsultar);
-            this.groupBox3.Controls.Add(this.btnCancelarBusqueda);
-            this.groupBox3.Controls.Add(this.btnBuscarConsultar);
-            this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.label20);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox3.Location = new System.Drawing.Point(3, 3);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(259, 721);
-            this.groupBox3.TabIndex = 1;
-            this.groupBox3.TabStop = false;
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Location = new System.Drawing.Point(273, 32);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(184, 24);
+            this.label46.TabIndex = 21;
+            this.label46.Text = "Detalle de Productos";
             // 
-            // txtNumeroFacturaConsultar
+            // dataGridView1
             // 
-            this.txtNumeroFacturaConsultar.Location = new System.Drawing.Point(18, 97);
-            this.txtNumeroFacturaConsultar.Name = "txtNumeroFacturaConsultar";
-            this.txtNumeroFacturaConsultar.Size = new System.Drawing.Size(185, 26);
-            this.txtNumeroFacturaConsultar.TabIndex = 5;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.dataGridView1.Location = new System.Drawing.Point(20, 65);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(690, 628);
+            this.dataGridView1.TabIndex = 20;
             // 
-            // btnCancelarBusqueda
+            // dataGridViewTextBoxColumn1
             // 
-            this.btnCancelarBusqueda.Location = new System.Drawing.Point(55, 200);
-            this.btnCancelarBusqueda.Name = "btnCancelarBusqueda";
-            this.btnCancelarBusqueda.Size = new System.Drawing.Size(111, 32);
-            this.btnCancelarBusqueda.TabIndex = 4;
-            this.btnCancelarBusqueda.Text = "Cancelar";
-            this.btnCancelarBusqueda.UseVisualStyleBackColor = true;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Nº";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
             // 
-            // btnBuscarConsultar
+            // dataGridViewTextBoxColumn2
             // 
-            this.btnBuscarConsultar.Location = new System.Drawing.Point(55, 149);
-            this.btnBuscarConsultar.Name = "btnBuscarConsultar";
-            this.btnBuscarConsultar.Size = new System.Drawing.Size(111, 32);
-            this.btnBuscarConsultar.TabIndex = 3;
-            this.btnBuscarConsultar.Text = "Buscar";
-            this.btnBuscarConsultar.UseVisualStyleBackColor = true;
-            this.btnBuscarConsultar.Click += new System.EventHandler(this.btnBuscarConsultar_Click_1);
+            this.dataGridViewTextBoxColumn2.HeaderText = "Código";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 125;
             // 
-            // label15
+            // dataGridViewTextBoxColumn3
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(34, 58);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(153, 20);
-            this.label15.TabIndex = 2;
-            this.label15.Text = "Número de Factura";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Nombre:";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 125;
             // 
-            // label20
+            // dataGridViewTextBoxColumn4
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(32, 22);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(157, 24);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "Consultar Factura";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Cantidad";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 125;
             // 
-            // tabEliminar
+            // dataGridViewTextBoxColumn5
             // 
-            this.tabEliminar.Controls.Add(this.groupBox5);
-            this.tabEliminar.Controls.Add(this.groupBox4);
-            this.tabEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabEliminar.Location = new System.Drawing.Point(4, 25);
-            this.tabEliminar.Name = "tabEliminar";
-            this.tabEliminar.Size = new System.Drawing.Size(1626, 727);
-            this.tabEliminar.TabIndex = 3;
-            this.tabEliminar.Text = "Anular Venta";
-            this.tabEliminar.UseVisualStyleBackColor = true;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Precio";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 125;
             // 
-            // tabPage1
+            // txtTotalBusqueda
             // 
-            this.tabPage1.Controls.Add(this.groupBox7);
-            this.tabPage1.Controls.Add(this.groupBox6);
-            this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1626, 727);
-            this.tabPage1.TabIndex = 4;
-            this.tabPage1.Text = "Consultar Ventas";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.txtTotalBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalBusqueda.Location = new System.Drawing.Point(354, 565);
+            this.txtTotalBusqueda.Name = "txtTotalBusqueda";
+            this.txtTotalBusqueda.ReadOnly = true;
+            this.txtTotalBusqueda.Size = new System.Drawing.Size(310, 27);
+            this.txtTotalBusqueda.TabIndex = 64;
             // 
-            // label10
+            // txtIvaBusqueda
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(15, 24);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(186, 24);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "Ventas y Facturación";
+            this.txtIvaBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIvaBusqueda.Location = new System.Drawing.Point(354, 531);
+            this.txtIvaBusqueda.Name = "txtIvaBusqueda";
+            this.txtIvaBusqueda.ReadOnly = true;
+            this.txtIvaBusqueda.Size = new System.Drawing.Size(310, 27);
+            this.txtIvaBusqueda.TabIndex = 63;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Location = new System.Drawing.Point(8, 139);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(151, 24);
+            this.label45.TabIndex = 62;
+            this.label45.Text = "Datos del Cliente";
             // 
             // label9
             // 
@@ -1030,167 +1054,105 @@
             this.txtCedulaBusqueda.Size = new System.Drawing.Size(310, 27);
             this.txtCedulaBusqueda.TabIndex = 37;
             // 
-            // label45
+            // label19
             // 
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(8, 139);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(151, 24);
-            this.label45.TabIndex = 62;
-            this.label45.Text = "Datos del Cliente";
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(53, 96);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(158, 20);
+            this.label19.TabIndex = 2;
+            this.label19.Text = "Número de Factura:";
             // 
-            // txtTotalBusqueda
+            // label21
             // 
-            this.txtTotalBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalBusqueda.Location = new System.Drawing.Point(354, 565);
-            this.txtTotalBusqueda.Name = "txtTotalBusqueda";
-            this.txtTotalBusqueda.ReadOnly = true;
-            this.txtTotalBusqueda.Size = new System.Drawing.Size(310, 27);
-            this.txtTotalBusqueda.TabIndex = 64;
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(321, 38);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(157, 24);
+            this.label21.TabIndex = 1;
+            this.label21.Text = "Detalles de Venta";
             // 
-            // txtIvaBusqueda
+            // txtNumeroFacturaBusqueda
             // 
-            this.txtIvaBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIvaBusqueda.Location = new System.Drawing.Point(354, 531);
-            this.txtIvaBusqueda.Name = "txtIvaBusqueda";
-            this.txtIvaBusqueda.ReadOnly = true;
-            this.txtIvaBusqueda.Size = new System.Drawing.Size(310, 27);
-            this.txtIvaBusqueda.TabIndex = 63;
+            this.txtNumeroFacturaBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumeroFacturaBusqueda.Location = new System.Drawing.Point(296, 96);
+            this.txtNumeroFacturaBusqueda.Name = "txtNumeroFacturaBusqueda";
+            this.txtNumeroFacturaBusqueda.ReadOnly = true;
+            this.txtNumeroFacturaBusqueda.Size = new System.Drawing.Size(310, 27);
+            this.txtNumeroFacturaBusqueda.TabIndex = 0;
             // 
-            // panel2
+            // groupBox3
             // 
-            this.panel2.Controls.Add(this.label46);
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(670, 22);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(688, 696);
-            this.panel2.TabIndex = 65;
+            this.groupBox3.Controls.Add(this.txtNumeroFacturaConsultar);
+            this.groupBox3.Controls.Add(this.btnCancelarBusqueda);
+            this.groupBox3.Controls.Add(this.btnBuscarConsultar);
+            this.groupBox3.Controls.Add(this.label15);
+            this.groupBox3.Controls.Add(this.label20);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox3.Location = new System.Drawing.Point(3, 3);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(259, 721);
+            this.groupBox3.TabIndex = 1;
+            this.groupBox3.TabStop = false;
             // 
-            // label46
+            // txtNumeroFacturaConsultar
             // 
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.Location = new System.Drawing.Point(273, 32);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(184, 24);
-            this.label46.TabIndex = 21;
-            this.label46.Text = "Detalle de Productos";
+            this.txtNumeroFacturaConsultar.Location = new System.Drawing.Point(18, 97);
+            this.txtNumeroFacturaConsultar.Name = "txtNumeroFacturaConsultar";
+            this.txtNumeroFacturaConsultar.Size = new System.Drawing.Size(185, 26);
+            this.txtNumeroFacturaConsultar.TabIndex = 5;
             // 
-            // dataGridView1
+            // btnCancelarBusqueda
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5});
-            this.dataGridView1.Location = new System.Drawing.Point(20, 65);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(690, 628);
-            this.dataGridView1.TabIndex = 20;
+            this.btnCancelarBusqueda.Location = new System.Drawing.Point(55, 200);
+            this.btnCancelarBusqueda.Name = "btnCancelarBusqueda";
+            this.btnCancelarBusqueda.Size = new System.Drawing.Size(111, 32);
+            this.btnCancelarBusqueda.TabIndex = 4;
+            this.btnCancelarBusqueda.Text = "Cancelar";
+            this.btnCancelarBusqueda.UseVisualStyleBackColor = true;
             // 
-            // dataGridViewTextBoxColumn1
+            // btnBuscarConsultar
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Nº";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 125;
+            this.btnBuscarConsultar.Location = new System.Drawing.Point(55, 149);
+            this.btnBuscarConsultar.Name = "btnBuscarConsultar";
+            this.btnBuscarConsultar.Size = new System.Drawing.Size(111, 32);
+            this.btnBuscarConsultar.TabIndex = 3;
+            this.btnBuscarConsultar.Text = "Buscar";
+            this.btnBuscarConsultar.UseVisualStyleBackColor = true;
+            this.btnBuscarConsultar.Click += new System.EventHandler(this.btnBuscarConsultar_Click_1);
             // 
-            // dataGridViewTextBoxColumn2
+            // label15
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Código";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 125;
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(34, 58);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(153, 20);
+            this.label15.TabIndex = 2;
+            this.label15.Text = "Número de Factura";
             // 
-            // dataGridViewTextBoxColumn3
+            // label20
             // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Nombre:";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 125;
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(32, 22);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(157, 24);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "Consultar Factura";
             // 
-            // dataGridViewTextBoxColumn4
+            // tabEliminar
             // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Cantidad";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Precio";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 125;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.txtNFacturaBuscarAnular);
-            this.groupBox4.Controls.Add(this.btnCancelarEliminar);
-            this.groupBox4.Controls.Add(this.btnBuscarAnular);
-            this.groupBox4.Controls.Add(this.label16);
-            this.groupBox4.Controls.Add(this.label17);
-            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox4.Location = new System.Drawing.Point(0, 0);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(259, 727);
-            this.groupBox4.TabIndex = 2;
-            this.groupBox4.TabStop = false;
-            // 
-            // txtNFacturaBuscarAnular
-            // 
-            this.txtNFacturaBuscarAnular.Location = new System.Drawing.Point(18, 97);
-            this.txtNFacturaBuscarAnular.Name = "txtNFacturaBuscarAnular";
-            this.txtNFacturaBuscarAnular.Size = new System.Drawing.Size(185, 26);
-            this.txtNFacturaBuscarAnular.TabIndex = 5;
-            // 
-            // btnCancelarEliminar
-            // 
-            this.btnCancelarEliminar.Location = new System.Drawing.Point(55, 200);
-            this.btnCancelarEliminar.Name = "btnCancelarEliminar";
-            this.btnCancelarEliminar.Size = new System.Drawing.Size(111, 32);
-            this.btnCancelarEliminar.TabIndex = 4;
-            this.btnCancelarEliminar.Text = "Cancelar";
-            this.btnCancelarEliminar.UseVisualStyleBackColor = true;
-            // 
-            // btnBuscarAnular
-            // 
-            this.btnBuscarAnular.Location = new System.Drawing.Point(55, 149);
-            this.btnBuscarAnular.Name = "btnBuscarAnular";
-            this.btnBuscarAnular.Size = new System.Drawing.Size(111, 32);
-            this.btnBuscarAnular.TabIndex = 3;
-            this.btnBuscarAnular.Text = "Buscar";
-            this.btnBuscarAnular.UseVisualStyleBackColor = true;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(34, 58);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(153, 20);
-            this.label16.TabIndex = 2;
-            this.label16.Text = "Número de Factura";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(32, 22);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(157, 24);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "Consultar Factura";
+            this.tabEliminar.Controls.Add(this.groupBox5);
+            this.tabEliminar.Controls.Add(this.groupBox4);
+            this.tabEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabEliminar.Location = new System.Drawing.Point(4, 25);
+            this.tabEliminar.Name = "tabEliminar";
+            this.tabEliminar.Size = new System.Drawing.Size(1626, 727);
+            this.tabEliminar.TabIndex = 3;
+            this.tabEliminar.Text = "Anular Venta";
+            this.tabEliminar.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
@@ -1231,6 +1193,37 @@
             this.groupBox5.Size = new System.Drawing.Size(1367, 727);
             this.groupBox5.TabIndex = 3;
             this.groupBox5.TabStop = false;
+            // 
+            // txtEstadoPagoAnular
+            // 
+            this.txtEstadoPagoAnular.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstadoPagoAnular.Location = new System.Drawing.Point(353, 604);
+            this.txtEstadoPagoAnular.Name = "txtEstadoPagoAnular";
+            this.txtEstadoPagoAnular.ReadOnly = true;
+            this.txtEstadoPagoAnular.Size = new System.Drawing.Size(310, 27);
+            this.txtEstadoPagoAnular.TabIndex = 69;
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.Location = new System.Drawing.Point(31, 607);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(132, 20);
+            this.label55.TabIndex = 68;
+            this.label55.Text = "Estado de Pago:";
+            // 
+            // btnAnular
+            // 
+            this.btnAnular.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnAnular.IconColor = System.Drawing.Color.Black;
+            this.btnAnular.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAnular.Location = new System.Drawing.Point(203, 650);
+            this.btnAnular.Name = "btnAnular";
+            this.btnAnular.Size = new System.Drawing.Size(220, 40);
+            this.btnAnular.TabIndex = 66;
+            this.btnAnular.Text = "Anular Factura";
+            this.btnAnular.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
@@ -1571,133 +1564,75 @@
             this.txtNumeroFacturaAnular.Size = new System.Drawing.Size(310, 27);
             this.txtNumeroFacturaAnular.TabIndex = 0;
             // 
-            // btnAnular
+            // groupBox4
             // 
-            this.btnAnular.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnAnular.IconColor = System.Drawing.Color.Black;
-            this.btnAnular.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAnular.Location = new System.Drawing.Point(203, 650);
-            this.btnAnular.Name = "btnAnular";
-            this.btnAnular.Size = new System.Drawing.Size(220, 40);
-            this.btnAnular.TabIndex = 66;
-            this.btnAnular.Text = "Anular Factura";
-            this.btnAnular.UseVisualStyleBackColor = true;
+            this.groupBox4.Controls.Add(this.txtNFacturaBuscarAnular);
+            this.groupBox4.Controls.Add(this.btnCancelarEliminar);
+            this.groupBox4.Controls.Add(this.btnBuscarAnular);
+            this.groupBox4.Controls.Add(this.label16);
+            this.groupBox4.Controls.Add(this.label17);
+            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox4.Location = new System.Drawing.Point(0, 0);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(259, 727);
+            this.groupBox4.TabIndex = 2;
+            this.groupBox4.TabStop = false;
             // 
-            // cmbEstadoPago
+            // txtNFacturaBuscarAnular
             // 
-            this.cmbEstadoPago.FormattingEnabled = true;
-            this.cmbEstadoPago.Items.AddRange(new object[] {
-            "Pagado",
-            "No Pagado"});
-            this.cmbEstadoPago.Location = new System.Drawing.Point(370, 502);
-            this.cmbEstadoPago.Name = "cmbEstadoPago";
-            this.cmbEstadoPago.Size = new System.Drawing.Size(210, 28);
-            this.cmbEstadoPago.TabIndex = 38;
-            this.cmbEstadoPago.Text = "Seleccione";
+            this.txtNFacturaBuscarAnular.Location = new System.Drawing.Point(18, 97);
+            this.txtNFacturaBuscarAnular.Name = "txtNFacturaBuscarAnular";
+            this.txtNFacturaBuscarAnular.Size = new System.Drawing.Size(185, 26);
+            this.txtNFacturaBuscarAnular.TabIndex = 5;
             // 
-            // label53
+            // btnCancelarEliminar
             // 
-            this.label53.AutoSize = true;
-            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.Location = new System.Drawing.Point(44, 503);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(127, 20);
-            this.label53.TabIndex = 37;
-            this.label53.Text = "Estado de Pago";
+            this.btnCancelarEliminar.Location = new System.Drawing.Point(55, 200);
+            this.btnCancelarEliminar.Name = "btnCancelarEliminar";
+            this.btnCancelarEliminar.Size = new System.Drawing.Size(111, 32);
+            this.btnCancelarEliminar.TabIndex = 4;
+            this.btnCancelarEliminar.Text = "Cancelar";
+            this.btnCancelarEliminar.UseVisualStyleBackColor = true;
             // 
-            // label54
+            // btnBuscarAnular
             // 
-            this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label54.Location = new System.Drawing.Point(38, 596);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(132, 20);
-            this.label54.TabIndex = 66;
-            this.label54.Text = "Estado de Pago:";
+            this.btnBuscarAnular.Location = new System.Drawing.Point(55, 149);
+            this.btnBuscarAnular.Name = "btnBuscarAnular";
+            this.btnBuscarAnular.Size = new System.Drawing.Size(111, 32);
+            this.btnBuscarAnular.TabIndex = 3;
+            this.btnBuscarAnular.Text = "Buscar";
+            this.btnBuscarAnular.UseVisualStyleBackColor = true;
             // 
-            // txtEstadoPagoBusqueda
+            // label16
             // 
-            this.txtEstadoPagoBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEstadoPagoBusqueda.Location = new System.Drawing.Point(354, 599);
-            this.txtEstadoPagoBusqueda.Name = "txtEstadoPagoBusqueda";
-            this.txtEstadoPagoBusqueda.ReadOnly = true;
-            this.txtEstadoPagoBusqueda.Size = new System.Drawing.Size(310, 27);
-            this.txtEstadoPagoBusqueda.TabIndex = 67;
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(34, 58);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(153, 20);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "Número de Factura";
             // 
-            // txtEstadoPagoAnular
+            // label17
             // 
-            this.txtEstadoPagoAnular.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEstadoPagoAnular.Location = new System.Drawing.Point(353, 604);
-            this.txtEstadoPagoAnular.Name = "txtEstadoPagoAnular";
-            this.txtEstadoPagoAnular.ReadOnly = true;
-            this.txtEstadoPagoAnular.Size = new System.Drawing.Size(310, 27);
-            this.txtEstadoPagoAnular.TabIndex = 69;
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(32, 22);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(157, 24);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Consultar Factura";
             // 
-            // label55
+            // tabPage1
             // 
-            this.label55.AutoSize = true;
-            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label55.Location = new System.Drawing.Point(31, 607);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(132, 20);
-            this.label55.TabIndex = 68;
-            this.label55.Text = "Estado de Pago:";
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.dtpFechaFin);
-            this.groupBox6.Controls.Add(this.dtpFechaInicio);
-            this.groupBox6.Controls.Add(this.btnConsultarPorFechas);
-            this.groupBox6.Controls.Add(this.label60);
-            this.groupBox6.Controls.Add(this.label59);
-            this.groupBox6.Controls.Add(this.cmbEstadoPagoConsulta);
-            this.groupBox6.Controls.Add(this.btnCancelar);
-            this.groupBox6.Controls.Add(this.btnConsultarEstadoPago);
-            this.groupBox6.Controls.Add(this.label56);
-            this.groupBox6.Controls.Add(this.label57);
-            this.groupBox6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox6.Location = new System.Drawing.Point(0, 0);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(259, 727);
-            this.groupBox6.TabIndex = 3;
-            this.groupBox6.TabStop = false;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(61, 514);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(111, 32);
-            this.btnCancelar.TabIndex = 4;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // btnConsultarEstadoPago
-            // 
-            this.btnConsultarEstadoPago.Location = new System.Drawing.Point(69, 139);
-            this.btnConsultarEstadoPago.Name = "btnConsultarEstadoPago";
-            this.btnConsultarEstadoPago.Size = new System.Drawing.Size(111, 32);
-            this.btnConsultarEstadoPago.TabIndex = 3;
-            this.btnConsultarEstadoPago.Text = "Buscar";
-            this.btnConsultarEstadoPago.UseVisualStyleBackColor = true;
-            // 
-            // label56
-            // 
-            this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(48, 59);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(132, 20);
-            this.label56.TabIndex = 2;
-            this.label56.Text = "Estado de Pago:";
-            // 
-            // label57
-            // 
-            this.label57.AutoSize = true;
-            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label57.Location = new System.Drawing.Point(32, 22);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(157, 24);
-            this.label57.TabIndex = 0;
-            this.label57.Text = "Consultar Factura";
+            this.tabPage1.Controls.Add(this.groupBox7);
+            this.tabPage1.Controls.Add(this.groupBox6);
+            this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(1626, 727);
+            this.tabPage1.TabIndex = 4;
+            this.tabPage1.Text = "Consultar Ventas";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // groupBox7
             // 
@@ -1710,6 +1645,25 @@
             this.groupBox7.Size = new System.Drawing.Size(1367, 727);
             this.groupBox7.TabIndex = 4;
             this.groupBox7.TabStop = false;
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Location = new System.Drawing.Point(29, 68);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(575, 20);
+            this.label61.TabIndex = 45;
+            this.label61.Text = "Para ver los detalles de la factura presione encima de su número de factura";
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.Location = new System.Drawing.Point(29, 22);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(156, 24);
+            this.label58.TabIndex = 22;
+            this.label58.Text = "Registro Facturas";
             // 
             // dataGridView3
             // 
@@ -1726,78 +1680,6 @@
             this.dataGridView3.RowTemplate.Height = 24;
             this.dataGridView3.Size = new System.Drawing.Size(1197, 579);
             this.dataGridView3.TabIndex = 21;
-            // 
-            // label58
-            // 
-            this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.Location = new System.Drawing.Point(29, 22);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(156, 24);
-            this.label58.TabIndex = 22;
-            this.label58.Text = "Registro Facturas";
-            // 
-            // cmbEstadoPagoConsulta
-            // 
-            this.cmbEstadoPagoConsulta.FormattingEnabled = true;
-            this.cmbEstadoPagoConsulta.Items.AddRange(new object[] {
-            "Pagado",
-            "No Pagado"});
-            this.cmbEstadoPagoConsulta.Location = new System.Drawing.Point(20, 93);
-            this.cmbEstadoPagoConsulta.Name = "cmbEstadoPagoConsulta";
-            this.cmbEstadoPagoConsulta.Size = new System.Drawing.Size(210, 28);
-            this.cmbEstadoPagoConsulta.TabIndex = 39;
-            this.cmbEstadoPagoConsulta.Text = "Seleccione";
-            // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(68, 224);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(104, 20);
-            this.label59.TabIndex = 40;
-            this.label59.Text = "Fecha Inicio:";
-            // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(76, 318);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(88, 20);
-            this.label60.TabIndex = 41;
-            this.label60.Text = "Fecha Fin:";
-            // 
-            // btnConsultarPorFechas
-            // 
-            this.btnConsultarPorFechas.Location = new System.Drawing.Point(61, 420);
-            this.btnConsultarPorFechas.Name = "btnConsultarPorFechas";
-            this.btnConsultarPorFechas.Size = new System.Drawing.Size(111, 32);
-            this.btnConsultarPorFechas.TabIndex = 42;
-            this.btnConsultarPorFechas.Text = "Buscar";
-            this.btnConsultarPorFechas.UseVisualStyleBackColor = true;
-            // 
-            // dtpFechaInicio
-            // 
-            this.dtpFechaInicio.Location = new System.Drawing.Point(20, 263);
-            this.dtpFechaInicio.Name = "dtpFechaInicio";
-            this.dtpFechaInicio.Size = new System.Drawing.Size(200, 26);
-            this.dtpFechaInicio.TabIndex = 43;
-            // 
-            // dtpFechaFin
-            // 
-            this.dtpFechaFin.Location = new System.Drawing.Point(20, 366);
-            this.dtpFechaFin.Name = "dtpFechaFin";
-            this.dtpFechaFin.Size = new System.Drawing.Size(200, 26);
-            this.dtpFechaFin.TabIndex = 44;
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(29, 68);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(575, 20);
-            this.label61.TabIndex = 45;
-            this.label61.Text = "Para ver los detalles de la factura presione encima de su número de factura";
             // 
             // dataGridViewTextBoxColumn11
             // 
@@ -1839,6 +1721,125 @@
             this.dataGridViewTextBoxColumn15.ReadOnly = true;
             this.dataGridViewTextBoxColumn15.Width = 125;
             // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.dtpFechaFin);
+            this.groupBox6.Controls.Add(this.dtpFechaInicio);
+            this.groupBox6.Controls.Add(this.btnConsultarPorFechas);
+            this.groupBox6.Controls.Add(this.label60);
+            this.groupBox6.Controls.Add(this.label59);
+            this.groupBox6.Controls.Add(this.cmbEstadoPagoConsulta);
+            this.groupBox6.Controls.Add(this.btnCancelar);
+            this.groupBox6.Controls.Add(this.btnConsultarEstadoPago);
+            this.groupBox6.Controls.Add(this.label56);
+            this.groupBox6.Controls.Add(this.label57);
+            this.groupBox6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox6.Location = new System.Drawing.Point(0, 0);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(259, 727);
+            this.groupBox6.TabIndex = 3;
+            this.groupBox6.TabStop = false;
+            // 
+            // dtpFechaFin
+            // 
+            this.dtpFechaFin.Location = new System.Drawing.Point(20, 366);
+            this.dtpFechaFin.Name = "dtpFechaFin";
+            this.dtpFechaFin.Size = new System.Drawing.Size(200, 26);
+            this.dtpFechaFin.TabIndex = 44;
+            // 
+            // dtpFechaInicio
+            // 
+            this.dtpFechaInicio.Location = new System.Drawing.Point(20, 263);
+            this.dtpFechaInicio.Name = "dtpFechaInicio";
+            this.dtpFechaInicio.Size = new System.Drawing.Size(200, 26);
+            this.dtpFechaInicio.TabIndex = 43;
+            // 
+            // btnConsultarPorFechas
+            // 
+            this.btnConsultarPorFechas.Location = new System.Drawing.Point(61, 420);
+            this.btnConsultarPorFechas.Name = "btnConsultarPorFechas";
+            this.btnConsultarPorFechas.Size = new System.Drawing.Size(111, 32);
+            this.btnConsultarPorFechas.TabIndex = 42;
+            this.btnConsultarPorFechas.Text = "Buscar";
+            this.btnConsultarPorFechas.UseVisualStyleBackColor = true;
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Location = new System.Drawing.Point(76, 318);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(88, 20);
+            this.label60.TabIndex = 41;
+            this.label60.Text = "Fecha Fin:";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Location = new System.Drawing.Point(68, 224);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(104, 20);
+            this.label59.TabIndex = 40;
+            this.label59.Text = "Fecha Inicio:";
+            // 
+            // cmbEstadoPagoConsulta
+            // 
+            this.cmbEstadoPagoConsulta.FormattingEnabled = true;
+            this.cmbEstadoPagoConsulta.Items.AddRange(new object[] {
+            "Pagado",
+            "No Pagado"});
+            this.cmbEstadoPagoConsulta.Location = new System.Drawing.Point(20, 93);
+            this.cmbEstadoPagoConsulta.Name = "cmbEstadoPagoConsulta";
+            this.cmbEstadoPagoConsulta.Size = new System.Drawing.Size(210, 28);
+            this.cmbEstadoPagoConsulta.TabIndex = 39;
+            this.cmbEstadoPagoConsulta.Text = "Seleccione";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(61, 514);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(111, 32);
+            this.btnCancelar.TabIndex = 4;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // btnConsultarEstadoPago
+            // 
+            this.btnConsultarEstadoPago.Location = new System.Drawing.Point(69, 139);
+            this.btnConsultarEstadoPago.Name = "btnConsultarEstadoPago";
+            this.btnConsultarEstadoPago.Size = new System.Drawing.Size(111, 32);
+            this.btnConsultarEstadoPago.TabIndex = 3;
+            this.btnConsultarEstadoPago.Text = "Buscar";
+            this.btnConsultarEstadoPago.UseVisualStyleBackColor = true;
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(48, 59);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(132, 20);
+            this.label56.TabIndex = 2;
+            this.label56.Text = "Estado de Pago:";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.Location = new System.Drawing.Point(32, 22);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(157, 24);
+            this.label57.TabIndex = 0;
+            this.label57.Text = "Consultar Factura";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(15, 24);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(186, 24);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "Ventas y Facturación";
+            // 
             // frmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1859,25 +1860,25 @@
             this.tabConsultar.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.tabEliminar.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.tabEliminar.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

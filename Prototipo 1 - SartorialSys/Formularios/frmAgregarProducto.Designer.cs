@@ -31,8 +31,6 @@
             this.txtCodigoProducto = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cmbProductos = new System.Windows.Forms.ComboBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAgregar = new FontAwesome.Sharp.IconButton();
@@ -43,7 +41,7 @@
             // txtCodigoProducto
             // 
             this.txtCodigoProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoProducto.Location = new System.Drawing.Point(439, 157);
+            this.txtCodigoProducto.Location = new System.Drawing.Point(438, 109);
             this.txtCodigoProducto.Name = "txtCodigoProducto";
             this.txtCodigoProducto.Size = new System.Drawing.Size(222, 28);
             this.txtCodigoProducto.TabIndex = 18;
@@ -52,7 +50,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(45, 157);
+            this.label6.Location = new System.Drawing.Point(44, 109);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(260, 22);
             this.label6.TabIndex = 17;
@@ -68,29 +66,10 @@
             this.label11.TabIndex = 15;
             this.label11.Text = "Producto";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(45, 109);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 22);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Seleccione el producto";
-            // 
-            // cmbProductos
-            // 
-            this.cmbProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbProductos.FormattingEnabled = true;
-            this.cmbProductos.Location = new System.Drawing.Point(439, 109);
-            this.cmbProductos.Name = "cmbProductos";
-            this.cmbProductos.Size = new System.Drawing.Size(222, 30);
-            this.cmbProductos.TabIndex = 23;
-            // 
             // txtCantidad
             // 
             this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad.Location = new System.Drawing.Point(439, 203);
+            this.txtCantidad.Location = new System.Drawing.Point(438, 158);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(222, 28);
             this.txtCantidad.TabIndex = 25;
@@ -99,7 +78,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(45, 205);
+            this.label2.Location = new System.Drawing.Point(44, 160);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 22);
             this.label2.TabIndex = 24;
@@ -111,7 +90,7 @@
             this.btnAgregar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnAgregar.IconColor = System.Drawing.Color.Black;
             this.btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAgregar.Location = new System.Drawing.Point(246, 265);
+            this.btnAgregar.Location = new System.Drawing.Point(244, 226);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(145, 42);
             this.btnAgregar.TabIndex = 26;
@@ -125,7 +104,7 @@
             this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnCancelar.IconColor = System.Drawing.Color.Black;
             this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCancelar.Location = new System.Drawing.Point(419, 265);
+            this.btnCancelar.Location = new System.Drawing.Point(417, 226);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(145, 42);
             this.btnCancelar.TabIndex = 27;
@@ -139,7 +118,7 @@
             this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnBuscar.IconColor = System.Drawing.Color.Black;
             this.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBuscar.Location = new System.Drawing.Point(688, 150);
+            this.btnBuscar.Location = new System.Drawing.Point(688, 109);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(131, 42);
             this.btnBuscar.TabIndex = 28;
@@ -156,8 +135,6 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cmbProductos);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtCodigoProducto);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label11);
@@ -172,8 +149,6 @@
         private System.Windows.Forms.TextBox txtCodigoProducto;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmbProductos;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton btnAgregar;
