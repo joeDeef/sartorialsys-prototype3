@@ -16,5 +16,6 @@ namespace Prototipo_1___SartorialSys.Formularios
         {
             InitializeComponent();
         }
+
     }
 }

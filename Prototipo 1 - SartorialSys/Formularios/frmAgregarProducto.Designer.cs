@@ -41,7 +41,7 @@
             // txtCodigoProducto
             // 
             this.txtCodigoProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoProducto.Location = new System.Drawing.Point(438, 109);
+            this.txtCodigoProducto.Location = new System.Drawing.Point(438, 131);
             this.txtCodigoProducto.Name = "txtCodigoProducto";
             this.txtCodigoProducto.Size = new System.Drawing.Size(222, 28);
             this.txtCodigoProducto.TabIndex = 18;
@@ -50,7 +50,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(44, 109);
+            this.label6.Location = new System.Drawing.Point(44, 131);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(260, 22);
             this.label6.TabIndex = 17;
@@ -69,7 +69,7 @@
             // txtCantidad
             // 
             this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad.Location = new System.Drawing.Point(438, 158);
+            this.txtCantidad.Location = new System.Drawing.Point(438, 180);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(222, 28);
             this.txtCantidad.TabIndex = 25;
@@ -78,7 +78,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(44, 160);
+            this.label2.Location = new System.Drawing.Point(44, 182);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 22);
             this.label2.TabIndex = 24;
@@ -90,7 +90,7 @@
             this.btnAgregar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnAgregar.IconColor = System.Drawing.Color.Black;
             this.btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAgregar.Location = new System.Drawing.Point(244, 226);
+            this.btnAgregar.Location = new System.Drawing.Point(244, 248);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(145, 42);
             this.btnAgregar.TabIndex = 26;
@@ -104,7 +104,7 @@
             this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnCancelar.IconColor = System.Drawing.Color.Black;
             this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCancelar.Location = new System.Drawing.Point(417, 226);
+            this.btnCancelar.Location = new System.Drawing.Point(417, 248);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(145, 42);
             this.btnCancelar.TabIndex = 27;
@@ -118,7 +118,7 @@
             this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnBuscar.IconColor = System.Drawing.Color.Black;
             this.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBuscar.Location = new System.Drawing.Point(688, 109);
+            this.btnBuscar.Location = new System.Drawing.Point(688, 131);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(131, 42);
             this.btnBuscar.TabIndex = 28;

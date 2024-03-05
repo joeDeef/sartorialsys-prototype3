@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using FontAwesome.Sharp;
 using Prototipo_1___SartorialSys.Clases;
+using Prototipo_1___SartorialSys.Formularios;
 
 namespace Prototipo_1___SartorialSys
 {
@@ -125,6 +126,7 @@ namespace Prototipo_1___SartorialSys
         private void btnProductos_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColor.color3);
+            openFormChild(new frmProductos());
         }
 
         private void btnInventario_Click(object sender, EventArgs e)

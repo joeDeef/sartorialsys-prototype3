@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tabClientes = new System.Windows.Forms.TabControl();
             this.tabRegistrar = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBoxContraseña = new System.Windows.Forms.CheckBox();
             this.comboBoxRolRegistrar = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -85,9 +84,10 @@
             this.label25 = new System.Windows.Forms.Label();
             this.txtUsuarioDarDeBaja = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.checkBoxContraseña = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabClientes.SuspendLayout();
             this.tabRegistrar.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -99,25 +99,6 @@
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(136, 105);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(236, 24);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Administración del Sistema";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(155, 129);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 16);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Usuarios";
             // 
             // label4
             // 
@@ -172,6 +153,16 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registra Usuario";
+            // 
+            // checkBoxContraseña
+            // 
+            this.checkBoxContraseña.AutoSize = true;
+            this.checkBoxContraseña.Location = new System.Drawing.Point(324, 126);
+            this.checkBoxContraseña.Name = "checkBoxContraseña";
+            this.checkBoxContraseña.Size = new System.Drawing.Size(18, 17);
+            this.checkBoxContraseña.TabIndex = 15;
+            this.checkBoxContraseña.UseVisualStyleBackColor = true;
+            this.checkBoxContraseña.CheckedChanged += new System.EventHandler(this.checkBoxContraseña_CheckedChanged);
             // 
             // comboBoxRolRegistrar
             // 
@@ -715,16 +706,15 @@
             this.label26.TabIndex = 1;
             this.label26.Text = "Datos";
             // 
-            // label1
+            // label2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Handwriting", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label1.Location = new System.Drawing.Point(36, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(348, 33);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "TRAJES HIDALGO PLUS";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(136, 105);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(236, 24);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Administración del Sistema";
             // 
             // pictureBox1
             // 
@@ -735,15 +725,25 @@
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
-            // checkBoxContraseña
+            // label3
             // 
-            this.checkBoxContraseña.AutoSize = true;
-            this.checkBoxContraseña.Location = new System.Drawing.Point(324, 126);
-            this.checkBoxContraseña.Name = "checkBoxContraseña";
-            this.checkBoxContraseña.Size = new System.Drawing.Size(18, 17);
-            this.checkBoxContraseña.TabIndex = 15;
-            this.checkBoxContraseña.UseVisualStyleBackColor = true;
-            this.checkBoxContraseña.CheckedChanged += new System.EventHandler(this.checkBoxContraseña_CheckedChanged);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(155, 129);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 16);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Usuarios";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Lucida Handwriting", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.label1.Location = new System.Drawing.Point(36, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(348, 33);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "TRAJES HIDALGO PLUS";
             // 
             // frmAdministrarUsuarios
             // 
@@ -778,10 +778,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TabControl tabClientes;
         private System.Windows.Forms.TabPage tabRegistrar;
@@ -832,12 +828,15 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TextBox txtUsuarioDarDeBaja;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnActualizarRol;
         private System.Windows.Forms.Button btnActualizarContraseña;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnDarDeAlta;
         private System.Windows.Forms.Button btnBuscarDarDeBaja;
         private System.Windows.Forms.CheckBox checkBoxContraseña;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
     }
 }

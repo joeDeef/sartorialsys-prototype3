@@ -167,7 +167,7 @@
             this.tabRegistrar.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabRegistrar.Size = new System.Drawing.Size(980, 603);
             this.tabRegistrar.TabIndex = 0;
-            this.tabRegistrar.Text = "Registrar";
+            this.tabRegistrar.Text = "Registrar Cliente";
             this.tabRegistrar.UseVisualStyleBackColor = true;
             // 
             // groupBox1
@@ -379,7 +379,7 @@
             this.tabBuscar.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabBuscar.Size = new System.Drawing.Size(980, 603);
             this.tabBuscar.TabIndex = 1;
-            this.tabBuscar.Text = "Buscar";
+            this.tabBuscar.Text = "Buscar Cliente";
             this.tabBuscar.UseVisualStyleBackColor = true;
             // 
             // groupBox2
@@ -399,11 +399,11 @@
             this.groupBox2.Controls.Add(this.txtCedulaBuscar);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(404, 2);
+            this.groupBox2.Location = new System.Drawing.Point(350, 2);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(573, 599);
+            this.groupBox2.Size = new System.Drawing.Size(627, 599);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
@@ -558,7 +558,7 @@
             this.panel1.Location = new System.Drawing.Point(3, 2);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(401, 599);
+            this.panel1.Size = new System.Drawing.Size(347, 599);
             this.panel1.TabIndex = 7;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -629,7 +629,7 @@
             this.tabActualizar.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabActualizar.Size = new System.Drawing.Size(980, 603);
             this.tabActualizar.TabIndex = 2;
-            this.tabActualizar.Text = "Actualizar";
+            this.tabActualizar.Text = "Actualizar Cliente";
             this.tabActualizar.UseVisualStyleBackColor = true;
             // 
             // groupBox5
@@ -940,7 +940,7 @@
             this.tabCambiarEstado.Name = "tabCambiarEstado";
             this.tabCambiarEstado.Size = new System.Drawing.Size(980, 603);
             this.tabCambiarEstado.TabIndex = 3;
-            this.tabCambiarEstado.Text = "Dar de Baja/Alta";
+            this.tabCambiarEstado.Text = "Dar de Baja/Alta Cliente";
             this.tabCambiarEstado.UseVisualStyleBackColor = true;
             // 
             // groupBox6
