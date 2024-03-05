@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Forms;
 using Prototipo_1___SartorialSys.Clases;
 using Prototipo_1___SartorialSys.Formularios;
@@ -14,6 +15,16 @@ namespace Prototipo_1___SartorialSys
 {
     public partial class frmVentas : Form
     {
+        private struct RGBColor
+        {
+            public static Color color1 = Color.FromArgb(172, 126, 241);
+            public static Color color2 = Color.FromArgb(249, 118, 176);
+            public static Color color3 = Color.FromArgb(253, 128, 114);
+            public static Color color4 = Color.FromArgb(95, 77, 221);
+            public static Color color5 = Color.FromArgb(249, 88, 155);
+            public static Color color6 = Color.FromArgb(24, 161, 251);
+
+        }
         public frmVentas()
         {
             InitializeComponent();
@@ -78,8 +89,14 @@ namespace Prototipo_1___SartorialSys
             string[] datosCliente = Cliente.buscarCliente(txtCedulaRegistrar.Text);
             if (!existeRegistro(datosCliente[0]))
             {
-                Mensajes.emitirMensaje("Cliente no registrado - Por favor llenar los demas datos");
-                vaciarDatos();
+                if(!Mensajes.confirmarAccion("Desea registrar al usuario"))
+                {
+                    Mensajes.emitirMensaje("Por favor llenar todos los campos");
+                    vaciarDatos();
+                    return;
+                }
+                frmClientes clientes = new frmClientes();
+                clientes.ShowDialog();
                 return;
             }
             txtCedulaRegistrar.Text = datosCliente[0];
@@ -114,6 +131,12 @@ namespace Prototipo_1___SartorialSys
         private void btnBuscarConsultar_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnActualizarInformacion_Click(object sender, EventArgs e)
+        {
+            frmClientes clientes = new frmClientes(txtCedulaRegistrar.Text, 0);
+            clientes.ShowDialog();
         }
     }
 }

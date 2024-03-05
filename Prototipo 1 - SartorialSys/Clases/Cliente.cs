@@ -98,7 +98,7 @@ namespace Prototipo_1___SartorialSys.Clases
                 Mensajes.emitirMensaje("Este cliente ya esta dado de baja");
                 return false;
             }
-           if (!confirmarAccion("¿Está seguro de dar de baja a este cliente?"))
+           if (!Mensajes.confirmarAccion("¿Está seguro de dar de baja a este cliente?"))
             {
                 return false;
             }
@@ -116,16 +116,6 @@ namespace Prototipo_1___SartorialSys.Clases
                 }
             }
             return true;
-        }
-
-        private static bool confirmarAccion(string mensaje)
-        {
-            DialogResult result = MessageBox.Show(mensaje, "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                return true;
-            }
-            return false;
         }
 
         internal static bool registrarCliente(string[] datosCliente)
@@ -187,7 +177,7 @@ namespace Prototipo_1___SartorialSys.Clases
                 Mensajes.emitirMensaje("Este cliente ya esta dado de alta");
                 return false;
             }
-            if (!confirmarAccion("¿Está  seguro de dar de alta a este cliente?"))
+            if (!Mensajes.confirmarAccion("¿Está  seguro de dar de alta a este cliente?"))
             {
                 return false;
             }
@@ -209,7 +199,7 @@ namespace Prototipo_1___SartorialSys.Clases
 
         internal static bool actualizarDireccion(string direccion, string parametroBusqueda)
         {
-            if (!confirmarAccion("¿Está seguro de actualizar este dato?"))
+            if (!Mensajes.confirmarAccion("¿Está seguro de actualizar este dato?"))
             {
                 return false;
             }
@@ -231,7 +221,7 @@ namespace Prototipo_1___SartorialSys.Clases
 
         internal static bool actualizarTelefono(string telefono, string parametroBusqueda)
         {
-            if (!confirmarAccion("¿Está seguro de actualizar este dato?"))
+            if (!Mensajes.confirmarAccion("¿Está seguro de actualizar este dato?"))
             {
                 return false;
             }
@@ -253,7 +243,7 @@ namespace Prototipo_1___SartorialSys.Clases
 
         internal static bool actualizarCorreo(string correo, string parametroBusqueda)
         {
-            if (!confirmarAccion("¿Está seguro de actualizar este dato?"))
+            if (!Mensajes.confirmarAccion("¿Está seguro de actualizar este dato?"))
             {
                 return false;
             }
@@ -275,7 +265,7 @@ namespace Prototipo_1___SartorialSys.Clases
 
         internal static bool actualizarNombres(string nombres, string parametroBusqueda)
         {
-            if (!confirmarAccion("¿Está seguro de corregir este dato?"))
+            if (!Mensajes.confirmarAccion("¿Está seguro de corregir este dato?"))
             {
                 return false;
             }
@@ -297,7 +287,7 @@ namespace Prototipo_1___SartorialSys.Clases
 
         internal static bool actualizarApellidos(string apellidos, string parametroBusqueda)
         {
-            if (!confirmarAccion("¿Está seguro de corregir este dato?"))
+            if (!Mensajes.confirmarAccion("¿Está seguro de corregir este dato?"))
             {
                 return false;
             }
