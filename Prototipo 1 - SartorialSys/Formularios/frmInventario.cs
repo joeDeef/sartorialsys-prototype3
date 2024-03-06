@@ -64,21 +64,6 @@ namespace Prototipo_1___SartorialSys
         private void btnInsertar_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Produto Registrado con exito");
-            limpiarConsola();
-        }
-
-        private void limpiarConsola()
-        {
-            txtID.Text = "";
-            txtNombreRegistrar.Text = "";
-            txtProveedorRegistrar.Text = "";
-            txtCantidadRegistrar.Text = "";
-            txtPrecioRegistrar.Text = "";
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void frmInventario_FormClosing(object sender, FormClosingEventArgs e)

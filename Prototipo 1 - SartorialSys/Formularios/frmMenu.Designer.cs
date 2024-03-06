@@ -49,6 +49,7 @@
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.horafecha = new System.Windows.Forms.Timer(this.components);
+            this.btnAuditoria = new FontAwesome.Sharp.IconButton();
             this.pnlMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,13 +60,14 @@
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(189)))), ((int)(((byte)(165)))));
+            this.pnlMenu.Controls.Add(this.btnAuditoria);
             this.pnlMenu.Controls.Add(this.btnEmpleados);
+            this.pnlMenu.Controls.Add(this.btnProductos);
             this.pnlMenu.Controls.Add(this.btnAdministracion);
+            this.pnlMenu.Controls.Add(this.btnProveedores);
             this.pnlMenu.Controls.Add(this.btnVentas);
             this.pnlMenu.Controls.Add(this.btnPedidos);
             this.pnlMenu.Controls.Add(this.btnInventario);
-            this.pnlMenu.Controls.Add(this.btnProductos);
-            this.pnlMenu.Controls.Add(this.btnProveedores);
             this.pnlMenu.Controls.Add(this.btnClientes);
             this.pnlMenu.Controls.Add(this.panel2);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -84,7 +86,7 @@
             this.btnEmpleados.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.btnEmpleados.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpleados.Location = new System.Drawing.Point(0, 476);
+            this.btnEmpleados.Location = new System.Drawing.Point(3, 476);
             this.btnEmpleados.Name = "btnEmpleados";
             this.btnEmpleados.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnEmpleados.Size = new System.Drawing.Size(213, 60);
@@ -126,7 +128,7 @@
             this.btnVentas.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.btnVentas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVentas.Location = new System.Drawing.Point(0, 410);
+            this.btnVentas.Location = new System.Drawing.Point(0, 146);
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnVentas.Size = new System.Drawing.Size(213, 60);
@@ -168,7 +170,7 @@
             this.btnInventario.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.btnInventario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventario.Location = new System.Drawing.Point(0, 278);
+            this.btnInventario.Location = new System.Drawing.Point(3, 212);
             this.btnInventario.Name = "btnInventario";
             this.btnInventario.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnInventario.Size = new System.Drawing.Size(213, 60);
@@ -189,7 +191,7 @@
             this.btnProductos.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.btnProductos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProductos.Location = new System.Drawing.Point(0, 212);
+            this.btnProductos.Location = new System.Drawing.Point(3, 278);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnProductos.Size = new System.Drawing.Size(213, 60);
@@ -210,7 +212,7 @@
             this.btnProveedores.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.btnProveedores.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnProveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProveedores.Location = new System.Drawing.Point(0, 146);
+            this.btnProveedores.Location = new System.Drawing.Point(3, 410);
             this.btnProveedores.Name = "btnProveedores";
             this.btnProveedores.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnProveedores.Size = new System.Drawing.Size(213, 60);
@@ -232,7 +234,7 @@
             this.btnClientes.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.btnClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClientes.Location = new System.Drawing.Point(0, 80);
+            this.btnClientes.Location = new System.Drawing.Point(0, 86);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnClientes.Size = new System.Drawing.Size(213, 60);
@@ -368,6 +370,26 @@
             this.horafecha.Enabled = true;
             this.horafecha.Tick += new System.EventHandler(this.horafecha_Tick);
             // 
+            // btnAuditoria
+            // 
+            this.btnAuditoria.FlatAppearance.BorderSize = 0;
+            this.btnAuditoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAuditoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAuditoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnAuditoria.IconChar = FontAwesome.Sharp.IconChar.UserSecret;
+            this.btnAuditoria.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnAuditoria.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAuditoria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAuditoria.Location = new System.Drawing.Point(3, 608);
+            this.btnAuditoria.Name = "btnAuditoria";
+            this.btnAuditoria.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnAuditoria.Size = new System.Drawing.Size(213, 60);
+            this.btnAuditoria.TabIndex = 16;
+            this.btnAuditoria.Text = "Auditoría";
+            this.btnAuditoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAuditoria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAuditoria.UseVisualStyleBackColor = true;
+            // 
             // frmMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -409,5 +431,6 @@
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Timer horafecha;
         private System.Windows.Forms.Label label1;
+        private FontAwesome.Sharp.IconButton btnAuditoria;
     }
 }
