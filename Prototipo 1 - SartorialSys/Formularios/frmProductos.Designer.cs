@@ -243,15 +243,21 @@
             this.txtCantidadInicialRegistrar.Name = "txtCantidadInicialRegistrar";
             this.txtCantidadInicialRegistrar.Size = new System.Drawing.Size(320, 24);
             this.txtCantidadInicialRegistrar.TabIndex = 22;
+            this.txtCantidadInicialRegistrar.Leave += new System.EventHandler(this.txtCantidadInicialRegistrar_Leave);
             // 
             // cmbCategoriaRegistrar
             // 
             this.cmbCategoriaRegistrar.FormattingEnabled = true;
+            this.cmbCategoriaRegistrar.Items.AddRange(new object[] {
+            "Prenda",
+            "Accesorio",
+            "Material"});
             this.cmbCategoriaRegistrar.Location = new System.Drawing.Point(565, 225);
             this.cmbCategoriaRegistrar.Name = "cmbCategoriaRegistrar";
             this.cmbCategoriaRegistrar.Size = new System.Drawing.Size(171, 27);
             this.cmbCategoriaRegistrar.TabIndex = 21;
             this.cmbCategoriaRegistrar.Text = "Seleccione";
+            this.cmbCategoriaRegistrar.SelectedIndexChanged += new System.EventHandler(this.cmbCategoriaRegistrar_SelectedIndexChanged);
             // 
             // cmbTallaRegistrar
             // 
@@ -316,6 +322,7 @@
             this.txtPrecioVenta.Name = "txtPrecioVenta";
             this.txtPrecioVenta.Size = new System.Drawing.Size(320, 24);
             this.txtPrecioVenta.TabIndex = 14;
+            this.txtPrecioVenta.Leave += new System.EventHandler(this.txtPrecioVenta_Leave);
             // 
             // label30
             // 
@@ -348,6 +355,7 @@
             this.btnRegistrar.TabIndex = 11;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // txtPrecioCompraRegistrar
             // 
@@ -357,6 +365,7 @@
             this.txtPrecioCompraRegistrar.Name = "txtPrecioCompraRegistrar";
             this.txtPrecioCompraRegistrar.Size = new System.Drawing.Size(320, 24);
             this.txtPrecioCompraRegistrar.TabIndex = 10;
+            this.txtPrecioCompraRegistrar.Leave += new System.EventHandler(this.txtPrecioCompraRegistrar_Leave);
             // 
             // txtRUCProveedorRegistrar
             // 
@@ -366,6 +375,7 @@
             this.txtRUCProveedorRegistrar.Name = "txtRUCProveedorRegistrar";
             this.txtRUCProveedorRegistrar.Size = new System.Drawing.Size(318, 24);
             this.txtRUCProveedorRegistrar.TabIndex = 9;
+            this.txtRUCProveedorRegistrar.Leave += new System.EventHandler(this.txtRUCProveedorRegistrar_Leave);
             // 
             // txtDescripcionRegistrar
             // 
@@ -375,6 +385,7 @@
             this.txtDescripcionRegistrar.Name = "txtDescripcionRegistrar";
             this.txtDescripcionRegistrar.Size = new System.Drawing.Size(320, 24);
             this.txtDescripcionRegistrar.TabIndex = 8;
+            this.txtDescripcionRegistrar.Leave += new System.EventHandler(this.txtDescripcionRegistrar_Leave);
             // 
             // label8
             // 
@@ -444,6 +455,7 @@
             this.txtCodigoRegistrar.Name = "txtCodigoRegistrar";
             this.txtCodigoRegistrar.Size = new System.Drawing.Size(320, 24);
             this.txtCodigoRegistrar.TabIndex = 0;
+            this.txtCodigoRegistrar.Leave += new System.EventHandler(this.txtCodigoRegistrar_Leave);
             // 
             // tabBuscar
             // 
