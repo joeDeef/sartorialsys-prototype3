@@ -10,6 +10,10 @@ namespace Prototipo_1___SartorialSys.Clases
 {
     internal class Login
     {
+        static string strConn = ConexionBaseDeDatos.getConexion();
+        static string strComm = null;
+        static SqlConnection conn = null;
+        static SqlCommand comm = null;
         internal static bool estanCrendencialesVacias(string usuario, string contraseña)
         {
             if ((usuario == "" && contraseña == "") || (usuario == "USUARIO") && (contraseña == "CONTRASEÑA"))

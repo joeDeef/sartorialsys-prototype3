@@ -6,12 +6,12 @@ namespace Prototipo_1___SartorialSys
 {
     public partial class frmClientes : Form
     {
-        private string usuario;
+        private bool permiso;
 
-        public frmClientes(string usuario)
+        public frmClientes(bool permiso)
         {
             InitializeComponent();
-            this.usuario = usuario;
+            this.permiso = permiso;
         }
 
         public frmClientes()
@@ -110,7 +110,7 @@ namespace Prototipo_1___SartorialSys
 
         private void btnActualizarCliente_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Cliente actualizado con exito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Cliente actualizado con éxito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
             limpiarActualizacion();
         }
 
@@ -372,7 +372,7 @@ namespace Prototipo_1___SartorialSys
 
         private void btnCorregirNombres_Click(object sender, EventArgs e)
         {
-            if (Usuario.tienePermisos(usuario) && checkBoxNombres.Checked)
+            if (permiso && checkBoxNombres.Checked)
             {
                 if (Cliente.actualizarNombres(txtNombresActualizar.Text, txtParametroActualizar.Text))
                 {
@@ -484,7 +484,7 @@ namespace Prototipo_1___SartorialSys
 
         private void btnCorregirApellidos_Click(object sender, EventArgs e)
         {
-            if (Usuario.tienePermisos(usuario) && checkBoxApellidos.Checked)
+            if (permiso && checkBoxApellidos.Checked)
             {
                 if (Cliente.actualizarApellidos(txtApellidosActualizar.Text, txtParametroActualizar.Text))
                 {
@@ -514,7 +514,7 @@ namespace Prototipo_1___SartorialSys
             {
                 if (!ValidarCedula.validarCedula(txtCedulaRegistrar.Text))
                 {
-                    Mensajes.emitirMensaje("Número de Cédula invalida");
+                    Mensajes.emitirMensaje("Número de Cédula inválida");
                     txtCedulaRegistrar.Text = "";
                     txtCedulaRegistrar.Focus();
                 }
@@ -637,7 +637,7 @@ namespace Prototipo_1___SartorialSys
             {
                 if (!ValidarCedula.validarCedula(txtParametroBuscar.Text))
                 {
-                    Mensajes.emitirMensaje("Número de Cédula invalida");
+                    Mensajes.emitirMensaje("Número de Cédula inválida");
                     txtParametroBuscar.Text = "";
                     txtParametroBuscar.Focus();
                 }
@@ -650,7 +650,7 @@ namespace Prototipo_1___SartorialSys
             {
                 if (!ValidarCedula.validarCedula(txtParametroActualizar.Text))
                 {
-                    Mensajes.emitirMensaje("Número de Cédula invalida");
+                    Mensajes.emitirMensaje("Número de Cédula inválida");
                     txtParametroActualizar.Text = "";
                     txtParametroActualizar.Focus();
                 }
@@ -663,7 +663,7 @@ namespace Prototipo_1___SartorialSys
             {
                 if (!ValidarCedula.validarCedula(txtParametroDarDeBaja.Text))
                 {
-                    Mensajes.emitirMensaje("Número de Cédula invalida");
+                    Mensajes.emitirMensaje("Número de Cédula inválida");
                     txtParametroDarDeBaja.Text = "";
                     txtParametroDarDeBaja.Focus();
                 }

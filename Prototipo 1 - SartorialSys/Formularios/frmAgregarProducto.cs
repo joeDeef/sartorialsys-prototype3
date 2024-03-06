@@ -7,19 +7,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Prototipo_1___SartorialSys.Clases;
 
 namespace Prototipo_1___SartorialSys.Formularios
 {
     public partial class frmAgregarProducto : Form
     {
+        int i = 1;
+        private DataGridView listaProductos;
+
         public frmAgregarProducto(DataGridView dgtvListaProductos)
         {
             InitializeComponent();
+            this.listaProductos = dgtvListaProductos;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            //Agregar el producto a la tabla
+            if (!Validaciones.esValidoCodigoProducto(txtCodigoProducto.Text))
+            {
+                Mensajes.emitirMensaje("Código de producto no válido");
+                txtCodigoProducto.Text = "";
+            }
+            if (!Productos.buscarProducto(i,txtCodigoProducto.Text,listaProductos,txtCantidad.Text))
+            {
+                Mensajes.emitirMensaje("Error al consultar");
+                txtCodigoProducto.Text = "";
+            }
+            i++;
             this.Close();
         }
 

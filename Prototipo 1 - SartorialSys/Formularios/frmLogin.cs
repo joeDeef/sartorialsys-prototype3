@@ -28,7 +28,7 @@ namespace Prototipo_1___SartorialSys
         {
             if (Login.estanCrendencialesVacias(txtUsuario.Text, txtContraseña.Text))
             {
-                Mensajes.emitirMensaje("Los campos no pueden estar vacíon - Por favor llenar");
+                Mensajes.emitirMensaje("Los campos no pueden estar vacíos - Por favor llenar");
                 return;
             }
             if (!Login.sonCorrectasLasCredenciales(txtUsuario.Text, txtContraseña.Text))
@@ -39,9 +39,9 @@ namespace Prototipo_1___SartorialSys
                 txtContraseña.ForeColor = Color.DimGray;
                 return;
             }
-                this.Visible = false;
-                frmMenu menu = new frmMenu(txtUsuario.Text);
-                menu.ShowDialog();
+            this.Visible = false;
+            frmMenu menu = new frmMenu(txtUsuario.Text);
+            menu.ShowDialog();
         }
 
         private void label4_Click(object sender, EventArgs e)
