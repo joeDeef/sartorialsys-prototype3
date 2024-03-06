@@ -30,7 +30,7 @@ namespace Prototipo_1___SartorialSys.Clases
 
                     if (items != null)
                     {
-                        for (int i = 0; i < items[].Length; i++)
+                        for (int i = 0; i < items.Length; i++)
                         {
                             SqlCommand command1 = new SqlCommand(getComandoItems(datos[0], items[i, 0], items[i,1]), conn, transaction);
                             command1.ExecuteNonQuery();
