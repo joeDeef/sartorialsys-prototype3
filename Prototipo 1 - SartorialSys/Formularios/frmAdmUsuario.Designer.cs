@@ -107,7 +107,7 @@
             this.tabClientes.Controls.Add(this.tabEliminar);
             this.tabClientes.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tabClientes.Location = new System.Drawing.Point(0, 91);
-            this.tabClientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabClientes.Margin = new System.Windows.Forms.Padding(2);
             this.tabClientes.Name = "tabClientes";
             this.tabClientes.SelectedIndex = 0;
             this.tabClientes.Size = new System.Drawing.Size(494, 388);
@@ -118,10 +118,10 @@
             this.tabRegistrar.Controls.Add(this.groupBox1);
             this.tabRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabRegistrar.Location = new System.Drawing.Point(4, 22);
-            this.tabRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabRegistrar.Margin = new System.Windows.Forms.Padding(2);
             this.tabRegistrar.Name = "tabRegistrar";
-            this.tabRegistrar.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabRegistrar.Size = new System.Drawing.Size(465, 275);
+            this.tabRegistrar.Padding = new System.Windows.Forms.Padding(2);
+            this.tabRegistrar.Size = new System.Drawing.Size(486, 362);
             this.tabRegistrar.TabIndex = 0;
             this.tabRegistrar.Text = "Registrar Usuario";
             this.tabRegistrar.UseVisualStyleBackColor = true;
@@ -141,9 +141,9 @@
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.txtUsuarioRegistrar);
             this.groupBox1.Location = new System.Drawing.Point(16, 10);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(440, 262);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
@@ -153,7 +153,7 @@
             // 
             this.checkBoxContraseña.AutoSize = true;
             this.checkBoxContraseña.Location = new System.Drawing.Point(243, 102);
-            this.checkBoxContraseña.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxContraseña.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxContraseña.Name = "checkBoxContraseña";
             this.checkBoxContraseña.Size = new System.Drawing.Size(15, 14);
             this.checkBoxContraseña.TabIndex = 15;
@@ -168,7 +168,7 @@
             "Administrativo",
             "Vendedor"});
             this.comboBoxRolRegistrar.Location = new System.Drawing.Point(261, 167);
-            this.comboBoxRolRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxRolRegistrar.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxRolRegistrar.Name = "comboBoxRolRegistrar";
             this.comboBoxRolRegistrar.Size = new System.Drawing.Size(159, 24);
             this.comboBoxRolRegistrar.TabIndex = 14;
@@ -199,7 +199,7 @@
             // btnCancelarRegistro
             // 
             this.btnCancelarRegistro.Location = new System.Drawing.Point(226, 214);
-            this.btnCancelarRegistro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelarRegistro.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelarRegistro.Name = "btnCancelarRegistro";
             this.btnCancelarRegistro.Size = new System.Drawing.Size(91, 29);
             this.btnCancelarRegistro.TabIndex = 12;
@@ -210,7 +210,7 @@
             // btnRegistrar
             // 
             this.btnRegistrar.Location = new System.Drawing.Point(98, 214);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(91, 29);
             this.btnRegistrar.TabIndex = 11;
@@ -221,7 +221,7 @@
             // txtCedulaEmpleadoRegistrar
             // 
             this.txtCedulaEmpleadoRegistrar.Location = new System.Drawing.Point(261, 130);
-            this.txtCedulaEmpleadoRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCedulaEmpleadoRegistrar.Margin = new System.Windows.Forms.Padding(2);
             this.txtCedulaEmpleadoRegistrar.Name = "txtCedulaEmpleadoRegistrar";
             this.txtCedulaEmpleadoRegistrar.Size = new System.Drawing.Size(159, 23);
             this.txtCedulaEmpleadoRegistrar.TabIndex = 8;
@@ -230,7 +230,7 @@
             // txtContraseñaRegistrar
             // 
             this.txtContraseñaRegistrar.Location = new System.Drawing.Point(261, 95);
-            this.txtContraseñaRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContraseñaRegistrar.Margin = new System.Windows.Forms.Padding(2);
             this.txtContraseñaRegistrar.Name = "txtContraseñaRegistrar";
             this.txtContraseñaRegistrar.Size = new System.Drawing.Size(159, 23);
             this.txtContraseñaRegistrar.TabIndex = 7;
@@ -273,7 +273,7 @@
             // txtUsuarioRegistrar
             // 
             this.txtUsuarioRegistrar.Location = new System.Drawing.Point(261, 57);
-            this.txtUsuarioRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsuarioRegistrar.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuarioRegistrar.Name = "txtUsuarioRegistrar";
             this.txtUsuarioRegistrar.Size = new System.Drawing.Size(159, 23);
             this.txtUsuarioRegistrar.TabIndex = 0;
@@ -283,10 +283,10 @@
             this.tabActualizar.Controls.Add(this.groupBox2);
             this.tabActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabActualizar.Location = new System.Drawing.Point(4, 22);
-            this.tabActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabActualizar.Margin = new System.Windows.Forms.Padding(2);
             this.tabActualizar.Name = "tabActualizar";
-            this.tabActualizar.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabActualizar.Size = new System.Drawing.Size(465, 275);
+            this.tabActualizar.Padding = new System.Windows.Forms.Padding(2);
+            this.tabActualizar.Size = new System.Drawing.Size(486, 362);
             this.tabActualizar.TabIndex = 1;
             this.tabActualizar.Text = "Actualizar Usuario";
             this.tabActualizar.UseVisualStyleBackColor = true;
@@ -306,9 +306,9 @@
             this.groupBox2.Controls.Add(this.txtCedulaActualizar);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Location = new System.Drawing.Point(4, 5);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(460, 241);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
@@ -318,7 +318,7 @@
             // btnActualizarRol
             // 
             this.btnActualizarRol.Location = new System.Drawing.Point(370, 166);
-            this.btnActualizarRol.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnActualizarRol.Margin = new System.Windows.Forms.Padding(2);
             this.btnActualizarRol.Name = "btnActualizarRol";
             this.btnActualizarRol.Size = new System.Drawing.Size(86, 32);
             this.btnActualizarRol.TabIndex = 31;
@@ -329,7 +329,7 @@
             // btnActualizarContraseña
             // 
             this.btnActualizarContraseña.Location = new System.Drawing.Point(370, 128);
-            this.btnActualizarContraseña.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnActualizarContraseña.Margin = new System.Windows.Forms.Padding(2);
             this.btnActualizarContraseña.Name = "btnActualizarContraseña";
             this.btnActualizarContraseña.Size = new System.Drawing.Size(86, 32);
             this.btnActualizarContraseña.TabIndex = 30;
@@ -341,7 +341,7 @@
             // 
             this.btnBuscarActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarActualizar.Location = new System.Drawing.Point(370, 63);
-            this.btnBuscarActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscarActualizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscarActualizar.Name = "btnBuscarActualizar";
             this.btnBuscarActualizar.Size = new System.Drawing.Size(86, 32);
             this.btnBuscarActualizar.TabIndex = 6;
@@ -358,7 +358,7 @@
             "Administrativo",
             "Vendedor"});
             this.comboBoxRolActualizar.Location = new System.Drawing.Point(239, 167);
-            this.comboBoxRolActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxRolActualizar.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxRolActualizar.Name = "comboBoxRolActualizar";
             this.comboBoxRolActualizar.Size = new System.Drawing.Size(114, 24);
             this.comboBoxRolActualizar.TabIndex = 29;
@@ -370,7 +370,7 @@
             this.checkBoxRol.AutoSize = true;
             this.checkBoxRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxRol.Location = new System.Drawing.Point(4, 174);
-            this.checkBoxRol.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxRol.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxRol.Name = "checkBoxRol";
             this.checkBoxRol.Size = new System.Drawing.Size(48, 19);
             this.checkBoxRol.TabIndex = 28;
@@ -394,7 +394,7 @@
             this.checkContraseña.AutoSize = true;
             this.checkContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkContraseña.Location = new System.Drawing.Point(4, 141);
-            this.checkContraseña.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkContraseña.Margin = new System.Windows.Forms.Padding(2);
             this.checkContraseña.Name = "checkContraseña";
             this.checkContraseña.Size = new System.Drawing.Size(92, 19);
             this.checkContraseña.TabIndex = 26;
@@ -405,7 +405,7 @@
             // txtContraseñaActualizar
             // 
             this.txtContraseñaActualizar.Location = new System.Drawing.Point(240, 134);
-            this.txtContraseñaActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContraseñaActualizar.Margin = new System.Windows.Forms.Padding(2);
             this.txtContraseñaActualizar.Name = "txtContraseñaActualizar";
             this.txtContraseñaActualizar.ReadOnly = true;
             this.txtContraseñaActualizar.Size = new System.Drawing.Size(114, 23);
@@ -416,7 +416,7 @@
             // txtUsuarioActualizar
             // 
             this.txtUsuarioActualizar.Location = new System.Drawing.Point(239, 101);
-            this.txtUsuarioActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsuarioActualizar.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuarioActualizar.Name = "txtUsuarioActualizar";
             this.txtUsuarioActualizar.ReadOnly = true;
             this.txtUsuarioActualizar.Size = new System.Drawing.Size(114, 23);
@@ -436,7 +436,7 @@
             // txtCedulaActualizar
             // 
             this.txtCedulaActualizar.Location = new System.Drawing.Point(239, 71);
-            this.txtCedulaActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCedulaActualizar.Margin = new System.Windows.Forms.Padding(2);
             this.txtCedulaActualizar.Name = "txtCedulaActualizar";
             this.txtCedulaActualizar.Size = new System.Drawing.Size(114, 23);
             this.txtCedulaActualizar.TabIndex = 11;
@@ -459,10 +459,10 @@
             this.tabConsultar.Controls.Add(this.groupBox5);
             this.tabConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabConsultar.Location = new System.Drawing.Point(4, 22);
-            this.tabConsultar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabConsultar.Margin = new System.Windows.Forms.Padding(2);
             this.tabConsultar.Name = "tabConsultar";
-            this.tabConsultar.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabConsultar.Size = new System.Drawing.Size(465, 275);
+            this.tabConsultar.Padding = new System.Windows.Forms.Padding(2);
+            this.tabConsultar.Size = new System.Drawing.Size(486, 362);
             this.tabConsultar.TabIndex = 2;
             this.tabConsultar.Text = "Buscar Usuario";
             this.tabConsultar.UseVisualStyleBackColor = true;
@@ -480,9 +480,9 @@
             this.groupBox5.Controls.Add(this.txtUsuarioBuscar);
             this.groupBox5.Controls.Add(this.label22);
             this.groupBox5.Location = new System.Drawing.Point(16, 20);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox5.Size = new System.Drawing.Size(429, 228);
             this.groupBox5.TabIndex = 2;
             this.groupBox5.TabStop = false;
@@ -491,7 +491,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Location = new System.Drawing.Point(337, 59);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(88, 29);
             this.btnBuscar.TabIndex = 23;
@@ -502,7 +502,7 @@
             // txtRolBuscar
             // 
             this.txtRolBuscar.Location = new System.Drawing.Point(213, 141);
-            this.txtRolBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRolBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.txtRolBuscar.Name = "txtRolBuscar";
             this.txtRolBuscar.ReadOnly = true;
             this.txtRolBuscar.Size = new System.Drawing.Size(114, 23);
@@ -523,7 +523,7 @@
             // txtCedulaEmpleadoBuscar
             // 
             this.txtCedulaEmpleadoBuscar.Location = new System.Drawing.Point(213, 63);
-            this.txtCedulaEmpleadoBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCedulaEmpleadoBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.txtCedulaEmpleadoBuscar.Name = "txtCedulaEmpleadoBuscar";
             this.txtCedulaEmpleadoBuscar.Size = new System.Drawing.Size(114, 23);
             this.txtCedulaEmpleadoBuscar.TabIndex = 20;
@@ -533,7 +533,7 @@
             // txtContraseñaBuscar
             // 
             this.txtContraseñaBuscar.Location = new System.Drawing.Point(213, 115);
-            this.txtContraseñaBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContraseñaBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.txtContraseñaBuscar.Name = "txtContraseñaBuscar";
             this.txtContraseñaBuscar.ReadOnly = true;
             this.txtContraseñaBuscar.Size = new System.Drawing.Size(114, 23);
@@ -579,7 +579,7 @@
             // txtUsuarioBuscar
             // 
             this.txtUsuarioBuscar.Location = new System.Drawing.Point(213, 89);
-            this.txtUsuarioBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsuarioBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuarioBuscar.Name = "txtUsuarioBuscar";
             this.txtUsuarioBuscar.ReadOnly = true;
             this.txtUsuarioBuscar.Size = new System.Drawing.Size(114, 23);
@@ -602,7 +602,7 @@
             this.tabEliminar.Controls.Add(this.groupBox6);
             this.tabEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabEliminar.Location = new System.Drawing.Point(4, 22);
-            this.tabEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.tabEliminar.Name = "tabEliminar";
             this.tabEliminar.Size = new System.Drawing.Size(486, 362);
             this.tabEliminar.TabIndex = 3;
@@ -624,9 +624,9 @@
             this.groupBox6.Controls.Add(this.txtUsuarioDarDeBaja);
             this.groupBox6.Controls.Add(this.label26);
             this.groupBox6.Location = new System.Drawing.Point(35, 19);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox6.Size = new System.Drawing.Size(409, 239);
             this.groupBox6.TabIndex = 3;
             this.groupBox6.TabStop = false;
@@ -635,7 +635,7 @@
             // btnDarDeAlta
             // 
             this.btnDarDeAlta.Location = new System.Drawing.Point(208, 190);
-            this.btnDarDeAlta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDarDeAlta.Margin = new System.Windows.Forms.Padding(2);
             this.btnDarDeAlta.Name = "btnDarDeAlta";
             this.btnDarDeAlta.Size = new System.Drawing.Size(131, 26);
             this.btnDarDeAlta.TabIndex = 25;
@@ -646,7 +646,7 @@
             // btnBuscarDarDeBaja
             // 
             this.btnBuscarDarDeBaja.Location = new System.Drawing.Point(326, 65);
-            this.btnBuscarDarDeBaja.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscarDarDeBaja.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscarDarDeBaja.Name = "btnBuscarDarDeBaja";
             this.btnBuscarDarDeBaja.Size = new System.Drawing.Size(80, 25);
             this.btnBuscarDarDeBaja.TabIndex = 24;
@@ -657,7 +657,7 @@
             // btnDarDeBaja
             // 
             this.btnDarDeBaja.Location = new System.Drawing.Point(69, 190);
-            this.btnDarDeBaja.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDarDeBaja.Margin = new System.Windows.Forms.Padding(2);
             this.btnDarDeBaja.Name = "btnDarDeBaja";
             this.btnDarDeBaja.Size = new System.Drawing.Size(131, 26);
             this.btnDarDeBaja.TabIndex = 23;
@@ -668,7 +668,7 @@
             // txtRolDarDeBaja
             // 
             this.txtRolDarDeBaja.Location = new System.Drawing.Point(208, 148);
-            this.txtRolDarDeBaja.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRolDarDeBaja.Margin = new System.Windows.Forms.Padding(2);
             this.txtRolDarDeBaja.Name = "txtRolDarDeBaja";
             this.txtRolDarDeBaja.ReadOnly = true;
             this.txtRolDarDeBaja.Size = new System.Drawing.Size(114, 23);
@@ -688,7 +688,7 @@
             // txtCedulaEmpleadoDarDeBaja
             // 
             this.txtCedulaEmpleadoDarDeBaja.Location = new System.Drawing.Point(208, 67);
-            this.txtCedulaEmpleadoDarDeBaja.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCedulaEmpleadoDarDeBaja.Margin = new System.Windows.Forms.Padding(2);
             this.txtCedulaEmpleadoDarDeBaja.Name = "txtCedulaEmpleadoDarDeBaja";
             this.txtCedulaEmpleadoDarDeBaja.Size = new System.Drawing.Size(114, 23);
             this.txtCedulaEmpleadoDarDeBaja.TabIndex = 20;
@@ -697,7 +697,7 @@
             // txtContraseñaDarDeBaja
             // 
             this.txtContraseñaDarDeBaja.Location = new System.Drawing.Point(208, 119);
-            this.txtContraseñaDarDeBaja.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContraseñaDarDeBaja.Margin = new System.Windows.Forms.Padding(2);
             this.txtContraseñaDarDeBaja.Name = "txtContraseñaDarDeBaja";
             this.txtContraseñaDarDeBaja.ReadOnly = true;
             this.txtContraseñaDarDeBaja.Size = new System.Drawing.Size(114, 23);
@@ -739,7 +739,7 @@
             // txtUsuarioDarDeBaja
             // 
             this.txtUsuarioDarDeBaja.Location = new System.Drawing.Point(208, 93);
-            this.txtUsuarioDarDeBaja.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsuarioDarDeBaja.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuarioDarDeBaja.Name = "txtUsuarioDarDeBaja";
             this.txtUsuarioDarDeBaja.ReadOnly = true;
             this.txtUsuarioDarDeBaja.Size = new System.Drawing.Size(114, 23);
@@ -771,7 +771,7 @@
             // 
             this.pictureBox1.Image = global::Prototipo_1___SartorialSys.Properties.Resources.icono_nuevoCliente;
             this.pictureBox1.Location = new System.Drawing.Point(11, 29);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(78, 58);
             this.pictureBox1.TabIndex = 16;
@@ -810,7 +810,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmAdministrarUsuarios";
             this.Text = "SartorialSys";
             this.tabClientes.ResumeLayout(false);
