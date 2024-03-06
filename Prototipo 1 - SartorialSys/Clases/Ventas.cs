@@ -92,18 +92,19 @@ namespace Prototipo_1___SartorialSys.Clases
         }
 
         private static string getComandoItems(string numero_factura, string[,] datosIngresar)
-        { 
+        {
+            int filas = datosIngresar.GetLength(0);
             string comandoFacturas = "INSERT INTO items VALUES";
-            for (int i = 0; i < datosIngresar.GetLength(1); i++)
+            for (int i = 0; i < filas; i++)
             {
-                comandoFacturas += "('"+numero_factura+"','"+ datosIngresar[i,0] + "',NULL," + datosIngresar[i,1] +"), ";
+                comandoFacturas += "('"+numero_factura+"','"+ datosIngresar[i,0] + "',NULL," + datosIngresar[i,1] +"), ";           
             }
             return comandoFacturas.Substring(0, comandoFacturas.Length - 2) + ";";
         }
 
         private static string getComandoFacturas(string num_factura, string[] datos)
         {
-            return "INSERT INTO facturas VALUES('"+num_factura + "','" + datos[1] + "','" + datos[2] + "','" + datos[3] + "','" + datos[4] +"');";
+            return "INSERT INTO facturas VALUES('"+num_factura + "','" + datos[1] + "','" + datos[2] + "','" + datos[3] + "','" + datos[4] + "'," + datos[5] + "," + datos[6] + "," + datos[7] + "," + datos[8] +");";
         }
 
         internal static void consultarVenta(frmVentas frmVentas)

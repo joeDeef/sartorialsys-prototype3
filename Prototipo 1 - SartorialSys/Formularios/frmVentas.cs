@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Windows.Documents;
 using System.Windows.Forms;
 using Prototipo_1___SartorialSys.Clases;
 using Prototipo_1___SartorialSys.Formularios;
@@ -172,17 +173,38 @@ namespace Prototipo_1___SartorialSys
             if (!Validaciones.estanLlenosLosCampos(datos))
             {
                 Mensajes.emitirMensaje("Los datos no pueden estar vacíos - Por favor Llenar");
+                limpiarRegistro();
                 return;
             }
-            if (!Ventas.registrarVenta(datos, getItems()))
+            string[,] items = getItems();
+            if (!Ventas.registrarVenta(datos,items))
             {
                 Mensajes.emitirMensaje("Error al registrar la venta");
+                limpiarRegistro();
                 return;
             }
             else 
             { 
-            Mensajes.emitirMensaje("Venta registrada con éxito"); 
+            Mensajes.emitirMensaje("Venta registrada con éxito");
+            Inventario.actualizarInventario(items); 
+            limpiarRegistro();
             }
+        }
+
+        private void limpiarRegistro()
+        {
+            txtCedulaRegistrar.Text = "";
+            txtNombresRegistrar.Text = "";
+            txtApellidosRegistrar.Text = "";
+            txtDireccionRegistrar.Text = "";
+            txtTelefonoRegistrar.Text = "";
+            txtCorreoRegistrar.Text = "";
+            cmbMetodoPago.Text = "Seleccione";
+            cmbEstadoPago.Text = "Seleccione";
+            txtSubtotalRegistrar.Text = "";
+            txtIvaRegistrar.Text = "";
+            txtTotalRegistrar.Text = "";
+            dgtvListaProductos.Rows.Clear();
         }
 
         private string[,] getItems()
@@ -198,7 +220,7 @@ namespace Prototipo_1___SartorialSys
         }
         private string[] getDatoVenta()
         {
-            string[] datos = new string[5];
+            string[] datos = new string[9];
             datos[1] = txtCedulaRegistrar.Text;
             DateTime fechaSeleccionada = dtpFechaVenta.Value;
             datos[2] = fechaSeleccionada.ToString("yyyy-MM-dd");
@@ -211,6 +233,10 @@ namespace Prototipo_1___SartorialSys
             {
                 datos[4] = "0";
             }
+            datos[5] = txtSubtotalRegistrar.Text;
+            datos[6] = txtIvaRegistrar.Text;
+            datos[7] = txtTotalRegistrar.Text;
+            datos[8] = "DEFAULT";
             return datos;
         }
 
@@ -225,6 +251,24 @@ namespace Prototipo_1___SartorialSys
                     txtCedulaRegistrar.Focus();
                 }
             }
+        }
+
+        private void dgtvListaProductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+                if(Mensajes.confirmarAccion("¿Desea quitar este producto de la venta?"))
+                {
+                    int indice = e.RowIndex;
+                    dgtvListaProductos.Rows.RemoveAt(indice);
+                    dgtvListaProductos.Refresh();
+                    txtSubtotalRegistrar.Text = getSumatoria();
+                    txtIvaRegistrar.Text = getIVA();
+                    txtTotalRegistrar.Text = getTotal();
+            }
+        }
+
+        private void btnCancelarRegistro_Click(object sender, EventArgs e)
+        {
+            limpiarRegistro();
         }
     }
 }
