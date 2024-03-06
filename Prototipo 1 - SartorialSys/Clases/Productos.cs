@@ -71,10 +71,12 @@ namespace Prototipo_1___SartorialSys.Clases
                         strComm = getComandoNull(datos);
                     }
                     using (comm = new SqlCommand(strComm, conn))
+                    {
                         if (comm.ExecuteNonQuery() == 1)
                         {
                             return true;
                         }
+                    }
                 }
                 catch (SqlException ex)
                 {
@@ -95,16 +97,34 @@ namespace Prototipo_1___SartorialSys.Clases
 
         private static string getComandoNull(string[] datos)
         {
-            return "INSERT INTO productos VALUES('" + datos[0] + "','" + datos[1] + "'," +
-                "(SELECT id_categoria FROM categoria WHERE categoria = '" + datos[2] + "'), " +
-                "(SELECT id_color from color WHERE color = '" + datos[3] + "'),NULL," +
-                "'" + datos[5] + "'," + datos[6] + ",NULL," + datos[8] + "," + datos[9] + "," +
-                "(SELECT CAST(GETDATE() AS date)))";
+            return "INSERT INTO productos VALUES('" + datos[0] + "','" + datos[1] + "'," + getIDCategoria(datos[2]) + "," +
+                getIdColor(datos[3]) + ",NULL,'" + datos[5] + "'," + datos[6] + ",NULL," + datos[8] + ",'" + datos[9] + "'," + getDia()+")";
+        }
+
+        private static string getDia()
+        {
+            return "(SELECT CAST(GETDATE() AS date))";
+        }
+
+        private static string getIdColor(string v)
+        {
+            return "(SELECT id_color from color WHERE color = '" + v + "')";
+        }
+
+        private static string getIDCategoria(string v)
+        {
+            return "(SELECT id_categoria FROM categoria WHERE categoria = '" + v + "')";
         }
 
         private static string getComando(string[] datos)
         {
-            return "INSERT INTO productos VALUES('" + datos[0] + "','" + datos[1] + "',(SELECT id_categoria FROM categoria WHERE categoria = '" + datos[2] + "'),(SELECT id_color from color WHERE color = '" + datos[3] + "'),(SELECT id_talla FROM talla WHERE talla = '" + datos[4] + "'),'" + datos[5] + "'," + datos[6] + "," + datos[7] + "," + datos[8] + "," + datos[9] + ",(SELECT CAST(GETDATE() AS date)));";
+            return "INSERT INTO productos VALUES('" + datos[0] + "','" + datos[1] + "'," + getIDCategoria(datos[2]) + "," +
+                getIdColor(datos[3]) + ","+getIDTalla(datos[4]) +",'" + datos[5] + "'," + datos[6] + "," + datos[7] +"," + datos[8] + ",'" + datos[9] + "'," + getDia() + ");";
+        }
+
+        private static string getIDTalla(string v)
+        {
+            return "(SELECT id_talla FROM talla WHERE talla = '" + v + "')";
         }
 
         internal static bool buscarProducto(int i, string codigo, System.Windows.Forms.DataGridView listaProductos, string cantidad)

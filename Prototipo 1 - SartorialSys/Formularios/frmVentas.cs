@@ -17,7 +17,7 @@ namespace Prototipo_1___SartorialSys
 {
     public partial class frmVentas : Form
     {
-        int v = 1;
+        bool permiso;
         private struct RGBColor
         {
             public static Color color1 = Color.FromArgb(172, 126, 241);
@@ -28,9 +28,10 @@ namespace Prototipo_1___SartorialSys
             public static Color color6 = Color.FromArgb(24, 161, 251);
 
         }
-        public frmVentas()
+        public frmVentas(bool permiso)
         {
             InitializeComponent();
+            this.permiso = permiso;
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -156,7 +157,7 @@ namespace Prototipo_1___SartorialSys
 
         private void btnBuscarConsultar_Click_1(object sender, EventArgs e)
         {
-
+            Ventas.consultarVenta(this);
         }
 
         private void btnActualizarInformacion_Click(object sender, EventArgs e)
@@ -186,18 +187,18 @@ namespace Prototipo_1___SartorialSys
 
         private string[,] getItems()
         {
-            string[,] items = new string[dgtvListaProductos.RowCount-1,2];
-            for (int i = 0; i < dgtvListaProductos.RowCount - 1; i++)
+            int filas = dgtvListaProductos.RowCount-1;
+            string[,] items = new string[filas,2];
+            for (int i = 0; i < filas; i++)
             {
-                items[i,0] = dgtvListaProductos.Rows[i+1].Cells[1].ToString();
-                items[i,1] = dgtvListaProductos.Rows[i + 1].Cells[4].ToString();
+                items[i,0] = dgtvListaProductos.Rows[i].Cells[1].Value.ToString();
+                items[i,1] = dgtvListaProductos.Rows[i].Cells[3].Value.ToString();
             }
             return items;
         }
         private string[] getDatoVenta()
         {
             string[] datos = new string[5];
-            datos[0] = "001-001-00000000" + getSiguienteNumero();
             datos[1] = txtCedulaRegistrar.Text;
             DateTime fechaSeleccionada = dtpFechaVenta.Value;
             datos[2] = fechaSeleccionada.ToString("yyyy-MM-dd");
@@ -205,7 +206,6 @@ namespace Prototipo_1___SartorialSys
             if(cmbEstadoPago.Text == "Pagado")
             {
                 datos[4] = "1";
-
             }
             else
             {
@@ -214,10 +214,17 @@ namespace Prototipo_1___SartorialSys
             return datos;
         }
 
-        private string getSiguienteNumero()
+        private void txtCedulaRegistrar_Leave(object sender, EventArgs e)
         {
-            v++;
-            return (v).ToString();
+            if (txtCedulaRegistrar.Text != "")
+            {
+                if (!ValidarCedula.validarCedula(txtCedulaRegistrar.Text))
+                {
+                    Mensajes.emitirMensaje("Número de Cédula inválida");
+                    txtCedulaRegistrar.Text = "";
+                    txtCedulaRegistrar.Focus();
+                }
+            }
         }
     }
 }

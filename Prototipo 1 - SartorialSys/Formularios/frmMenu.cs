@@ -22,6 +22,7 @@ namespace Prototipo_1___SartorialSys
         private Panel leftBorderBtn;
         private Form currentchildForm;
         private string usuario;
+        private bool permiso;
 
         //
         public frmMenu(string usuario_actual)
@@ -31,10 +32,25 @@ namespace Prototipo_1___SartorialSys
             leftBorderBtn.Size = new Size(7, 60);
             pnlMenu.Controls.Add(leftBorderBtn);
             this.usuario = usuario_actual;
+            this.permiso = Usuario.tienePermisos(usuario_actual);
             Form currentchildForm;
             label1.Text += usuario_actual;
-
+            activarBotones();
         }
+
+        private void activarBotones()
+        {
+            if (!permiso)
+            {
+                btnProductos.Visible = false;
+                btnPedidos.Visible = false;
+                btnProveedores.Visible = false;
+                btnEmpleados.Visible = false;
+                btnAdministracion.Visible = false;
+                btnAuditoria.Visible = false;
+            }
+        }
+
         //Structure
         private struct RGBColor
         {
@@ -114,7 +130,7 @@ namespace Prototipo_1___SartorialSys
         private void btnClientes_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColor.color1);
-            openFormChild(new frmClientes(usuario));
+            openFormChild(new frmClientes(permiso));
         }
 
         private void btnProveedores_Click(object sender, EventArgs e)
@@ -132,7 +148,7 @@ namespace Prototipo_1___SartorialSys
         private void btnInventario_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColor.color4);
-            openFormChild(new frmInventario());
+            openFormChild(new frmInventario(permiso));
         }
 
         private void btnPedidos_Click(object sender, EventArgs e)
@@ -144,19 +160,13 @@ namespace Prototipo_1___SartorialSys
         private void btnVentas_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColor.color6);
-            openFormChild(new frmVentas());
+            openFormChild(new frmVentas(permiso));
         }
 
         private void btnAdministracion_Click(object sender, EventArgs e)
         {
-            if(Usuario.tienePermisos(usuario)){
                 ActivateButton(sender, RGBColor.color1);
-                openFormChild(new frmAdministracion());
-            }
-            else
-            {
-                Mensajes.emitirMensaje("Usted no posee con los permisos para este módulo.");
-            }
+                openFormChild(new frmAdministracion());   
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

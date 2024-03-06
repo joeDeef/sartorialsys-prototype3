@@ -31,13 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btnAuditoria = new FontAwesome.Sharp.IconButton();
             this.btnEmpleados = new FontAwesome.Sharp.IconButton();
+            this.btnProductos = new FontAwesome.Sharp.IconButton();
             this.btnAdministracion = new FontAwesome.Sharp.IconButton();
+            this.btnProveedores = new FontAwesome.Sharp.IconButton();
             this.btnVentas = new FontAwesome.Sharp.IconButton();
             this.btnPedidos = new FontAwesome.Sharp.IconButton();
             this.btnInventario = new FontAwesome.Sharp.IconButton();
-            this.btnProductos = new FontAwesome.Sharp.IconButton();
-            this.btnProveedores = new FontAwesome.Sharp.IconButton();
             this.btnClientes = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -49,7 +50,6 @@
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.horafecha = new System.Windows.Forms.Timer(this.components);
-            this.btnAuditoria = new FontAwesome.Sharp.IconButton();
             this.pnlMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -76,6 +76,26 @@
             this.pnlMenu.Size = new System.Drawing.Size(213, 752);
             this.pnlMenu.TabIndex = 0;
             // 
+            // btnAuditoria
+            // 
+            this.btnAuditoria.FlatAppearance.BorderSize = 0;
+            this.btnAuditoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAuditoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAuditoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnAuditoria.IconChar = FontAwesome.Sharp.IconChar.UserSecret;
+            this.btnAuditoria.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnAuditoria.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAuditoria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAuditoria.Location = new System.Drawing.Point(3, 608);
+            this.btnAuditoria.Name = "btnAuditoria";
+            this.btnAuditoria.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnAuditoria.Size = new System.Drawing.Size(213, 60);
+            this.btnAuditoria.TabIndex = 16;
+            this.btnAuditoria.Text = "Auditoría";
+            this.btnAuditoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAuditoria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAuditoria.UseVisualStyleBackColor = true;
+            // 
             // btnEmpleados
             // 
             this.btnEmpleados.FlatAppearance.BorderSize = 0;
@@ -96,6 +116,27 @@
             this.btnEmpleados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEmpleados.UseVisualStyleBackColor = true;
             this.btnEmpleados.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
+            // btnProductos
+            // 
+            this.btnProductos.FlatAppearance.BorderSize = 0;
+            this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnProductos.IconChar = FontAwesome.Sharp.IconChar.Shirt;
+            this.btnProductos.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnProductos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProductos.Location = new System.Drawing.Point(3, 278);
+            this.btnProductos.Name = "btnProductos";
+            this.btnProductos.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnProductos.Size = new System.Drawing.Size(213, 60);
+            this.btnProductos.TabIndex = 10;
+            this.btnProductos.Text = " Productos";
+            this.btnProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProductos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnProductos.UseVisualStyleBackColor = true;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
             // btnAdministracion
             // 
@@ -118,6 +159,27 @@
             this.btnAdministracion.UseVisualStyleBackColor = true;
             this.btnAdministracion.Click += new System.EventHandler(this.btnAdministracion_Click);
             // 
+            // btnProveedores
+            // 
+            this.btnProveedores.FlatAppearance.BorderSize = 0;
+            this.btnProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProveedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProveedores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnProveedores.IconChar = FontAwesome.Sharp.IconChar.Truck;
+            this.btnProveedores.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnProveedores.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnProveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProveedores.Location = new System.Drawing.Point(3, 410);
+            this.btnProveedores.Name = "btnProveedores";
+            this.btnProveedores.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnProveedores.Size = new System.Drawing.Size(213, 60);
+            this.btnProveedores.TabIndex = 9;
+            this.btnProveedores.Text = " Proveedores";
+            this.btnProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProveedores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnProveedores.UseVisualStyleBackColor = true;
+            this.btnProveedores.Click += new System.EventHandler(this.btnProveedores_Click);
+            // 
             // btnVentas
             // 
             this.btnVentas.FlatAppearance.BorderSize = 0;
@@ -133,7 +195,7 @@
             this.btnVentas.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnVentas.Size = new System.Drawing.Size(213, 60);
             this.btnVentas.TabIndex = 13;
-            this.btnVentas.Text = " Veta y Facturación";
+            this.btnVentas.Text = " Ventas y Facturación";
             this.btnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVentas.UseVisualStyleBackColor = true;
@@ -180,48 +242,6 @@
             this.btnInventario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInventario.UseVisualStyleBackColor = true;
             this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
-            // 
-            // btnProductos
-            // 
-            this.btnProductos.FlatAppearance.BorderSize = 0;
-            this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProductos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.btnProductos.IconChar = FontAwesome.Sharp.IconChar.Shirt;
-            this.btnProductos.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.btnProductos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProductos.Location = new System.Drawing.Point(3, 278);
-            this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnProductos.Size = new System.Drawing.Size(213, 60);
-            this.btnProductos.TabIndex = 10;
-            this.btnProductos.Text = " Productos";
-            this.btnProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProductos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnProductos.UseVisualStyleBackColor = true;
-            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
-            // 
-            // btnProveedores
-            // 
-            this.btnProveedores.FlatAppearance.BorderSize = 0;
-            this.btnProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProveedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProveedores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.btnProveedores.IconChar = FontAwesome.Sharp.IconChar.Truck;
-            this.btnProveedores.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.btnProveedores.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnProveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProveedores.Location = new System.Drawing.Point(3, 410);
-            this.btnProveedores.Name = "btnProveedores";
-            this.btnProveedores.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnProveedores.Size = new System.Drawing.Size(213, 60);
-            this.btnProveedores.TabIndex = 9;
-            this.btnProveedores.Text = " Proveedores";
-            this.btnProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProveedores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnProveedores.UseVisualStyleBackColor = true;
-            this.btnProveedores.Click += new System.EventHandler(this.btnProveedores_Click);
             // 
             // btnClientes
             // 
@@ -369,26 +389,6 @@
             // 
             this.horafecha.Enabled = true;
             this.horafecha.Tick += new System.EventHandler(this.horafecha_Tick);
-            // 
-            // btnAuditoria
-            // 
-            this.btnAuditoria.FlatAppearance.BorderSize = 0;
-            this.btnAuditoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAuditoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAuditoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.btnAuditoria.IconChar = FontAwesome.Sharp.IconChar.UserSecret;
-            this.btnAuditoria.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.btnAuditoria.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAuditoria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAuditoria.Location = new System.Drawing.Point(3, 608);
-            this.btnAuditoria.Name = "btnAuditoria";
-            this.btnAuditoria.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnAuditoria.Size = new System.Drawing.Size(213, 60);
-            this.btnAuditoria.TabIndex = 16;
-            this.btnAuditoria.Text = "Auditoría";
-            this.btnAuditoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAuditoria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAuditoria.UseVisualStyleBackColor = true;
             // 
             // frmMenu
             // 

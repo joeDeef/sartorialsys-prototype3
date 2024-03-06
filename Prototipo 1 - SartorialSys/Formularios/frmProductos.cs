@@ -136,7 +136,8 @@ namespace Prototipo_1___SartorialSys.Formularios
             datos[5] = txtRUCProveedorRegistrar.Text;
             datos[6] = txtCantidadInicialRegistrar.Text;
             datos[7] = txtPrecioCompraRegistrar.Text;
-            datos[9] = dtpFechaRegistro.ToString();
+            DateTime fechaSeleccionada = dtpFechaRegistro.Value;
+            datos[9] = fechaSeleccionada.ToString("yyyy-MM-dd");
             return datos;
         }
     }
