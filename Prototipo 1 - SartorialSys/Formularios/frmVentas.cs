@@ -176,7 +176,8 @@ namespace Prototipo_1___SartorialSys
                 limpiarRegistro();
                 return;
             }
-            if (!Ventas.registrarVenta(datos, getItems()))
+            string[,] items = getItems();
+            if (!Ventas.registrarVenta(datos,items))
             {
                 Mensajes.emitirMensaje("Error al registrar la venta");
                 limpiarRegistro();
@@ -185,7 +186,8 @@ namespace Prototipo_1___SartorialSys
             else 
             { 
             Mensajes.emitirMensaje("Venta registrada con éxito");
-                limpiarRegistro();
+            Inventario.actualizarInventario(items); 
+            limpiarRegistro();
             }
         }
 
