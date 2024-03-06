@@ -76,9 +76,12 @@
     <Compile Include="Clases\ConexionBaseDeDatos.cs" />
     <Compile Include="Clases\Login.cs" />
     <Compile Include="Clases\Mensajes.cs" />
+    <Compile Include="Clases\Parametros.cs" />
+    <Compile Include="Clases\Productos.cs" />
     <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Clases\Validaciones.cs" />
     <Compile Include="Clases\ValidarCedula.cs" />
+    <Compile Include="Clases\Ventas.cs" />
     <Compile Include="Formularios\frmAgregarProducto.cs">
       <SubType>Form</SubType>
     </Compile>

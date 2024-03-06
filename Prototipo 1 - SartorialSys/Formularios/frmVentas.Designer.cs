@@ -34,11 +34,6 @@
             this.btnAgregarProducto = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
             this.dgtvListaProductos = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmbEstadoPago = new System.Windows.Forms.ComboBox();
             this.label53 = new System.Windows.Forms.Label();
@@ -57,9 +52,9 @@
             this.btnBuscarCliente = new FontAwesome.Sharp.IconButton();
             this.btnCancelarRegistro = new FontAwesome.Sharp.IconButton();
             this.btnRegistrarVenta = new FontAwesome.Sharp.IconButton();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaVenta = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBoxMétodoPago = new System.Windows.Forms.ComboBox();
+            this.cmbMetodoPago = new System.Windows.Forms.ComboBox();
             this.label30 = new System.Windows.Forms.Label();
             this.txtTotalRegistrar = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
@@ -184,6 +179,11 @@
             this.label56 = new System.Windows.Forms.Label();
             this.label57 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabClientes.SuspendLayout();
             this.tabRegistrar.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -280,46 +280,6 @@
             this.dgtvListaProductos.Size = new System.Drawing.Size(942, 501);
             this.dgtvListaProductos.TabIndex = 0;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Nº";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Código";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Nombre:";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Cantidad";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 125;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Precio";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 125;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cmbEstadoPago);
@@ -339,9 +299,9 @@
             this.groupBox1.Controls.Add(this.btnBuscarCliente);
             this.groupBox1.Controls.Add(this.btnCancelarRegistro);
             this.groupBox1.Controls.Add(this.btnRegistrarVenta);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.dtpFechaVenta);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.comboBoxMétodoPago);
+            this.groupBox1.Controls.Add(this.cmbMetodoPago);
             this.groupBox1.Controls.Add(this.label30);
             this.groupBox1.Controls.Add(this.txtTotalRegistrar);
             this.groupBox1.Controls.Add(this.label29);
@@ -537,13 +497,14 @@
             this.btnRegistrarVenta.TabIndex = 20;
             this.btnRegistrarVenta.Text = "Registrar";
             this.btnRegistrarVenta.UseVisualStyleBackColor = true;
+            this.btnRegistrarVenta.Click += new System.EventHandler(this.btnRegistrarVenta_Click);
             // 
-            // dateTimePicker1
+            // dtpFechaVenta
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(370, 439);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(210, 27);
-            this.dateTimePicker1.TabIndex = 19;
+            this.dtpFechaVenta.Location = new System.Drawing.Point(370, 439);
+            this.dtpFechaVenta.Name = "dtpFechaVenta";
+            this.dtpFechaVenta.Size = new System.Drawing.Size(210, 27);
+            this.dtpFechaVenta.TabIndex = 19;
             // 
             // label1
             // 
@@ -555,18 +516,18 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Datos del Cliente";
             // 
-            // comboBoxMétodoPago
+            // cmbMetodoPago
             // 
-            this.comboBoxMétodoPago.FormattingEnabled = true;
-            this.comboBoxMétodoPago.Items.AddRange(new object[] {
+            this.cmbMetodoPago.FormattingEnabled = true;
+            this.cmbMetodoPago.Items.AddRange(new object[] {
             "Efectivo",
             "Transferencia",
             "Cheques al Portador"});
-            this.comboBoxMétodoPago.Location = new System.Drawing.Point(370, 470);
-            this.comboBoxMétodoPago.Name = "comboBoxMétodoPago";
-            this.comboBoxMétodoPago.Size = new System.Drawing.Size(210, 28);
-            this.comboBoxMétodoPago.TabIndex = 16;
-            this.comboBoxMétodoPago.Text = "Seleccione";
+            this.cmbMetodoPago.Location = new System.Drawing.Point(370, 470);
+            this.cmbMetodoPago.Name = "cmbMetodoPago";
+            this.cmbMetodoPago.Size = new System.Drawing.Size(210, 28);
+            this.cmbMetodoPago.TabIndex = 16;
+            this.cmbMetodoPago.Text = "Seleccione";
             // 
             // label30
             // 
@@ -1840,6 +1801,46 @@
             this.label10.TabIndex = 19;
             this.label10.Text = "Ventas y Facturación";
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Nº";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Código";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Descripción";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 125;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Cantidad";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 125;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Precio";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 125;
+            // 
             // frmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1892,7 +1893,7 @@
         private System.Windows.Forms.DataGridView dgtvListaProductos;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBoxMétodoPago;
+        private System.Windows.Forms.ComboBox cmbMetodoPago;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.TextBox txtTotalRegistrar;
         private System.Windows.Forms.Label label29;
@@ -1918,13 +1919,8 @@
         private System.Windows.Forms.TabPage tabEliminar;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpFechaVenta;
         private FontAwesome.Sharp.IconButton btnAgregarProducto;
         private FontAwesome.Sharp.IconButton btnCancelarRegistro;
         private FontAwesome.Sharp.IconButton btnRegistrarVenta;
@@ -2042,5 +2038,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DateTimePicker dtpFechaFin;
         private System.Windows.Forms.DateTimePicker dtpFechaInicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }
