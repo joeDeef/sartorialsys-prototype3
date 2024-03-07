@@ -29,12 +29,16 @@ namespace Prototipo_1___SartorialSys
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-
-        }
+                    }
 
         private void frmProveedores_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

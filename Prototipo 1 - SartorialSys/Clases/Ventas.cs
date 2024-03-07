@@ -31,6 +31,7 @@ namespace Prototipo_1___SartorialSys.Clases
 
                     if (items != null)
                     {
+
                         SqlCommand command1 = new SqlCommand(getComandoItems(numeroDeFactura, items), conn, transaction);
                         command1.ExecuteNonQuery();
                     }
