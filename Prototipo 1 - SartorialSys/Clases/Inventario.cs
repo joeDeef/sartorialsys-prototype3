@@ -37,5 +37,10 @@ namespace Prototipo_1___SartorialSys.Clases
                 }
             }
         }
+
+        internal static (int,bool) existeStockSuficiente(string text)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

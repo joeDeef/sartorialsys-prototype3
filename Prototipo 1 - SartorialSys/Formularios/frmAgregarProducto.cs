@@ -28,11 +28,12 @@ namespace Prototipo_1___SartorialSys.Formularios
             {
                 Mensajes.emitirMensaje("Código de producto no válido");
                 txtCodigoProducto.Text = "";
+                this.Close();
             }
             if (!Productos.buscarProducto(i,txtCodigoProducto.Text,listaProductos,txtCantidad.Text))
             {
-                Mensajes.emitirMensaje("Error al consultar");
                 txtCodigoProducto.Text = "";
+                this.Close();
             }
             i++;
             this.Close();

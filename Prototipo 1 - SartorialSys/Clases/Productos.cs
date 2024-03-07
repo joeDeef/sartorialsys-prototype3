@@ -139,20 +139,64 @@ namespace Prototipo_1___SartorialSys.Clases
                     rdr.Read();
                     if (rdr.HasRows)
                     {
-                        int n = listaProductos.Rows.Add();
-                        listaProductos.Rows[n].Cells[0].Value = i;
-                        listaProductos.Rows[n].Cells[1].Value = codigo;
-                        listaProductos.Rows[n].Cells[2].Value = rdr.GetString(0);
-                        listaProductos.Rows[n].Cells[3].Value = cantidad;
-                        listaProductos.Rows[n].Cells[4].Value = rdr.GetDecimal(1).ToString();
-                        return true;
+                        var resultado = hayStockSuficiente(codigo,cantidad);
+                        int stock = resultado.Item1;
+                        bool esStockSuficiente = resultado.Item2;
+                        if (!esStockSuficiente)
+                        {
+                            string mensaje = "No se tiene esta cantidad al momento.\nSolo de dispone de " + stock + " unidades\n¿Desea agregar solo esta cantidad?";
+                            if (!Mensajes.confirmarAccion(mensaje))
+                            {
+                                return false;
+                            }
+                            int n = listaProductos.Rows.Add();
+                            listaProductos.Rows[n].Cells[0].Value = i;
+                            listaProductos.Rows[n].Cells[1].Value = codigo;
+                            listaProductos.Rows[n].Cells[2].Value = rdr.GetString(0);
+                            listaProductos.Rows[n].Cells[3].Value = stock;
+                            listaProductos.Rows[n].Cells[4].Value = rdr.GetDecimal(1).ToString();
+                            return true;
+                        }
+                        else
+                        {
+                            int n = listaProductos.Rows.Add();
+                            listaProductos.Rows[n].Cells[0].Value = i;
+                            listaProductos.Rows[n].Cells[1].Value = codigo;
+                            listaProductos.Rows[n].Cells[2].Value = rdr.GetString(0);
+                            listaProductos.Rows[n].Cells[3].Value = cantidad;
+                            listaProductos.Rows[n].Cells[4].Value = rdr.GetDecimal(1).ToString();
+                            return true;
+                        }
                     }
                     else
                     {
+                        Mensajes.emitirMensaje("Producto no registrado");
                         return false;
                     }
                 }
             }
+        }
+
+        private static (int,bool) hayStockSuficiente(string codigo, string cantidad)
+        {
+            int stockACtual;
+            bool hayStock = true;
+            using (conn = new SqlConnection(strConn))
+            {
+                conn.Open();
+                strComm = "SELECT cantidad_inicial FROM productos WHERE codigo_producto = '" + codigo + "'";
+                using (comm = new SqlCommand(strComm, conn))
+                {
+                    SqlDataReader rdr = comm.ExecuteReader();
+                    rdr.Read();
+                    stockACtual = rdr.GetInt32(0);
+                    if (stockACtual - Convert.ToInt32(cantidad) < 0)
+                    {
+                        hayStock = false;
+                    }
+                }
+            }
+            return (stockACtual, hayStock);
         }
     }
 }
