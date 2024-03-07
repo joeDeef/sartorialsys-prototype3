@@ -56,7 +56,7 @@
             this.btnParámetros.Name = "btnParámetros";
             this.btnParámetros.Size = new System.Drawing.Size(221, 78);
             this.btnParámetros.TabIndex = 18;
-            this.btnParámetros.Text = "Parametros";
+            this.btnParámetros.Text = "Parámetros";
             this.btnParámetros.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnParámetros.UseVisualStyleBackColor = true;
             this.btnParámetros.Click += new System.EventHandler(this.btnParámetros_Click);

@@ -697,7 +697,7 @@ namespace Prototipo_1___SartorialSys
         {
             if (txtCorreoActualizar.Text != "")
             {
-                if (!Validaciones.ValidarCorreoElectronico(txtCorreoRegistrar.Text))
+                if (!Validaciones.ValidarCorreoElectronico(txtCorreoActualizar.Text))
                 {
                     Mensajes.emitirMensaje("Correo Electrónico equivocado");
                     txtCorreoActualizar.Text = "";

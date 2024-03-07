@@ -29,10 +29,6 @@ namespace Prototipo_1___SartorialSys.Clases
 
         internal static bool sonCorrectasLasCredenciales(string usuario, string contraseña)
         {
-            string strConn = ConexionBaseDeDatos.getConexion();
-            string strComm = null;
-            SqlConnection conn = null;
-            SqlCommand comm = null;
             using (conn = new SqlConnection(strConn))
             {
                 conn.Open();
