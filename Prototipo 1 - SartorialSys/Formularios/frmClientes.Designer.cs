@@ -399,11 +399,11 @@
             this.groupBox2.Controls.Add(this.txtCedulaBuscar);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(350, 2);
+            this.groupBox2.Location = new System.Drawing.Point(343, 2);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(627, 599);
+            this.groupBox2.Size = new System.Drawing.Size(634, 599);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
@@ -558,7 +558,7 @@
             this.panel1.Location = new System.Drawing.Point(3, 2);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(347, 599);
+            this.panel1.Size = new System.Drawing.Size(340, 599);
             this.panel1.TabIndex = 7;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -566,7 +566,7 @@
             // 
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(91, 42);
+            this.label35.Location = new System.Drawing.Point(69, 42);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(179, 28);
             this.label35.TabIndex = 8;
@@ -575,7 +575,7 @@
             // btnCancelarBuscar
             // 
             this.btnCancelarBuscar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarBuscar.Location = new System.Drawing.Point(96, 292);
+            this.btnCancelarBuscar.Location = new System.Drawing.Point(83, 292);
             this.btnCancelarBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelarBuscar.Name = "btnCancelarBuscar";
             this.btnCancelarBuscar.Size = new System.Drawing.Size(151, 53);
@@ -588,7 +588,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(31, 111);
+            this.label11.Location = new System.Drawing.Point(87, 111);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(142, 19);
             this.label11.TabIndex = 4;
@@ -597,7 +597,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(96, 222);
+            this.btnBuscar.Location = new System.Drawing.Point(83, 222);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(151, 54);
@@ -609,7 +609,7 @@
             // txtParametroBuscar
             // 
             this.txtParametroBuscar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtParametroBuscar.Location = new System.Drawing.Point(35, 146);
+            this.txtParametroBuscar.Location = new System.Drawing.Point(12, 146);
             this.txtParametroBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtParametroBuscar.Name = "txtParametroBuscar";
             this.txtParametroBuscar.Size = new System.Drawing.Size(293, 24);
