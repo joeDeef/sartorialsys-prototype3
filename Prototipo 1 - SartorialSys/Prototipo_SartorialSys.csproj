@@ -77,6 +77,7 @@
   <ItemGroup>
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\ConexionBaseDeDatos.cs" />
+    <Compile Include="Clases\Inventario.cs" />
     <Compile Include="Clases\Login.cs" />
     <Compile Include="Clases\Mensajes.cs" />
     <Compile Include="Clases\Parametros.cs" />

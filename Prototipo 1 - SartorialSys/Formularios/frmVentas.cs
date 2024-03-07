@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Windows.Documents;
 using System.Windows.Forms;
 using Prototipo_1___SartorialSys.Clases;
 using Prototipo_1___SartorialSys.Formularios;
@@ -17,7 +18,7 @@ namespace Prototipo_1___SartorialSys
 {
     public partial class frmVentas : Form
     {
-        int v = 1;
+        bool permiso;
         private struct RGBColor
         {
             public static Color color1 = Color.FromArgb(172, 126, 241);
@@ -28,9 +29,10 @@ namespace Prototipo_1___SartorialSys
             public static Color color6 = Color.FromArgb(24, 161, 251);
 
         }
-        public frmVentas()
+        public frmVentas(bool permiso)
         {
             InitializeComponent();
+            this.permiso = permiso;
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -156,7 +158,7 @@ namespace Prototipo_1___SartorialSys
 
         private void btnBuscarConsultar_Click_1(object sender, EventArgs e)
         {
-
+            Ventas.consultarVenta(this);
         }
 
         private void btnActualizarInformacion_Click(object sender, EventArgs e)
@@ -171,33 +173,57 @@ namespace Prototipo_1___SartorialSys
             if (!Validaciones.estanLlenosLosCampos(datos))
             {
                 Mensajes.emitirMensaje("Los datos no pueden estar vacíos - Por favor Llenar");
+                limpiarRegistro();
                 return;
             }
-            if (!Ventas.registrarVenta(datos, getItems()))
+            string[,] items = getItems();
+            if (!Ventas.registrarVenta(datos,items))
             {
                 Mensajes.emitirMensaje("Error al registrar la venta");
+                limpiarRegistro();
                 return;
             }
             else 
             { 
-            Mensajes.emitirMensaje("Venta registrada con éxito"); 
+            Mensajes.emitirMensaje("Venta registrada con éxito");
+            Inventario.actualizarInventario(items); 
+            //
+                //Mostrar la factura
+            //
+                limpiarRegistro();
             }
+        }
+
+        private void limpiarRegistro()
+        {
+            txtCedulaRegistrar.Text = "";
+            txtNombresRegistrar.Text = "";
+            txtApellidosRegistrar.Text = "";
+            txtDireccionRegistrar.Text = "";
+            txtTelefonoRegistrar.Text = "";
+            txtCorreoRegistrar.Text = "";
+            cmbMetodoPago.Text = "Seleccione";
+            cmbEstadoPago.Text = "Seleccione";
+            txtSubtotalRegistrar.Text = "";
+            txtIvaRegistrar.Text = "";
+            txtTotalRegistrar.Text = "";
+            dgtvListaProductos.Rows.Clear();
         }
 
         private string[,] getItems()
         {
-            string[,] items = new string[dgtvListaProductos.RowCount-1,2];
-            for (int i = 0; i < dgtvListaProductos.RowCount - 1; i++)
+            int filas = dgtvListaProductos.RowCount-1;
+            string[,] items = new string[filas,2];
+            for (int i = 0; i < filas; i++)
             {
-                items[i,0] = dgtvListaProductos.Rows[i+1].Cells[1].ToString();
-                items[i,1] = dgtvListaProductos.Rows[i + 1].Cells[4].ToString();
+                items[i,0] = dgtvListaProductos.Rows[i].Cells[1].Value.ToString();
+                items[i,1] = dgtvListaProductos.Rows[i].Cells[3].Value.ToString();
             }
             return items;
         }
         private string[] getDatoVenta()
         {
-            string[] datos = new string[5];
-            datos[0] = "001-001-00000000" + getSiguienteNumero();
+            string[] datos = new string[9];
             datos[1] = txtCedulaRegistrar.Text;
             DateTime fechaSeleccionada = dtpFechaVenta.Value;
             datos[2] = fechaSeleccionada.ToString("yyyy-MM-dd");
@@ -205,19 +231,47 @@ namespace Prototipo_1___SartorialSys
             if(cmbEstadoPago.Text == "Pagado")
             {
                 datos[4] = "1";
-
             }
             else
             {
                 datos[4] = "0";
             }
+            datos[5] = txtSubtotalRegistrar.Text;
+            datos[6] = txtIvaRegistrar.Text;
+            datos[7] = txtTotalRegistrar.Text;
+            datos[8] = "DEFAULT";
             return datos;
         }
 
-        private string getSiguienteNumero()
+        private void txtCedulaRegistrar_Leave(object sender, EventArgs e)
         {
-            v++;
-            return (v).ToString();
+            if (txtCedulaRegistrar.Text != "")
+            {
+                if (!ValidarCedula.validarCedula(txtCedulaRegistrar.Text))
+                {
+                    Mensajes.emitirMensaje("Número de Cédula inválida");
+                    txtCedulaRegistrar.Text = "";
+                    txtCedulaRegistrar.Focus();
+                }
+            }
+        }
+
+        private void dgtvListaProductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+                if(Mensajes.confirmarAccion("¿Desea quitar este producto de la venta?"))
+                {
+                    int indice = e.RowIndex;
+                    dgtvListaProductos.Rows.RemoveAt(indice);
+                    dgtvListaProductos.Refresh();
+                    txtSubtotalRegistrar.Text = getSumatoria();
+                    txtIvaRegistrar.Text = getIVA();
+                    txtTotalRegistrar.Text = getTotal();
+            }
+        }
+
+        private void btnCancelarRegistro_Click(object sender, EventArgs e)
+        {
+            limpiarRegistro();
         }
     }
 }

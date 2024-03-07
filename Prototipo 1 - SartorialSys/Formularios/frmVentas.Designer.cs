@@ -34,6 +34,11 @@
             this.btnAgregarProducto = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
             this.dgtvListaProductos = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmbEstadoPago = new System.Windows.Forms.ComboBox();
             this.label53 = new System.Windows.Forms.Label();
@@ -179,11 +184,7 @@
             this.label56 = new System.Windows.Forms.Label();
             this.label57 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label62 = new System.Windows.Forms.Label();
             this.tabClientes.SuspendLayout();
             this.tabRegistrar.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -214,7 +215,7 @@
             this.tabClientes.Location = new System.Drawing.Point(12, 61);
             this.tabClientes.Name = "tabClientes";
             this.tabClientes.SelectedIndex = 0;
-            this.tabClientes.Size = new System.Drawing.Size(1634, 756);
+            this.tabClientes.Size = new System.Drawing.Size(1645, 756);
             this.tabClientes.TabIndex = 19;
             // 
             // tabRegistrar
@@ -225,18 +226,19 @@
             this.tabRegistrar.Location = new System.Drawing.Point(4, 25);
             this.tabRegistrar.Name = "tabRegistrar";
             this.tabRegistrar.Padding = new System.Windows.Forms.Padding(3);
-            this.tabRegistrar.Size = new System.Drawing.Size(1626, 727);
+            this.tabRegistrar.Size = new System.Drawing.Size(1637, 727);
             this.tabRegistrar.TabIndex = 0;
             this.tabRegistrar.Text = "Registrar Venta";
             this.tabRegistrar.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label62);
             this.panel1.Controls.Add(this.btnAgregarProducto);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.dgtvListaProductos);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(640, 3);
+            this.panel1.Location = new System.Drawing.Point(651, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(983, 721);
             this.panel1.TabIndex = 2;
@@ -246,7 +248,7 @@
             this.btnAgregarProducto.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnAgregarProducto.IconColor = System.Drawing.Color.Black;
             this.btnAgregarProducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAgregarProducto.Location = new System.Drawing.Point(375, 624);
+            this.btnAgregarProducto.Location = new System.Drawing.Point(401, 646);
             this.btnAgregarProducto.Name = "btnAgregarProducto";
             this.btnAgregarProducto.Size = new System.Drawing.Size(228, 49);
             this.btnAgregarProducto.TabIndex = 20;
@@ -273,12 +275,53 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dgtvListaProductos.Location = new System.Drawing.Point(18, 83);
+            this.dgtvListaProductos.Location = new System.Drawing.Point(19, 122);
             this.dgtvListaProductos.Name = "dgtvListaProductos";
             this.dgtvListaProductos.RowHeadersWidth = 51;
             this.dgtvListaProductos.RowTemplate.Height = 24;
             this.dgtvListaProductos.Size = new System.Drawing.Size(942, 501);
             this.dgtvListaProductos.TabIndex = 0;
+            this.dgtvListaProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgtvListaProductos_CellClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Nº";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 50;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Código";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Descripción";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 200;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Cantidad";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 125;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Precio";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 125;
             // 
             // groupBox1
             // 
@@ -372,6 +415,7 @@
             this.txtCorreoRegistrar.Location = new System.Drawing.Point(302, 296);
             this.txtCorreoRegistrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCorreoRegistrar.Name = "txtCorreoRegistrar";
+            this.txtCorreoRegistrar.ReadOnly = true;
             this.txtCorreoRegistrar.Size = new System.Drawing.Size(321, 27);
             this.txtCorreoRegistrar.TabIndex = 34;
             // 
@@ -391,6 +435,7 @@
             this.txtTelefonoRegistrar.Location = new System.Drawing.Point(304, 265);
             this.txtTelefonoRegistrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTelefonoRegistrar.Name = "txtTelefonoRegistrar";
+            this.txtTelefonoRegistrar.ReadOnly = true;
             this.txtTelefonoRegistrar.Size = new System.Drawing.Size(321, 27);
             this.txtTelefonoRegistrar.TabIndex = 32;
             // 
@@ -400,6 +445,7 @@
             this.txtDireccionRegistrar.Location = new System.Drawing.Point(304, 234);
             this.txtDireccionRegistrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDireccionRegistrar.Name = "txtDireccionRegistrar";
+            this.txtDireccionRegistrar.ReadOnly = true;
             this.txtDireccionRegistrar.Size = new System.Drawing.Size(319, 27);
             this.txtDireccionRegistrar.TabIndex = 31;
             // 
@@ -409,6 +455,7 @@
             this.txtApellidosRegistrar.Location = new System.Drawing.Point(304, 203);
             this.txtApellidosRegistrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtApellidosRegistrar.Name = "txtApellidosRegistrar";
+            this.txtApellidosRegistrar.ReadOnly = true;
             this.txtApellidosRegistrar.Size = new System.Drawing.Size(321, 27);
             this.txtApellidosRegistrar.TabIndex = 30;
             // 
@@ -418,6 +465,7 @@
             this.txtNombresRegistrar.Location = new System.Drawing.Point(304, 172);
             this.txtNombresRegistrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombresRegistrar.Name = "txtNombresRegistrar";
+            this.txtNombresRegistrar.ReadOnly = true;
             this.txtNombresRegistrar.Size = new System.Drawing.Size(321, 27);
             this.txtNombresRegistrar.TabIndex = 29;
             // 
@@ -485,6 +533,7 @@
             this.btnCancelarRegistro.TabIndex = 21;
             this.btnCancelarRegistro.Text = "Cancelar";
             this.btnCancelarRegistro.UseVisualStyleBackColor = true;
+            this.btnCancelarRegistro.Click += new System.EventHandler(this.btnCancelarRegistro_Click);
             // 
             // btnRegistrarVenta
             // 
@@ -501,6 +550,7 @@
             // 
             // dtpFechaVenta
             // 
+            this.dtpFechaVenta.Enabled = false;
             this.dtpFechaVenta.Location = new System.Drawing.Point(370, 439);
             this.dtpFechaVenta.Name = "dtpFechaVenta";
             this.dtpFechaVenta.Size = new System.Drawing.Size(210, 27);
@@ -633,6 +683,7 @@
             this.txtCedulaRegistrar.Name = "txtCedulaRegistrar";
             this.txtCedulaRegistrar.Size = new System.Drawing.Size(212, 27);
             this.txtCedulaRegistrar.TabIndex = 0;
+            this.txtCedulaRegistrar.Leave += new System.EventHandler(this.txtCedulaRegistrar_Leave);
             // 
             // tabConsultar
             // 
@@ -642,7 +693,7 @@
             this.tabConsultar.Location = new System.Drawing.Point(4, 25);
             this.tabConsultar.Name = "tabConsultar";
             this.tabConsultar.Padding = new System.Windows.Forms.Padding(3);
-            this.tabConsultar.Size = new System.Drawing.Size(1626, 727);
+            this.tabConsultar.Size = new System.Drawing.Size(1637, 727);
             this.tabConsultar.TabIndex = 2;
             this.tabConsultar.Text = "Buscar Venta";
             this.tabConsultar.UseVisualStyleBackColor = true;
@@ -682,7 +733,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(262, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1361, 721);
+            this.groupBox2.Size = new System.Drawing.Size(1372, 721);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             // 
@@ -710,7 +761,7 @@
             this.panel2.Controls.Add(this.label46);
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(670, 22);
+            this.panel2.Location = new System.Drawing.Point(681, 22);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(688, 696);
             this.panel2.TabIndex = 65;
@@ -747,7 +798,7 @@
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 125;
+            this.dataGridViewTextBoxColumn1.Width = 50;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -763,7 +814,7 @@
             this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 125;
+            this.dataGridViewTextBoxColumn3.Width = 200;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -1110,7 +1161,7 @@
             this.tabEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabEliminar.Location = new System.Drawing.Point(4, 25);
             this.tabEliminar.Name = "tabEliminar";
-            this.tabEliminar.Size = new System.Drawing.Size(1626, 727);
+            this.tabEliminar.Size = new System.Drawing.Size(1637, 727);
             this.tabEliminar.TabIndex = 3;
             this.tabEliminar.Text = "Anular Venta";
             this.tabEliminar.UseVisualStyleBackColor = true;
@@ -1151,7 +1202,7 @@
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox5.Location = new System.Drawing.Point(259, 0);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(1367, 727);
+            this.groupBox5.Size = new System.Drawing.Size(1378, 727);
             this.groupBox5.TabIndex = 3;
             this.groupBox5.TabStop = false;
             // 
@@ -1191,7 +1242,7 @@
             this.panel3.Controls.Add(this.label23);
             this.panel3.Controls.Add(this.dataGridView2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(676, 22);
+            this.panel3.Location = new System.Drawing.Point(687, 22);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(688, 702);
             this.panel3.TabIndex = 65;
@@ -1590,7 +1641,7 @@
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1626, 727);
+            this.tabPage1.Size = new System.Drawing.Size(1637, 727);
             this.tabPage1.TabIndex = 4;
             this.tabPage1.Text = "Consultar Ventas";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1603,7 +1654,7 @@
             this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox7.Location = new System.Drawing.Point(259, 0);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(1367, 727);
+            this.groupBox7.Size = new System.Drawing.Size(1378, 727);
             this.groupBox7.TabIndex = 4;
             this.groupBox7.TabStop = false;
             // 
@@ -1801,45 +1852,15 @@
             this.label10.TabIndex = 19;
             this.label10.Text = "Ventas y Facturación";
             // 
-            // Column1
+            // label62
             // 
-            this.Column1.HeaderText = "Nº";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Código";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Descripción";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Cantidad";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 125;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Precio";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 125;
+            this.label62.AutoSize = true;
+            this.label62.Location = new System.Drawing.Point(297, 86);
+            this.label62.Name = "label62";
+            this.label62.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label62.Size = new System.Drawing.Size(430, 20);
+            this.label62.TabIndex = 21;
+            this.label62.Text = "Para quitar un produto seleccione la fila correspondiente";
             // 
             // frmVentas
             // 
@@ -1964,11 +1985,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.GroupBox groupBox5;
         private FontAwesome.Sharp.IconButton btnAnular;
         private System.Windows.Forms.Panel panel3;
@@ -2043,5 +2059,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.Label label62;
     }
 }

@@ -12,9 +12,11 @@ namespace Prototipo_1___SartorialSys
 {
     public partial class frmInventario : Form
     {
-        public frmInventario()
+        bool permiso;
+        public frmInventario(bool permiso)
         {
             InitializeComponent();
+            this.permiso = permiso;
         }
 
         private void label3_Click(object sender, EventArgs e)

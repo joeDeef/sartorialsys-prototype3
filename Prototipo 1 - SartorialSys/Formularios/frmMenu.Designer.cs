@@ -195,7 +195,7 @@
             this.btnVentas.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnVentas.Size = new System.Drawing.Size(213, 60);
             this.btnVentas.TabIndex = 13;
-            this.btnVentas.Text = " Veta y Facturación";
+            this.btnVentas.Text = " Ventas y Facturación";
             this.btnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVentas.UseVisualStyleBackColor = true;
