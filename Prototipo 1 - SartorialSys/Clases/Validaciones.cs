@@ -126,5 +126,10 @@ namespace Prototipo_1___SartorialSys.Clases
             }
         return true;
         }
+
+        internal static bool validarParametros(string[] strings)
+        {
+            return true;
+        }
     }
 }

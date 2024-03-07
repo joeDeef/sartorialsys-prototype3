@@ -132,11 +132,16 @@ namespace Prototipo_1___SartorialSys.Clases
             using (conn = new SqlConnection(strConn))
             {
                 conn.Open();
-                strComm = "SELECT descripcion,precio_venta FROM productos WHERE codigo_producto = '" + codigo + "'";
+                strComm = "SELECT descripcion,precio_venta,activo FROM productos WHERE codigo_producto = '" + codigo + "'";
                 using (comm = new SqlCommand(strComm, conn))
                 {
                     SqlDataReader rdr = comm.ExecuteReader();
                     rdr.Read();
+                    if (!rdr.GetBoolean(2))
+                    {
+                        Mensajes.emitirMensaje("Producto no registrado");
+                        return false;
+                    }
                     if (rdr.HasRows)
                     {
                         var resultado = hayStockSuficiente(codigo,cantidad);
@@ -144,8 +149,12 @@ namespace Prototipo_1___SartorialSys.Clases
                         bool esStockSuficiente = resultado.Item2;
                         if (!esStockSuficiente)
                         {
-                            string mensaje = "No se tiene esta cantidad al momento.\nSolo de dispone de " + stock + " unidades\n¿Desea agregar solo esta cantidad?";
-                            if (!Mensajes.confirmarAccion(mensaje))
+                            if (stock == 0)
+                            {
+                                Mensajes.emitirMensaje("No existe stock del producto");
+                                return false;
+                            }
+                            if (!Mensajes.confirmarAccion("No se tiene esta cantidad al momento.\nSolo de dispone de " + stock + " unidades\n¿Desea agregar solo esta cantidad?"))
                             {
                                 return false;
                             }
@@ -190,7 +199,7 @@ namespace Prototipo_1___SartorialSys.Clases
                     SqlDataReader rdr = comm.ExecuteReader();
                     rdr.Read();
                     stockACtual = rdr.GetInt32(0);
-                    if (stockACtual - Convert.ToInt32(cantidad) < 0)
+                    if (stockACtual - Convert.ToInt32(cantidad) < 0 )
                     {
                         hayStock = false;
                     }

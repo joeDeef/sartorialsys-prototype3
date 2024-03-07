@@ -158,7 +158,44 @@ namespace Prototipo_1___SartorialSys
 
         private void btnBuscarConsultar_Click_1(object sender, EventArgs e)
         {
-            Ventas.consultarVenta(this);
+            string[] resultados = Ventas.consultarVenta(txtNumeroFacturaConsultar.Text);
+            string[,] datosItems = Ventas.getItemsFactura(resultados[0]);
+
+            if (resultados != null && datosItems != null)
+            {
+                txtNumeroFacturaBusqueda.Text = resultados[0];
+                txtCedulaBusqueda.Text = resultados[1];
+                txtNombreBusqueda.Text = resultados[2];
+                txtApellidoBusqueda.Text = resultados[3];
+                txtDireccionConsultar.Text = resultados[4];
+                txtTelefonoBusqueda.Text = resultados[5];
+                txtCorreoBusqueda.Text= resultados[6];
+                txtFechaVentaBusqueda.Text = resultados[7];
+                txtMetodoPagoBusqueda.Text = resultados[8];
+                txtSubtotalBusqueda.Text = resultados[9];
+                txtIvaBusqueda.Text = resultados[10];
+                txtTotalBusqueda.Text = resultados[11];
+                txtEstadoPagoBusqueda.Text = resultados[12];
+                txtAnuladoBusqueda.Text = resultados[13];
+                mostrarProductosComprados(dataGridView1, datosItems);
+            }
+        }
+
+        private void mostrarProductosComprados(DataGridView dataGridView, string[,] items)
+        {
+            for(int i = 0; i < items.GetLength(0); i++)
+            {
+                if (items[i,0] == null)
+                {
+                    break;
+                }
+                int n = dataGridView.Rows.Add();
+                dataGridView.Rows[n].Cells[0].Value = (i+1);
+                dataGridView.Rows[n].Cells[1].Value = items[i,0];
+                dataGridView.Rows[n].Cells[2].Value = items[i, 1];
+                dataGridView.Rows[n].Cells[3].Value = items[i,2];
+                dataGridView.Rows[n].Cells[4].Value = items[i, 3];
+            }
         }
 
         private void btnActualizarInformacion_Click(object sender, EventArgs e)
@@ -187,7 +224,10 @@ namespace Prototipo_1___SartorialSys
             { 
             Mensajes.emitirMensaje("Venta registrada con éxito");
             Inventario.actualizarInventario(items); 
-            limpiarRegistro();
+            //
+                //Mostrar la factura
+            //
+                limpiarRegistro();
             }
         }
 
@@ -269,6 +309,106 @@ namespace Prototipo_1___SartorialSys
         private void btnCancelarRegistro_Click(object sender, EventArgs e)
         {
             limpiarRegistro();
+        }
+
+        private void btnCancelarBusqueda_Click_1(object sender, EventArgs e)
+        {
+            limpiarBusqueda();
+        }
+
+        private void limpiarBusqueda()
+        {
+            txtNumeroFacturaBusqueda.Text = "";
+            txtCedulaBusqueda.Text = "";
+            txtNombreBusqueda.Text = "";
+            txtApellidoBusqueda.Text = "";
+            txtDireccionConsultar.Text = "";
+            txtTelefonoBusqueda.Text = "";
+            txtCorreoBusqueda.Text = "";
+            txtFechaVentaBusqueda.Text = "";
+            txtMetodoPagoBusqueda.Text = "";
+            txtSubtotalBusqueda.Text = "";
+            txtIvaBusqueda.Text = "";
+            txtTotalBusqueda.Text = "";
+            txtEstadoPagoBusqueda.Text = "";
+            txtAnuladoBusqueda.Text = "";
+            dataGridView1.Rows.Clear();
+        }
+
+        private void btnBuscarAnular_Click(object sender, EventArgs e)
+        {
+            string[] resultados = Ventas.consultarVenta(txtNumeroFacturaConsultar.Text);
+            string[,] datosItems = Ventas.getItemsFactura(resultados[0]);
+
+            if (resultados != null && datosItems != null)
+            {
+                txtNumeroFacturaAnular.Text = resultados[0];
+                txtCedulaAnular.Text = resultados[1];
+                txtNmbresAnular.Text = resultados[2];
+                txtApellidoAnular.Text = resultados[3];
+                txtDireccionAnular.Text = resultados[4];
+                txtTelefonoAnular.Text = resultados[5];
+                txtCorreoAnular.Text = resultados[6];
+                txtFechaVentaAnular.Text = resultados[7];
+                txtMetodoPagoAnular.Text = resultados[8];
+                txtSubtotalAnular.Text = resultados[9];
+                txtIvaAnular.Text = resultados[10];
+                txtTotalAnular.Text = resultados[11];
+                txtEstadoPagoAnular.Text = resultados[12];
+                txtAnuladoAnular.Text = resultados[13];
+                mostrarProductosComprados(dataGridView2,datosItems);
+            }
+        }
+
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelarEliminar_Click(object sender, EventArgs e)
+        {
+            txtNumeroFacturaAnular.Text = "";
+            txtCedulaAnular.Text = "";
+            txtNmbresAnular.Text = "";
+            txtApellidoAnular.Text = "";
+            txtDireccionAnular.Text = "";
+            txtTelefonoAnular.Text = "";
+            txtCorreoAnular.Text = "";
+            txtFechaVentaAnular.Text = "";
+            txtMetodoPagoAnular.Text = "";
+            txtSubtotalAnular.Text = "";
+            txtIvaAnular.Text = "";
+            txtTotalAnular.Text = "";
+            txtEstadoPagoAnular.Text = "";
+            txtAnuladoAnular.Text = "";
+            dataGridView2.Rows.Clear();
+        }
+        object contenidoCelda;
+        DataGridViewColumn columnaSeleccionada;
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex == 1)
+            {
+                columnaSeleccionada = dataGridView1.Columns[e.ColumnIndex];
+                contenidoCelda = dataGridView1.Rows[e.RowIndex].Cells[columnaSeleccionada.Index].Value;
+                frmInventario inventario = new frmInventario(contenidoCelda.ToString());
+                inventario.ShowDialog();
+                columnaSeleccionada = null;
+                contenidoCelda = "";
+            }
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex == 1)
+            {
+                columnaSeleccionada = dataGridView1.Columns[e.ColumnIndex];
+                contenidoCelda = dataGridView1.Rows[e.RowIndex].Cells[columnaSeleccionada.Index].Value;
+                frmInventario inventario = new frmInventario(contenidoCelda.ToString());
+                inventario.ShowDialog();
+                columnaSeleccionada = null;
+                contenidoCelda = "";
+            }
         }
     }
 }
