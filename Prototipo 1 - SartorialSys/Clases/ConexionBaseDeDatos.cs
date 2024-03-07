@@ -17,4 +17,5 @@ namespace Prototipo_1___SartorialSys.Clases
             return CONEXION_BASE_DE_DATOS;
         }
     }
+
 }
