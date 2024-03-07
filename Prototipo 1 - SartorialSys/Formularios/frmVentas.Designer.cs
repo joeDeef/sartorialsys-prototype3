@@ -550,6 +550,7 @@
             // 
             // dtpFechaVenta
             // 
+            this.dtpFechaVenta.Enabled = false;
             this.dtpFechaVenta.Location = new System.Drawing.Point(370, 439);
             this.dtpFechaVenta.Name = "dtpFechaVenta";
             this.dtpFechaVenta.Size = new System.Drawing.Size(210, 27);
