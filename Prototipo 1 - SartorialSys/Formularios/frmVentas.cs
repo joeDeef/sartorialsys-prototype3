@@ -187,7 +187,10 @@ namespace Prototipo_1___SartorialSys
             { 
             Mensajes.emitirMensaje("Venta registrada con éxito");
             Inventario.actualizarInventario(items); 
-            limpiarRegistro();
+            //
+                //Mostrar la factura
+            //
+                limpiarRegistro();
             }
         }
 

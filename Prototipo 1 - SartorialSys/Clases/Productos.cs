@@ -144,6 +144,11 @@ namespace Prototipo_1___SartorialSys.Clases
                         bool esStockSuficiente = resultado.Item2;
                         if (!esStockSuficiente)
                         {
+                            if (stock == 0)
+                            {
+                                Mensajes.emitirMensaje("No existe stock del producto");
+                                return false;
+                            }
                             string mensaje = "No se tiene esta cantidad al momento.\nSolo de dispone de " + stock + " unidades\n¿Desea agregar solo esta cantidad?";
                             if (!Mensajes.confirmarAccion(mensaje))
                             {
@@ -180,7 +185,7 @@ namespace Prototipo_1___SartorialSys.Clases
         private static (int,bool) hayStockSuficiente(string codigo, string cantidad)
         {
             int stockACtual;
-            bool hayStock = true;
+            bool hayStock = false;
             using (conn = new SqlConnection(strConn))
             {
                 conn.Open();
@@ -190,7 +195,7 @@ namespace Prototipo_1___SartorialSys.Clases
                     SqlDataReader rdr = comm.ExecuteReader();
                     rdr.Read();
                     stockACtual = rdr.GetInt32(0);
-                    if (stockACtual - Convert.ToInt32(cantidad) < 0)
+                    if ((stockACtual != 0) && stockACtual - Convert.ToInt32(cantidad) < 0 )
                     {
                         hayStock = false;
                     }
