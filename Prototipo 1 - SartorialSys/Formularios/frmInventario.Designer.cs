@@ -333,6 +333,7 @@
             this.txtcodigoBusqueda.Name = "txtcodigoBusqueda";
             this.txtcodigoBusqueda.Size = new System.Drawing.Size(230, 26);
             this.txtcodigoBusqueda.TabIndex = 0;
+            this.txtcodigoBusqueda.Leave += new System.EventHandler(this.txtcodigoBusqueda_Leave);
             // 
             // tabActualizar
             // 
@@ -620,6 +621,7 @@
             this.txtParametroActualizar.Name = "txtParametroActualizar";
             this.txtParametroActualizar.Size = new System.Drawing.Size(230, 26);
             this.txtParametroActualizar.TabIndex = 0;
+            this.txtParametroActualizar.Leave += new System.EventHandler(this.txtParametroActualizar_Leave);
             // 
             // frmInventario
             // 

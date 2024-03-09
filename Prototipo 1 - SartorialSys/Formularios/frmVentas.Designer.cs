@@ -173,7 +173,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.label57 = new System.Windows.Forms.Label();
             this.label56 = new System.Windows.Forms.Label();
             this.btnConsultarEstadoPago = new System.Windows.Forms.Button();
@@ -184,7 +183,6 @@
             this.btnConsultarPorFechas = new System.Windows.Forms.Button();
             this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
             this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -193,7 +191,6 @@
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label58 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabClientes.SuspendLayout();
             this.tabRegistrar.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -210,7 +207,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabClientes
@@ -218,7 +214,6 @@
             this.tabClientes.Controls.Add(this.tabRegistrar);
             this.tabClientes.Controls.Add(this.tabConsultar);
             this.tabClientes.Controls.Add(this.tabEliminar);
-            this.tabClientes.Controls.Add(this.tabPage1);
             this.tabClientes.Location = new System.Drawing.Point(12, 61);
             this.tabClientes.Name = "tabClientes";
             this.tabClientes.SelectedIndex = 0;
@@ -649,9 +644,9 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(44, 565);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 20);
+            this.label8.Size = new System.Drawing.Size(35, 20);
             this.label8.TabIndex = 6;
-            this.label8.Text = "IVA:";
+            this.label8.Text = "IVA";
             // 
             // label7
             // 
@@ -1164,6 +1159,7 @@
             this.txtNumeroFacturaConsultar.Name = "txtNumeroFacturaConsultar";
             this.txtNumeroFacturaConsultar.Size = new System.Drawing.Size(185, 26);
             this.txtNumeroFacturaConsultar.TabIndex = 5;
+            this.txtNumeroFacturaConsultar.Leave += new System.EventHandler(this.txtNumeroFacturaConsultar_Leave);
             // 
             // btnCancelarBusqueda
             // 
@@ -1308,6 +1304,7 @@
             this.btnAnular.TabIndex = 66;
             this.btnAnular.Text = "Anular Factura";
             this.btnAnular.UseVisualStyleBackColor = true;
+            this.btnAnular.Click += new System.EventHandler(this.btnAnular_Click);
             // 
             // panel3
             // 
@@ -1679,6 +1676,7 @@
             this.txtNFacturaBuscarAnular.Name = "txtNFacturaBuscarAnular";
             this.txtNFacturaBuscarAnular.Size = new System.Drawing.Size(185, 26);
             this.txtNFacturaBuscarAnular.TabIndex = 5;
+            this.txtNFacturaBuscarAnular.Leave += new System.EventHandler(this.txtNFacturaBuscarAnular_Leave);
             // 
             // btnCancelarEliminar
             // 
@@ -1728,15 +1726,6 @@
             this.label10.Size = new System.Drawing.Size(186, 24);
             this.label10.TabIndex = 19;
             this.label10.Text = "Ventas y Facturación";
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox6.Location = new System.Drawing.Point(0, 0);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(259, 750);
-            this.groupBox6.TabIndex = 3;
-            this.groupBox6.TabStop = false;
             // 
             // label57
             // 
@@ -1822,15 +1811,6 @@
             this.dtpFechaFin.Name = "dtpFechaFin";
             this.dtpFechaFin.Size = new System.Drawing.Size(200, 22);
             this.dtpFechaFin.TabIndex = 44;
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox7.Location = new System.Drawing.Point(259, 0);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(1497, 750);
-            this.groupBox7.TabIndex = 4;
-            this.groupBox7.TabStop = false;
             // 
             // dataGridView3
             // 
@@ -1923,18 +1903,6 @@
             this.label61.Size = new System.Drawing.Size(575, 20);
             this.label61.TabIndex = 45;
             // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.groupBox7);
-            this.tabPage1.Controls.Add(this.groupBox6);
-            this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1756, 750);
-            this.tabPage1.TabIndex = 4;
-            this.tabPage1.Text = "Consultar Ventas";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
             // frmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1969,7 +1937,6 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2119,9 +2086,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Button btnConsultarEstadoPago;

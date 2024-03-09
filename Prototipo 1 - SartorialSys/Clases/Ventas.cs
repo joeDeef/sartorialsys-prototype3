@@ -4,10 +4,13 @@ using System.Data.Common;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls.Primitives;
 using System.Windows.Forms;
 using System.Windows.Input;
+using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace Prototipo_1___SartorialSys.Clases
@@ -99,7 +102,7 @@ namespace Prototipo_1___SartorialSys.Clases
             string comandoFacturas = "INSERT INTO items VALUES";
             for (int i = 0; i < filas; i++)
             {
-                comandoFacturas += "('"+numero_factura+"','"+ datosIngresar[i,0] + "',NULL," + datosIngresar[i,1] +"), ";           
+                comandoFacturas += "('"+numero_factura+"','"+ datosIngresar[i,0] + "',NULL," + datosIngresar[i,1] + ","+datosIngresar[i,2]+"), ";           
             }
             return comandoFacturas.Substring(0, comandoFacturas.Length - 2) + ";";
         }
@@ -122,7 +125,7 @@ namespace Prototipo_1___SartorialSys.Clases
                     rdr.Read();
                     if (!rdr.HasRows)
                     {
-                        Mensajes.emitirMensaje("No existe registro");
+                        Mensajes.emitirMensaje("Factura no registrada");
                         return (null);
                     }
                     else
@@ -176,7 +179,7 @@ namespace Prototipo_1___SartorialSys.Clases
             using (conn = new SqlConnection(strConn))
             {
                 conn.Open();
-                strComm = "select P.codigo_producto, P.descripcion, I.cantidad, P.precio_venta from items I, facturas F, productos P " +
+                strComm = "select P.codigo_producto, P.descripcion, I.cantidad, I.precio_vendido from items I, facturas F, productos P " +
                     "where I.numero_factura = F.numero_factura AND F.numero_factura = '" + numero_factura + "' AND I.codigo_producto = P.codigo_producto";
                 using (comm = new SqlCommand(strComm, conn))
                 {
@@ -195,6 +198,55 @@ namespace Prototipo_1___SartorialSys.Clases
                 }
             }
             return items;
+        }
+
+        internal static bool anularFactura(string text)
+        {
+            try
+            {
+                using (conn = new SqlConnection(strConn))
+                {
+                    conn.Open();
+                    strComm = "UPDATE facturas SET anulado = 1 WHERE numero_factura = '" + text + "'";
+                    using (comm = new SqlCommand(strComm, conn))
+                    {
+                        if (comm.ExecuteNonQuery() == 1)
+                        {
+                            Mensajes.emitirMensaje("Factura anulada con éxito");
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex) { 
+                return false;
+            }
+            return true;
+        }
+
+        internal static string getNumeroFactura()
+        {
+            try
+            {
+                using (conn = new SqlConnection(strConn))
+                {
+                    conn.Open();
+                    strComm = "SELECT TOP 1 numero_factura FROM facturas ORDER BY fecha_venta DESC;";
+                    using (comm = new SqlCommand(strComm, conn))
+                    {
+                        SqlDataReader rdr = comm.ExecuteReader();
+                        return rdr.GetString(0).ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return "";
+            }
+            return "";
         }
     }
 }

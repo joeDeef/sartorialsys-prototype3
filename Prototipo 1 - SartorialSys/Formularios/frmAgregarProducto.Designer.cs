@@ -68,7 +68,7 @@
             // txtCantidad
             // 
             this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad.Location = new System.Drawing.Point(438, 180);
+            this.txtCantidad.Location = new System.Drawing.Point(438, 185);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(222, 28);
             this.txtCantidad.TabIndex = 25;
@@ -77,7 +77,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(44, 182);
+            this.label2.Location = new System.Drawing.Point(44, 187);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 22);
             this.label2.TabIndex = 24;
@@ -89,7 +89,7 @@
             this.btnAgregar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnAgregar.IconColor = System.Drawing.Color.Black;
             this.btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAgregar.Location = new System.Drawing.Point(159, 254);
+            this.btnAgregar.Location = new System.Drawing.Point(159, 259);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(145, 42);
             this.btnAgregar.TabIndex = 26;
@@ -103,7 +103,7 @@
             this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnCancelar.IconColor = System.Drawing.Color.Black;
             this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCancelar.Location = new System.Drawing.Point(332, 254);
+            this.btnCancelar.Location = new System.Drawing.Point(332, 259);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(145, 42);
             this.btnCancelar.TabIndex = 27;

@@ -87,11 +87,13 @@
             this.txtParametroConsulta = new System.Windows.Forms.TextBox();
             this.tabActualizar = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.txtUltimaActualizacionACtualizar = new System.Windows.Forms.TextBox();
+            this.label52 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
             this.txtStockActualizar = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtFechaIngresoActualizar = new System.Windows.Forms.TextBox();
             this.txtTallaActualizar = new System.Windows.Forms.TextBox();
             this.txtColorActualizar = new System.Windows.Forms.TextBox();
             this.txtCategoriaActualizar = new System.Windows.Forms.TextBox();
@@ -791,6 +793,7 @@
             this.btnBuscar.TabIndex = 6;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtParametroConsulta
             // 
@@ -800,6 +803,7 @@
             this.txtParametroConsulta.Name = "txtParametroConsulta";
             this.txtParametroConsulta.Size = new System.Drawing.Size(293, 24);
             this.txtParametroConsulta.TabIndex = 5;
+            this.txtParametroConsulta.Leave += new System.EventHandler(this.txtParametroConsulta_Leave);
             // 
             // tabActualizar
             // 
@@ -817,11 +821,13 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.txtUltimaActualizacionACtualizar);
+            this.groupBox5.Controls.Add(this.label52);
             this.groupBox5.Controls.Add(this.label51);
             this.groupBox5.Controls.Add(this.txtStockActualizar);
             this.groupBox5.Controls.Add(this.dateTimePicker1);
             this.groupBox5.Controls.Add(this.label21);
-            this.groupBox5.Controls.Add(this.textBox1);
+            this.groupBox5.Controls.Add(this.txtFechaIngresoActualizar);
             this.groupBox5.Controls.Add(this.txtTallaActualizar);
             this.groupBox5.Controls.Add(this.txtColorActualizar);
             this.groupBox5.Controls.Add(this.txtCategoriaActualizar);
@@ -852,11 +858,31 @@
             this.groupBox5.TabIndex = 2;
             this.groupBox5.TabStop = false;
             // 
+            // txtUltimaActualizacionACtualizar
+            // 
+            this.txtUltimaActualizacionACtualizar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUltimaActualizacionACtualizar.Location = new System.Drawing.Point(499, 466);
+            this.txtUltimaActualizacionACtualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUltimaActualizacionACtualizar.Name = "txtUltimaActualizacionACtualizar";
+            this.txtUltimaActualizacionACtualizar.ReadOnly = true;
+            this.txtUltimaActualizacionACtualizar.Size = new System.Drawing.Size(320, 24);
+            this.txtUltimaActualizacionACtualizar.TabIndex = 67;
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.Location = new System.Drawing.Point(238, 474);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(151, 19);
+            this.label52.TabIndex = 66;
+            this.label52.Text = "Utima Actualización:";
+            // 
             // label51
             // 
             this.label51.AutoSize = true;
             this.label51.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label51.Location = new System.Drawing.Point(239, 322);
+            this.label51.Location = new System.Drawing.Point(237, 309);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(50, 19);
             this.label51.TabIndex = 65;
@@ -865,7 +891,7 @@
             // txtStockActualizar
             // 
             this.txtStockActualizar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStockActualizar.Location = new System.Drawing.Point(500, 322);
+            this.txtStockActualizar.Location = new System.Drawing.Point(498, 309);
             this.txtStockActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStockActualizar.Name = "txtStockActualizar";
             this.txtStockActualizar.ReadOnly = true;
@@ -874,7 +900,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(560, 474);
+            this.dateTimePicker1.Location = new System.Drawing.Point(556, 508);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 24);
             this.dateTimePicker1.TabIndex = 55;
@@ -883,26 +909,26 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(239, 482);
+            this.label21.Location = new System.Drawing.Point(235, 516);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(178, 19);
             this.label21.TabIndex = 54;
             this.label21.Text = "Fecha de Actualización:";
             // 
-            // textBox1
+            // txtFechaIngresoActualizar
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(500, 436);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(320, 24);
-            this.textBox1.TabIndex = 53;
+            this.txtFechaIngresoActualizar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFechaIngresoActualizar.Location = new System.Drawing.Point(498, 423);
+            this.txtFechaIngresoActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtFechaIngresoActualizar.Name = "txtFechaIngresoActualizar";
+            this.txtFechaIngresoActualizar.ReadOnly = true;
+            this.txtFechaIngresoActualizar.Size = new System.Drawing.Size(320, 24);
+            this.txtFechaIngresoActualizar.TabIndex = 53;
             // 
             // txtTallaActualizar
             // 
             this.txtTallaActualizar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTallaActualizar.Location = new System.Drawing.Point(500, 246);
+            this.txtTallaActualizar.Location = new System.Drawing.Point(498, 233);
             this.txtTallaActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTallaActualizar.Name = "txtTallaActualizar";
             this.txtTallaActualizar.ReadOnly = true;
@@ -912,7 +938,7 @@
             // txtColorActualizar
             // 
             this.txtColorActualizar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtColorActualizar.Location = new System.Drawing.Point(500, 208);
+            this.txtColorActualizar.Location = new System.Drawing.Point(498, 195);
             this.txtColorActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtColorActualizar.Name = "txtColorActualizar";
             this.txtColorActualizar.ReadOnly = true;
@@ -922,7 +948,7 @@
             // txtCategoriaActualizar
             // 
             this.txtCategoriaActualizar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCategoriaActualizar.Location = new System.Drawing.Point(501, 170);
+            this.txtCategoriaActualizar.Location = new System.Drawing.Point(499, 157);
             this.txtCategoriaActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCategoriaActualizar.Name = "txtCategoriaActualizar";
             this.txtCategoriaActualizar.ReadOnly = true;
@@ -932,7 +958,7 @@
             // txtPrecioVentaActualizar
             // 
             this.txtPrecioVentaActualizar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecioVentaActualizar.Location = new System.Drawing.Point(500, 398);
+            this.txtPrecioVentaActualizar.Location = new System.Drawing.Point(498, 385);
             this.txtPrecioVentaActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrecioVentaActualizar.Name = "txtPrecioVentaActualizar";
             this.txtPrecioVentaActualizar.ReadOnly = true;
@@ -942,7 +968,7 @@
             // txtPrecioCompraActualizar
             // 
             this.txtPrecioCompraActualizar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecioCompraActualizar.Location = new System.Drawing.Point(500, 360);
+            this.txtPrecioCompraActualizar.Location = new System.Drawing.Point(498, 347);
             this.txtPrecioCompraActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrecioCompraActualizar.Name = "txtPrecioCompraActualizar";
             this.txtPrecioCompraActualizar.ReadOnly = true;
@@ -952,7 +978,7 @@
             // txtRUCProveedorActualizar
             // 
             this.txtRUCProveedorActualizar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRUCProveedorActualizar.Location = new System.Drawing.Point(501, 284);
+            this.txtRUCProveedorActualizar.Location = new System.Drawing.Point(499, 271);
             this.txtRUCProveedorActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRUCProveedorActualizar.Name = "txtRUCProveedorActualizar";
             this.txtRUCProveedorActualizar.ReadOnly = true;
@@ -962,7 +988,7 @@
             // txtDescripcionActualizar
             // 
             this.txtDescripcionActualizar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcionActualizar.Location = new System.Drawing.Point(500, 132);
+            this.txtDescripcionActualizar.Location = new System.Drawing.Point(498, 119);
             this.txtDescripcionActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescripcionActualizar.Name = "txtDescripcionActualizar";
             this.txtDescripcionActualizar.ReadOnly = true;
@@ -972,7 +998,7 @@
             // txtCodigoActualizar
             // 
             this.txtCodigoActualizar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoActualizar.Location = new System.Drawing.Point(500, 94);
+            this.txtCodigoActualizar.Location = new System.Drawing.Point(498, 81);
             this.txtCodigoActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCodigoActualizar.Name = "txtCodigoActualizar";
             this.txtCodigoActualizar.ReadOnly = true;
@@ -982,46 +1008,50 @@
             // ckbPrecioVenta
             // 
             this.ckbPrecioVenta.AutoSize = true;
-            this.ckbPrecioVenta.Location = new System.Drawing.Point(239, 402);
+            this.ckbPrecioVenta.Location = new System.Drawing.Point(237, 389);
             this.ckbPrecioVenta.Name = "ckbPrecioVenta";
             this.ckbPrecioVenta.Size = new System.Drawing.Size(146, 23);
             this.ckbPrecioVenta.TabIndex = 44;
             this.ckbPrecioVenta.Text = "Precio de Venta:";
             this.ckbPrecioVenta.UseVisualStyleBackColor = true;
+            this.ckbPrecioVenta.CheckedChanged += new System.EventHandler(this.ckbPrecioVenta_CheckedChanged);
             // 
             // ckbPrecioCompra
             // 
             this.ckbPrecioCompra.AutoSize = true;
-            this.ckbPrecioCompra.Location = new System.Drawing.Point(239, 360);
+            this.ckbPrecioCompra.Location = new System.Drawing.Point(237, 347);
             this.ckbPrecioCompra.Name = "ckbPrecioCompra";
             this.ckbPrecioCompra.Size = new System.Drawing.Size(161, 23);
             this.ckbPrecioCompra.TabIndex = 43;
             this.ckbPrecioCompra.Text = "Precio de Compra:";
             this.ckbPrecioCompra.UseVisualStyleBackColor = true;
+            this.ckbPrecioCompra.CheckedChanged += new System.EventHandler(this.ckbPrecioCompra_CheckedChanged);
             // 
             // iconButton2
             // 
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton2.IconColor = System.Drawing.Color.Black;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.Location = new System.Drawing.Point(844, 396);
+            this.iconButton2.Location = new System.Drawing.Point(844, 381);
             this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(106, 30);
+            this.iconButton2.Size = new System.Drawing.Size(128, 30);
             this.iconButton2.TabIndex = 42;
             this.iconButton2.Text = "Actualizar";
             this.iconButton2.UseVisualStyleBackColor = true;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
             // iconButton1
             // 
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton1.IconColor = System.Drawing.Color.Black;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(844, 354);
+            this.iconButton1.Location = new System.Drawing.Point(844, 339);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(106, 36);
+            this.iconButton1.Size = new System.Drawing.Size(128, 36);
             this.iconButton1.TabIndex = 41;
             this.iconButton1.Text = "Actualizar";
             this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // label45
             // 
@@ -1037,7 +1067,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(239, 444);
+            this.label19.Location = new System.Drawing.Point(237, 431);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(132, 19);
             this.label19.TabIndex = 35;
@@ -1047,7 +1077,7 @@
             // 
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(239, 284);
+            this.label39.Location = new System.Drawing.Point(237, 271);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(116, 19);
             this.label39.TabIndex = 31;
@@ -1057,7 +1087,7 @@
             // 
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(239, 246);
+            this.label40.Location = new System.Drawing.Point(237, 233);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(44, 19);
             this.label40.TabIndex = 27;
@@ -1067,7 +1097,7 @@
             // 
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(239, 208);
+            this.label41.Location = new System.Drawing.Point(237, 195);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(49, 19);
             this.label41.TabIndex = 26;
@@ -1077,7 +1107,7 @@
             // 
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(239, 132);
+            this.label42.Location = new System.Drawing.Point(237, 119);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(93, 19);
             this.label42.TabIndex = 25;
@@ -1087,7 +1117,7 @@
             // 
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(239, 170);
+            this.label43.Location = new System.Drawing.Point(237, 157);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(83, 19);
             this.label43.TabIndex = 24;
@@ -1097,7 +1127,7 @@
             // 
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(239, 94);
+            this.label44.Location = new System.Drawing.Point(237, 81);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(157, 19);
             this.label44.TabIndex = 23;
@@ -1127,6 +1157,7 @@
             this.txtParametroActualizar.Name = "txtParametroActualizar";
             this.txtParametroActualizar.Size = new System.Drawing.Size(388, 24);
             this.txtParametroActualizar.TabIndex = 5;
+            this.txtParametroActualizar.Leave += new System.EventHandler(this.txtParametroActualizar_Leave);
             // 
             // btnBuscarActualizar
             // 
@@ -1138,6 +1169,7 @@
             this.btnBuscarActualizar.TabIndex = 3;
             this.btnBuscarActualizar.Text = "Buscar";
             this.btnBuscarActualizar.UseVisualStyleBackColor = true;
+            this.btnBuscarActualizar.Click += new System.EventHandler(this.btnBuscarActualizar_Click);
             // 
             // label15
             // 
@@ -1446,6 +1478,7 @@
             this.bntDarDeBaja.TabIndex = 28;
             this.bntDarDeBaja.Text = "Dar de Baja";
             this.bntDarDeBaja.UseVisualStyleBackColor = true;
+            this.bntDarDeBaja.Click += new System.EventHandler(this.bntDarDeBaja_Click);
             // 
             // groupBox4
             // 
@@ -1482,6 +1515,7 @@
             this.btnBuscarDarDeBaja.TabIndex = 3;
             this.btnBuscarDarDeBaja.Text = "Buscar";
             this.btnBuscarDarDeBaja.UseVisualStyleBackColor = true;
+            this.btnBuscarDarDeBaja.Click += new System.EventHandler(this.btnBuscarDarDeBaja_Click);
             // 
             // label16
             // 
@@ -1615,7 +1649,7 @@
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtFechaIngresoActualizar;
         private System.Windows.Forms.TextBox txtTallaActualizar;
         private System.Windows.Forms.TextBox txtColorActualizar;
         private System.Windows.Forms.TextBox txtCategoriaActualizar;
@@ -1657,5 +1691,7 @@
         private System.Windows.Forms.TextBox txtStockDarDeBaja;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.TextBox txtStockActualizar;
+        private System.Windows.Forms.TextBox txtUltimaActualizacionACtualizar;
+        private System.Windows.Forms.Label label52;
     }
 }

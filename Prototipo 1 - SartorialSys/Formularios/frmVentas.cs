@@ -33,6 +33,8 @@ namespace Prototipo_1___SartorialSys
         {
             InitializeComponent();
             this.permiso = permiso;
+            string iva = "(" + (Convert.ToInt32(Parametros.getIVA()*100)).ToString() + "%):";
+            label8.Text += iva;
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -52,7 +54,6 @@ namespace Prototipo_1___SartorialSys
             txtSubtotalRegistrar.Text = "";
             txtIvaRegistrar.Text = "";
             txtTotalRegistrar.Text = "";
-
         }
 
         private void btnBuscarCliente_Click(object sender, EventArgs e)
@@ -94,9 +95,8 @@ namespace Prototipo_1___SartorialSys
             string[] datosCliente = Cliente.buscarCliente(txtCedulaRegistrar.Text);
             if (!existeRegistro(datosCliente[0]))
             {
-                if(!Mensajes.confirmarAccion("Desea registrar al usuario"))
+                if(!Mensajes.confirmarAccion("Desea registrar al cliente"))
                 {
-                    Mensajes.emitirMensaje("Por favor llenar todos los campos");
                     vaciarDatos();
                     return;
                 }
@@ -224,9 +224,6 @@ namespace Prototipo_1___SartorialSys
             { 
             Mensajes.emitirMensaje("Venta registrada con éxito");
             Inventario.actualizarInventario(items); 
-            //
-                //Mostrar la factura
-            //
                 limpiarRegistro();
             }
         }
@@ -250,11 +247,12 @@ namespace Prototipo_1___SartorialSys
         private string[,] getItems()
         {
             int filas = dgtvListaProductos.RowCount-1;
-            string[,] items = new string[filas,2];
+            string[,] items = new string[filas,3];
             for (int i = 0; i < filas; i++)
             {
                 items[i,0] = dgtvListaProductos.Rows[i].Cells[1].Value.ToString();
                 items[i,1] = dgtvListaProductos.Rows[i].Cells[3].Value.ToString();
+                items[i,2] = dgtvListaProductos.Rows[i].Cells[4].Value.ToString();
             }
             return items;
         }
@@ -337,8 +335,8 @@ namespace Prototipo_1___SartorialSys
 
         private void btnBuscarAnular_Click(object sender, EventArgs e)
         {
-            string[] resultados = Ventas.consultarVenta(txtNumeroFacturaConsultar.Text);
-            string[,] datosItems = Ventas.getItemsFactura(resultados[0]);
+            string[] resultados = Ventas.consultarVenta(txtNFacturaBuscarAnular.Text);
+            string[,] datosItems = Ventas.getItemsFactura(txtNFacturaBuscarAnular.Text);
 
             if (resultados != null && datosItems != null)
             {
@@ -408,6 +406,43 @@ namespace Prototipo_1___SartorialSys
                 inventario.ShowDialog();
                 columnaSeleccionada = null;
                 contenidoCelda = "";
+            }
+        }
+
+        private void btnAnular_Click(object sender, EventArgs e)
+        {
+            if (!Ventas.anularFactura(txtNumeroFacturaAnular.Text))
+            {
+                Mensajes.emitirMensaje("Error al anular la factura");
+                return;
+            }
+        }
+
+        private void txtNumeroFacturaConsultar_Leave(object sender, EventArgs e)
+        {
+            if (txtNumeroFacturaConsultar.Text == "")
+            {
+                Mensajes.emitirMensaje("El número de factura no puede estar en blanco – Por favor llenar");
+                return;
+            }
+            if (!Validaciones.esValidoElNumeroDeFactura(txtNumeroFacturaConsultar.Text))
+            {
+                Mensajes.emitirMensaje("Número de factura equivocada – vuelva a ingresar");
+                return;
+            }
+        }
+
+        private void txtNFacturaBuscarAnular_Leave(object sender, EventArgs e)
+        {
+            if (txtNumeroFacturaConsultar.Text == "")
+            {
+                Mensajes.emitirMensaje("El número de factura no puede estar en blanco – Por favor llenar");
+                return;
+            }
+            if (!Validaciones.esValidoElNumeroDeFactura(txtNumeroFacturaConsultar.Text))
+            {
+                Mensajes.emitirMensaje("Número de factura equivocada – vuelva a ingresar");
+                return;
             }
         }
     }

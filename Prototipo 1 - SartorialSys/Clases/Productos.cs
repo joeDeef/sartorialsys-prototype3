@@ -135,55 +135,61 @@ namespace Prototipo_1___SartorialSys.Clases
                 strComm = "SELECT descripcion,precio_venta,activo FROM productos WHERE codigo_producto = '" + codigo + "'";
                 using (comm = new SqlCommand(strComm, conn))
                 {
-                    SqlDataReader rdr = comm.ExecuteReader();
-                    rdr.Read();
-                    if (!rdr.GetBoolean(2))
+                    try
                     {
-                        Mensajes.emitirMensaje("Producto no registrado");
-                        return false;
-                    }
-                    if (rdr.HasRows)
-                    {
-                        var resultado = hayStockSuficiente(codigo,cantidad);
-                        int stock = resultado.Item1;
-                        bool esStockSuficiente = resultado.Item2;
-                        if (!esStockSuficiente)
+                        SqlDataReader rdr = comm.ExecuteReader();
+                        rdr.Read();
+                        if (!rdr.GetBoolean(2))
                         {
-                            if (stock == 0)
+                            Mensajes.emitirMensaje("Producto no registrado");
+                            return false;
+                        }
+                        if (rdr.HasRows)
+                        {
+                            var resultado = hayStockSuficiente(codigo,cantidad);
+                            int stock = resultado.Item1;
+                            bool esStockSuficiente = resultado.Item2;
+                            if (!esStockSuficiente)
                             {
-                                Mensajes.emitirMensaje("No existe stock del producto");
-                                return false;
+                                if (stock == 0)
+                                {
+                                    Mensajes.emitirMensaje("No existe stock del producto");
+                                    return false;
+                                }
+                                if (!Mensajes.confirmarAccion("No se tiene esta cantidad al momento.\nSolo de dispone de " + stock + " unidades\n¿Desea agregar solo esta cantidad?"))
+                                {
+                                    return false;
+                                }
+                                int n = listaProductos.Rows.Add();
+                                listaProductos.Rows[n].Cells[0].Value = i;
+                                listaProductos.Rows[n].Cells[1].Value = codigo;
+                                listaProductos.Rows[n].Cells[2].Value = rdr.GetString(0);
+                                listaProductos.Rows[n].Cells[3].Value = stock;
+                                listaProductos.Rows[n].Cells[4].Value = rdr.GetDecimal(1).ToString();
                             }
-                            if (!Mensajes.confirmarAccion("No se tiene esta cantidad al momento.\nSolo de dispone de " + stock + " unidades\n¿Desea agregar solo esta cantidad?"))
+                            else
                             {
-                                return false;
+                                int n = listaProductos.Rows.Add();
+                                listaProductos.Rows[n].Cells[0].Value = i;
+                                listaProductos.Rows[n].Cells[1].Value = codigo;
+                                listaProductos.Rows[n].Cells[2].Value = rdr.GetString(0);
+                                listaProductos.Rows[n].Cells[3].Value = cantidad;
+                                listaProductos.Rows[n].Cells[4].Value = rdr.GetDecimal(1).ToString();
                             }
-                            int n = listaProductos.Rows.Add();
-                            listaProductos.Rows[n].Cells[0].Value = i;
-                            listaProductos.Rows[n].Cells[1].Value = codigo;
-                            listaProductos.Rows[n].Cells[2].Value = rdr.GetString(0);
-                            listaProductos.Rows[n].Cells[3].Value = stock;
-                            listaProductos.Rows[n].Cells[4].Value = rdr.GetDecimal(1).ToString();
-                            return true;
                         }
                         else
                         {
-                            int n = listaProductos.Rows.Add();
-                            listaProductos.Rows[n].Cells[0].Value = i;
-                            listaProductos.Rows[n].Cells[1].Value = codigo;
-                            listaProductos.Rows[n].Cells[2].Value = rdr.GetString(0);
-                            listaProductos.Rows[n].Cells[3].Value = cantidad;
-                            listaProductos.Rows[n].Cells[4].Value = rdr.GetDecimal(1).ToString();
-                            return true;
+                            Mensajes.emitirMensaje("Producto no registrado");
+                            return false;
                         }
-                    }
-                    else
+                    }catch(Exception e)
                     {
-                        Mensajes.emitirMensaje("Producto no registrado");
+                        Mensajes.emitirMensaje("Ha ocurrido un error");
                         return false;
                     }
                 }
             }
+            return true;
         }
 
         private static (int,bool) hayStockSuficiente(string codigo, string cantidad)
@@ -206,6 +212,109 @@ namespace Prototipo_1___SartorialSys.Clases
                 }
             }
             return (stockACtual, hayStock);
+        }
+
+        internal static string[] datosProducto(string text)
+        {
+            string[] datos = new string[10];
+            using (conn = new SqlConnection(strConn))
+            {
+                conn.Open();
+                strComm = getComandoBusqueda(text);
+                using (comm = new SqlCommand(strComm, conn))
+                {
+                    try
+                    {
+                        SqlDataReader rdr = comm.ExecuteReader();
+                        rdr.Read();
+                        if (!rdr.GetBoolean(10))
+                        {
+                            Mensajes.emitirMensaje("Producto no registrado");
+                            return null;
+                        }
+                        if (rdr.HasRows)
+                        {
+                            datos[0] = rdr.GetString(0);
+                            datos[1] = rdr.GetString(1);
+                            datos[2] = rdr.GetString(2);
+                            datos[3] = rdr.GetString(3);
+                            datos[4] = rdr.GetString(4);
+                            datos[5] = rdr.GetInt32(5).ToString();
+                            datos[6] = rdr.GetDecimal(6).ToString();
+                            datos[7] = rdr.GetDecimal(7).ToString();
+                            datos[8] = rdr.GetDateTime(8).ToString();
+                            datos[9] = rdr.GetDateTime(9).ToString();
+                        }
+                        else
+                        {
+                            Mensajes.emitirMensaje("Producto no registrado");
+                            return null;
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        Mensajes.emitirMensaje("Error al consultar");
+                        return null;
+                    }
+                    return datos;
+                }
+            }
+        }
+
+        private static string getComandoBusqueda(string text)
+        {
+            return "select descripcion,C.categoria,L.color,T.talla,ruc_proveedor,cantidad_inicial,precio_compra,precio_venta,fecha_ingreso,fecha_actualizacion, P.activo " +
+                "from productos P, categoria C, talla T, color L where codigo_producto = '"+text+"' AND P.id_categoria = C.id_categoria " +
+                "AND P.id_color = L.id_color AND P.id_talla = T.id_talla";
+        }
+
+        internal static bool actualizarPrecioCompra(string precio_compra, string codigo)
+        {
+            if (!Mensajes.confirmarAccion("¿Está seguro de actualizar este dato?"))
+            {
+                return false;
+            }
+            using (conn = new SqlConnection(strConn))
+            {
+                conn.Open();
+                strComm = "UPDATE productos SET precio_compra = '" + precio_compra + "' WHERE codigo_producto = '" + codigo + "';";
+
+                using (comm = new SqlCommand(strComm, conn))
+                {
+                    if (comm.ExecuteNonQuery() == 1)
+                    {
+                        Mensajes.emitirMensaje("Precio de compra actualizado con éxito”");
+                    }
+                }
+            }
+            return true;
+        }
+
+        internal static bool actualizarPrecioVenta(string precio_venta, string codigo)
+        {
+            if (!Mensajes.confirmarAccion("¿Está seguro de actualizar este dato?"))
+            {
+                return false;
+            }
+            using (conn = new SqlConnection(strConn))
+            {
+                conn.Open();
+                strComm = "UPDATE productos SET precio_venta = '" + precio_venta + "' WHERE codigo_producto = '" + codigo + "';";
+
+                using (comm = new SqlCommand(strComm, conn))
+                {
+                    if (comm.ExecuteNonQuery() == 1)
+                    {
+                        Mensajes.emitirMensaje("Precio de venta actualizado con éxito”");
+                    }
+                }
+            }
+            return true;
+        }
+
+        internal static bool darDeBaja(string text)
+        {
+            throw new NotImplementedException();
         }
     }
 }

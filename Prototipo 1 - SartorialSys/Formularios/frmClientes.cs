@@ -70,7 +70,7 @@ namespace Prototipo_1___SartorialSys
             string[] datosCliente = { txtCedulaRegistrar.Text, txtNombresRegistrar.Text, txtApellidosRegistrar.Text, txtDireccionRegistrar.Text, txtCorreoRegistrar.Text, txtTelefonoRegistrar.Text };
             if (!ValidarCedula.estanLosCamposLlenos(datosCliente))
             {
-                Mensajes.emitirMensaje("Por favor llenar los campos");
+                Mensajes.emitirMensaje("Los datos no pueden estar vacíos – Por favor llenar");
                 return;
             }
             if (Cliente.registrarCliente(datosCliente))
@@ -697,7 +697,7 @@ namespace Prototipo_1___SartorialSys
         {
             if (txtCorreoActualizar.Text != "")
             {
-                if (!Validaciones.ValidarCorreoElectronico(txtCorreoRegistrar.Text))
+                if (!Validaciones.ValidarCorreoElectronico(txtCorreoActualizar.Text))
                 {
                     Mensajes.emitirMensaje("Correo Electrónico equivocado");
                     txtCorreoActualizar.Text = "";
