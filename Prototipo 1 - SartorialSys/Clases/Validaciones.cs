@@ -127,9 +127,19 @@ namespace Prototipo_1___SartorialSys.Clases
         return true;
         }
 
-        internal static bool validarParametros(string[] strings)
+        internal static bool validarParametros(string[] datos)
         {
             return true;
+        }
+
+        internal static bool esValidoElNumeroDeFactura(string text)
+        {
+            return Regex.IsMatch(text, "^001-001-\\d{9}$");
+        }
+
+        internal static bool validarHora(string text)
+        {
+            return Regex.IsMatch(text, "^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$");
         }
     }
 }

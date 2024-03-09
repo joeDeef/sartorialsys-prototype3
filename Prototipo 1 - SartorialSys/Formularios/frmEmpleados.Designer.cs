@@ -32,6 +32,16 @@
             this.tabClientes = new System.Windows.Forms.TabControl();
             this.tabRegistrar = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtpFechaIngreso = new System.Windows.Forms.DateTimePicker();
+            this.label35 = new System.Windows.Forms.Label();
+            this.txtHSalida = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.txtHAlmuerzo = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.txtHEntrada = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtSalarioRegistrar = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtCorreoRegistrar = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -48,27 +58,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtCedulaRegistrar = new System.Windows.Forms.TextBox();
             this.tabBuscar = new System.Windows.Forms.TabPage();
-            this.tabActualizar = new System.Windows.Forms.TabPage();
-            this.tabEliminar = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.btnCancelarBuscar = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtParametroBuscar = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.textBox25 = new System.Windows.Forms.TextBox();
+            this.label52 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
@@ -91,18 +84,20 @@
             this.label46 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
             this.textBox14 = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtParametroActualizar = new System.Windows.Forms.TextBox();
-            this.btnBuscarActualizar = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnCancelarBuscar = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtParametroBuscar = new System.Windows.Forms.TextBox();
+            this.tabActualizar = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.btnActualizarCorreo = new System.Windows.Forms.Button();
-            this.btnActualizarTelefono = new System.Windows.Forms.Button();
-            this.btnActualizarDireccion = new System.Windows.Forms.Button();
-            this.btnCorregirApellidos = new System.Windows.Forms.Button();
-            this.btnCorregirNombres = new System.Windows.Forms.Button();
-            this.label22 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
@@ -125,24 +120,19 @@
             this.label49 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.label52 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.txtParametroDarDeBaja = new System.Windows.Forms.TextBox();
-            this.btnBuscarDarDeBaja = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.btnActualizarCorreo = new System.Windows.Forms.Button();
+            this.btnActualizarTelefono = new System.Windows.Forms.Button();
+            this.btnActualizarDireccion = new System.Windows.Forms.Button();
+            this.btnCorregirApellidos = new System.Windows.Forms.Button();
+            this.btnCorregirNombres = new System.Windows.Forms.Button();
+            this.label22 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtParametroActualizar = new System.Windows.Forms.TextBox();
+            this.btnBuscarActualizar = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.tabEliminar = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.btnDarDeAlta = new System.Windows.Forms.Button();
-            this.bntDarDeBaja = new System.Windows.Forms.Button();
-            this.label34 = new System.Windows.Forms.Label();
             this.textBox26 = new System.Windows.Forms.TextBox();
             this.textBox27 = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
@@ -168,18 +158,26 @@
             this.label58 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
             this.textBox37 = new System.Windows.Forms.TextBox();
+            this.btnDarDeAlta = new System.Windows.Forms.Button();
+            this.bntDarDeBaja = new System.Windows.Forms.Button();
+            this.label34 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtParametroDarDeBaja = new System.Windows.Forms.TextBox();
+            this.btnBuscarDarDeBaja = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.tabClientes.SuspendLayout();
             this.tabRegistrar.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabBuscar.SuspendLayout();
-            this.tabActualizar.SuspendLayout();
-            this.tabEliminar.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.tabActualizar.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.tabEliminar.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabClientes
@@ -209,18 +207,16 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.dtpFechaIngreso);
             this.groupBox1.Controls.Add(this.label35);
-            this.groupBox1.Controls.Add(this.textBox6);
+            this.groupBox1.Controls.Add(this.txtHSalida);
             this.groupBox1.Controls.Add(this.label36);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.txtHAlmuerzo);
             this.groupBox1.Controls.Add(this.label29);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txtHEntrada);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtSalarioRegistrar);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtCorreoRegistrar);
             this.groupBox1.Controls.Add(this.label30);
             this.groupBox1.Controls.Add(this.btnCancelar);
@@ -243,6 +239,104 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
+            // dtpFechaIngreso
+            // 
+            this.dtpFechaIngreso.Location = new System.Drawing.Point(583, 511);
+            this.dtpFechaIngreso.Name = "dtpFechaIngreso";
+            this.dtpFechaIngreso.Size = new System.Drawing.Size(220, 26);
+            this.dtpFechaIngreso.TabIndex = 41;
+            this.dtpFechaIngreso.Value = new System.DateTime(2024, 3, 5, 18, 29, 50, 0);
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(228, 517);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(132, 19);
+            this.label35.TabIndex = 40;
+            this.label35.Text = "Fecha de Ingreso:";
+            // 
+            // txtHSalida
+            // 
+            this.txtHSalida.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHSalida.Location = new System.Drawing.Point(583, 471);
+            this.txtHSalida.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtHSalida.Name = "txtHSalida";
+            this.txtHSalida.Size = new System.Drawing.Size(220, 24);
+            this.txtHSalida.TabIndex = 39;
+            this.txtHSalida.Leave += new System.EventHandler(this.txtHSalida_Leave);
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(228, 474);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(116, 19);
+            this.label36.TabIndex = 38;
+            this.label36.Text = "Hora de Salida:";
+            // 
+            // txtHAlmuerzo
+            // 
+            this.txtHAlmuerzo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHAlmuerzo.Location = new System.Drawing.Point(583, 428);
+            this.txtHAlmuerzo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtHAlmuerzo.Name = "txtHAlmuerzo";
+            this.txtHAlmuerzo.Size = new System.Drawing.Size(220, 24);
+            this.txtHAlmuerzo.TabIndex = 37;
+            this.txtHAlmuerzo.Leave += new System.EventHandler(this.txtHAlmuerzo_Leave);
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(228, 431);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(139, 19);
+            this.label29.TabIndex = 36;
+            this.label29.Text = "Hora  de Almuerzo:";
+            // 
+            // txtHEntrada
+            // 
+            this.txtHEntrada.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHEntrada.Location = new System.Drawing.Point(583, 385);
+            this.txtHEntrada.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtHEntrada.Name = "txtHEntrada";
+            this.txtHEntrada.Size = new System.Drawing.Size(220, 24);
+            this.txtHEntrada.TabIndex = 35;
+            this.txtHEntrada.Leave += new System.EventHandler(this.txtHEntrada_Leave);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(228, 388);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(129, 19);
+            this.label10.TabIndex = 34;
+            this.label10.Text = "Hora de Entrada:";
+            // 
+            // txtSalarioRegistrar
+            // 
+            this.txtSalarioRegistrar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSalarioRegistrar.Location = new System.Drawing.Point(583, 342);
+            this.txtSalarioRegistrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSalarioRegistrar.Name = "txtSalarioRegistrar";
+            this.txtSalarioRegistrar.Size = new System.Drawing.Size(220, 24);
+            this.txtSalarioRegistrar.TabIndex = 33;
+            this.txtSalarioRegistrar.Leave += new System.EventHandler(this.txtSalarioRegistrar_Leave);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(228, 345);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 19);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "Salario:";
+            // 
             // txtCorreoRegistrar
             // 
             this.txtCorreoRegistrar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -251,6 +345,7 @@
             this.txtCorreoRegistrar.Name = "txtCorreoRegistrar";
             this.txtCorreoRegistrar.Size = new System.Drawing.Size(433, 24);
             this.txtCorreoRegistrar.TabIndex = 29;
+            this.txtCorreoRegistrar.Leave += new System.EventHandler(this.txtCorreoRegistrar_Leave);
             // 
             // label30
             // 
@@ -265,7 +360,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(583, 592);
+            this.btnCancelar.Location = new System.Drawing.Point(583, 578);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(133, 46);
@@ -276,13 +371,14 @@
             // btnInsertar
             // 
             this.btnInsertar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsertar.Location = new System.Drawing.Point(391, 592);
+            this.btnInsertar.Location = new System.Drawing.Point(391, 578);
             this.btnInsertar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(133, 46);
             this.btnInsertar.TabIndex = 26;
             this.btnInsertar.Text = "Registrar";
             this.btnInsertar.UseVisualStyleBackColor = true;
+            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
             // txtTelefonoRegistrar
             // 
@@ -292,6 +388,7 @@
             this.txtTelefonoRegistrar.Name = "txtTelefonoRegistrar";
             this.txtTelefonoRegistrar.Size = new System.Drawing.Size(433, 24);
             this.txtTelefonoRegistrar.TabIndex = 25;
+            this.txtTelefonoRegistrar.Leave += new System.EventHandler(this.txtTelefonoRegistrar_Leave);
             // 
             // txtDireccionRegistrar
             // 
@@ -310,6 +407,7 @@
             this.txtApellidosRegistrar.Name = "txtApellidosRegistrar";
             this.txtApellidosRegistrar.Size = new System.Drawing.Size(433, 24);
             this.txtApellidosRegistrar.TabIndex = 23;
+            this.txtApellidosRegistrar.Leave += new System.EventHandler(this.txtApellidosRegistrar_Leave);
             // 
             // txtNombresRegistrar
             // 
@@ -319,6 +417,7 @@
             this.txtNombresRegistrar.Name = "txtNombresRegistrar";
             this.txtNombresRegistrar.Size = new System.Drawing.Size(433, 24);
             this.txtNombresRegistrar.TabIndex = 22;
+            this.txtNombresRegistrar.Leave += new System.EventHandler(this.txtNombresRegistrar_Leave);
             // 
             // label8
             // 
@@ -388,6 +487,7 @@
             this.txtCedulaRegistrar.Name = "txtCedulaRegistrar";
             this.txtCedulaRegistrar.Size = new System.Drawing.Size(433, 24);
             this.txtCedulaRegistrar.TabIndex = 15;
+            this.txtCedulaRegistrar.Leave += new System.EventHandler(this.txtCedulaRegistrar_Leave);
             // 
             // tabBuscar
             // 
@@ -401,209 +501,6 @@
             this.tabBuscar.TabIndex = 1;
             this.tabBuscar.Text = "Buscar Empleado";
             this.tabBuscar.UseVisualStyleBackColor = true;
-            // 
-            // tabActualizar
-            // 
-            this.tabActualizar.Controls.Add(this.groupBox5);
-            this.tabActualizar.Controls.Add(this.groupBox3);
-            this.tabActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabActualizar.Location = new System.Drawing.Point(4, 25);
-            this.tabActualizar.Name = "tabActualizar";
-            this.tabActualizar.Padding = new System.Windows.Forms.Padding(3);
-            this.tabActualizar.Size = new System.Drawing.Size(1135, 664);
-            this.tabActualizar.TabIndex = 2;
-            this.tabActualizar.Text = "Actualizar Empleado";
-            this.tabActualizar.UseVisualStyleBackColor = true;
-            // 
-            // tabEliminar
-            // 
-            this.tabEliminar.Controls.Add(this.groupBox6);
-            this.tabEliminar.Controls.Add(this.groupBox4);
-            this.tabEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabEliminar.Location = new System.Drawing.Point(4, 25);
-            this.tabEliminar.Name = "tabEliminar";
-            this.tabEliminar.Size = new System.Drawing.Size(1135, 664);
-            this.tabEliminar.TabIndex = 3;
-            this.tabEliminar.Text = "Dar de Baja Empleado";
-            this.tabEliminar.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(226, 339);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 19);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "Cargo:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(581, 379);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(220, 24);
-            this.textBox2.TabIndex = 33;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(226, 382);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 19);
-            this.label2.TabIndex = 32;
-            this.label2.Text = "Salario:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(581, 422);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(220, 24);
-            this.textBox3.TabIndex = 35;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(226, 425);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(129, 19);
-            this.label10.TabIndex = 34;
-            this.label10.Text = "Hora de Entrada:";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(581, 465);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(220, 24);
-            this.textBox4.TabIndex = 37;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(226, 468);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(139, 19);
-            this.label29.TabIndex = 36;
-            this.label29.Text = "Hora  de Almuerzo:";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(226, 554);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(132, 19);
-            this.label35.TabIndex = 40;
-            this.label35.Text = "Fecha de Ingreso:";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(581, 508);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(220, 24);
-            this.textBox6.TabIndex = 39;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(226, 511);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(116, 19);
-            this.label36.TabIndex = 38;
-            this.label36.Text = "Hora de Salida:";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(581, 548);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(220, 26);
-            this.dateTimePicker1.TabIndex = 41;
-            this.dateTimePicker1.Value = new System.DateTime(2024, 3, 5, 18, 29, 50, 0);
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(581, 339);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(220, 28);
-            this.comboBox2.TabIndex = 42;
-            this.comboBox2.Text = "Seleccione";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.btnCancelarBuscar);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.btnBuscar);
-            this.panel1.Controls.Add(this.txtParametroBuscar);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(347, 658);
-            this.panel1.TabIndex = 8;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(91, 42);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(216, 28);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Buscar Empleado";
-            // 
-            // btnCancelarBuscar
-            // 
-            this.btnCancelarBuscar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarBuscar.Location = new System.Drawing.Point(96, 292);
-            this.btnCancelarBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCancelarBuscar.Name = "btnCancelarBuscar";
-            this.btnCancelarBuscar.Size = new System.Drawing.Size(151, 53);
-            this.btnCancelarBuscar.TabIndex = 7;
-            this.btnCancelarBuscar.Text = "Cancelar";
-            this.btnCancelarBuscar.UseVisualStyleBackColor = true;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(31, 111);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(142, 19);
-            this.label11.TabIndex = 4;
-            this.label11.Text = "Número de Cédula";
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(96, 222);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(151, 54);
-            this.btnBuscar.TabIndex = 6;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            // 
-            // txtParametroBuscar
-            // 
-            this.txtParametroBuscar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtParametroBuscar.Location = new System.Drawing.Point(35, 146);
-            this.txtParametroBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtParametroBuscar.Name = "txtParametroBuscar";
-            this.txtParametroBuscar.Size = new System.Drawing.Size(293, 24);
-            this.txtParametroBuscar.TabIndex = 5;
             // 
             // groupBox2
             // 
@@ -641,6 +538,36 @@
             this.groupBox2.Size = new System.Drawing.Size(782, 658);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
+            // 
+            // textBox24
+            // 
+            this.textBox24.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox24.Location = new System.Drawing.Point(405, 338);
+            this.textBox24.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox24.Name = "textBox24";
+            this.textBox24.ReadOnly = true;
+            this.textBox24.Size = new System.Drawing.Size(220, 24);
+            this.textBox24.TabIndex = 69;
+            // 
+            // textBox25
+            // 
+            this.textBox25.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox25.Location = new System.Drawing.Point(405, 556);
+            this.textBox25.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox25.Name = "textBox25";
+            this.textBox25.ReadOnly = true;
+            this.textBox25.Size = new System.Drawing.Size(220, 24);
+            this.textBox25.TabIndex = 68;
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.Location = new System.Drawing.Point(278, 32);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(204, 28);
+            this.label52.TabIndex = 67;
+            this.label52.Text = "Datos Empleado";
             // 
             // label14
             // 
@@ -862,61 +789,83 @@
             this.textBox14.Size = new System.Drawing.Size(433, 24);
             this.textBox14.TabIndex = 43;
             // 
-            // groupBox3
+            // panel1
             // 
-            this.groupBox3.Controls.Add(this.txtParametroActualizar);
-            this.groupBox3.Controls.Add(this.btnBuscarActualizar);
-            this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.label20);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(3, 3);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(1129, 87);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.btnCancelarBuscar);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.btnBuscar);
+            this.panel1.Controls.Add(this.txtParametroBuscar);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(347, 658);
+            this.panel1.TabIndex = 8;
             // 
-            // txtParametroActualizar
+            // label9
             // 
-            this.txtParametroActualizar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtParametroActualizar.Location = new System.Drawing.Point(380, 34);
-            this.txtParametroActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtParametroActualizar.Name = "txtParametroActualizar";
-            this.txtParametroActualizar.Size = new System.Drawing.Size(388, 24);
-            this.txtParametroActualizar.TabIndex = 5;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(91, 42);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(216, 28);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "Buscar Empleado";
             // 
-            // btnBuscarActualizar
+            // btnCancelarBuscar
             // 
-            this.btnBuscarActualizar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarActualizar.Location = new System.Drawing.Point(808, 22);
-            this.btnBuscarActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnBuscarActualizar.Name = "btnBuscarActualizar";
-            this.btnBuscarActualizar.Size = new System.Drawing.Size(127, 36);
-            this.btnBuscarActualizar.TabIndex = 3;
-            this.btnBuscarActualizar.Text = "Buscar";
-            this.btnBuscarActualizar.UseVisualStyleBackColor = true;
+            this.btnCancelarBuscar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarBuscar.Location = new System.Drawing.Point(96, 292);
+            this.btnCancelarBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancelarBuscar.Name = "btnCancelarBuscar";
+            this.btnCancelarBuscar.Size = new System.Drawing.Size(151, 53);
+            this.btnCancelarBuscar.TabIndex = 7;
+            this.btnCancelarBuscar.Text = "Cancelar";
+            this.btnCancelarBuscar.UseVisualStyleBackColor = true;
             // 
-            // label15
+            // label11
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(20, 36);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(242, 19);
-            this.label15.TabIndex = 2;
-            this.label15.Text = "Número de Cédula de Identidad:";
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(31, 111);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(142, 19);
+            this.label11.TabIndex = 4;
+            this.label11.Text = "Número de Cédula";
             // 
-            // label20
+            // btnBuscar
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(20, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(150, 19);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "Consultar Empleado";
+            this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(96, 222);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(151, 54);
+            this.btnBuscar.TabIndex = 6;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
+            // txtParametroBuscar
+            // 
+            this.txtParametroBuscar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtParametroBuscar.Location = new System.Drawing.Point(35, 146);
+            this.txtParametroBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtParametroBuscar.Name = "txtParametroBuscar";
+            this.txtParametroBuscar.Size = new System.Drawing.Size(293, 24);
+            this.txtParametroBuscar.TabIndex = 5;
+            // 
+            // tabActualizar
+            // 
+            this.tabActualizar.Controls.Add(this.groupBox5);
+            this.tabActualizar.Controls.Add(this.groupBox3);
+            this.tabActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabActualizar.Location = new System.Drawing.Point(4, 25);
+            this.tabActualizar.Name = "tabActualizar";
+            this.tabActualizar.Padding = new System.Windows.Forms.Padding(3);
+            this.tabActualizar.Size = new System.Drawing.Size(1135, 664);
+            this.tabActualizar.TabIndex = 2;
+            this.tabActualizar.Text = "Actualizar Empleado";
+            this.tabActualizar.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
@@ -964,59 +913,60 @@
             this.groupBox5.TabIndex = 3;
             this.groupBox5.TabStop = false;
             // 
-            // btnActualizarCorreo
+            // label53
             // 
-            this.btnActualizarCorreo.Location = new System.Drawing.Point(855, 239);
-            this.btnActualizarCorreo.Name = "btnActualizarCorreo";
-            this.btnActualizarCorreo.Size = new System.Drawing.Size(136, 31);
-            this.btnActualizarCorreo.TabIndex = 32;
-            this.btnActualizarCorreo.Text = "Actualizar";
-            this.btnActualizarCorreo.UseVisualStyleBackColor = true;
+            this.label53.AutoSize = true;
+            this.label53.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.Location = new System.Drawing.Point(412, 19);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(204, 28);
+            this.label53.TabIndex = 72;
+            this.label53.Text = "Datos Empleado";
             // 
-            // btnActualizarTelefono
+            // button7
             // 
-            this.btnActualizarTelefono.Location = new System.Drawing.Point(855, 198);
-            this.btnActualizarTelefono.Name = "btnActualizarTelefono";
-            this.btnActualizarTelefono.Size = new System.Drawing.Size(136, 31);
-            this.btnActualizarTelefono.TabIndex = 31;
-            this.btnActualizarTelefono.Text = "Actualizar";
-            this.btnActualizarTelefono.UseVisualStyleBackColor = true;
+            this.button7.Location = new System.Drawing.Point(855, 444);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(136, 31);
+            this.button7.TabIndex = 71;
+            this.button7.Text = "Actualizar";
+            this.button7.UseVisualStyleBackColor = true;
             // 
-            // btnActualizarDireccion
+            // button6
             // 
-            this.btnActualizarDireccion.Location = new System.Drawing.Point(855, 157);
-            this.btnActualizarDireccion.Name = "btnActualizarDireccion";
-            this.btnActualizarDireccion.Size = new System.Drawing.Size(136, 31);
-            this.btnActualizarDireccion.TabIndex = 30;
-            this.btnActualizarDireccion.Text = "Actualizar";
-            this.btnActualizarDireccion.UseVisualStyleBackColor = true;
+            this.button6.Location = new System.Drawing.Point(855, 403);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(136, 31);
+            this.button6.TabIndex = 70;
+            this.button6.Text = "Actualizar";
+            this.button6.UseVisualStyleBackColor = true;
             // 
-            // btnCorregirApellidos
+            // button5
             // 
-            this.btnCorregirApellidos.Location = new System.Drawing.Point(855, 116);
-            this.btnCorregirApellidos.Name = "btnCorregirApellidos";
-            this.btnCorregirApellidos.Size = new System.Drawing.Size(136, 31);
-            this.btnCorregirApellidos.TabIndex = 29;
-            this.btnCorregirApellidos.Text = "Corregir";
-            this.btnCorregirApellidos.UseVisualStyleBackColor = true;
+            this.button5.Location = new System.Drawing.Point(855, 362);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(136, 31);
+            this.button5.TabIndex = 69;
+            this.button5.Text = "Actualizar";
+            this.button5.UseVisualStyleBackColor = true;
             // 
-            // btnCorregirNombres
+            // button3
             // 
-            this.btnCorregirNombres.Location = new System.Drawing.Point(855, 75);
-            this.btnCorregirNombres.Name = "btnCorregirNombres";
-            this.btnCorregirNombres.Size = new System.Drawing.Size(136, 31);
-            this.btnCorregirNombres.TabIndex = 28;
-            this.btnCorregirNombres.Text = "Corregir";
-            this.btnCorregirNombres.UseVisualStyleBackColor = true;
+            this.button3.Location = new System.Drawing.Point(855, 321);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(136, 31);
+            this.button3.TabIndex = 68;
+            this.button3.Text = "Actualizar";
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // label22
+            // button2
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(25, 2);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(0, 19);
-            this.label22.TabIndex = 1;
+            this.button2.Location = new System.Drawing.Point(855, 280);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(136, 31);
+            this.button2.TabIndex = 67;
+            this.button2.Text = "Actualizar";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // comboBox4
             // 
@@ -1226,146 +1176,127 @@
             this.label51.TabIndex = 45;
             this.label51.Text = "Nombres:";
             // 
-            // button2
+            // btnActualizarCorreo
             // 
-            this.button2.Location = new System.Drawing.Point(855, 280);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(136, 31);
-            this.button2.TabIndex = 67;
-            this.button2.Text = "Actualizar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnActualizarCorreo.Location = new System.Drawing.Point(855, 239);
+            this.btnActualizarCorreo.Name = "btnActualizarCorreo";
+            this.btnActualizarCorreo.Size = new System.Drawing.Size(136, 31);
+            this.btnActualizarCorreo.TabIndex = 32;
+            this.btnActualizarCorreo.Text = "Actualizar";
+            this.btnActualizarCorreo.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnActualizarTelefono
             // 
-            this.button3.Location = new System.Drawing.Point(855, 321);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(136, 31);
-            this.button3.TabIndex = 68;
-            this.button3.Text = "Actualizar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnActualizarTelefono.Location = new System.Drawing.Point(855, 198);
+            this.btnActualizarTelefono.Name = "btnActualizarTelefono";
+            this.btnActualizarTelefono.Size = new System.Drawing.Size(136, 31);
+            this.btnActualizarTelefono.TabIndex = 31;
+            this.btnActualizarTelefono.Text = "Actualizar";
+            this.btnActualizarTelefono.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnActualizarDireccion
             // 
-            this.button5.Location = new System.Drawing.Point(855, 362);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(136, 31);
-            this.button5.TabIndex = 69;
-            this.button5.Text = "Actualizar";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnActualizarDireccion.Location = new System.Drawing.Point(855, 157);
+            this.btnActualizarDireccion.Name = "btnActualizarDireccion";
+            this.btnActualizarDireccion.Size = new System.Drawing.Size(136, 31);
+            this.btnActualizarDireccion.TabIndex = 30;
+            this.btnActualizarDireccion.Text = "Actualizar";
+            this.btnActualizarDireccion.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnCorregirApellidos
             // 
-            this.button6.Location = new System.Drawing.Point(855, 403);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(136, 31);
-            this.button6.TabIndex = 70;
-            this.button6.Text = "Actualizar";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnCorregirApellidos.Location = new System.Drawing.Point(855, 116);
+            this.btnCorregirApellidos.Name = "btnCorregirApellidos";
+            this.btnCorregirApellidos.Size = new System.Drawing.Size(136, 31);
+            this.btnCorregirApellidos.TabIndex = 29;
+            this.btnCorregirApellidos.Text = "Corregir";
+            this.btnCorregirApellidos.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btnCorregirNombres
             // 
-            this.button7.Location = new System.Drawing.Point(855, 444);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(136, 31);
-            this.button7.TabIndex = 71;
-            this.button7.Text = "Actualizar";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnCorregirNombres.Location = new System.Drawing.Point(855, 75);
+            this.btnCorregirNombres.Name = "btnCorregirNombres";
+            this.btnCorregirNombres.Size = new System.Drawing.Size(136, 31);
+            this.btnCorregirNombres.TabIndex = 28;
+            this.btnCorregirNombres.Text = "Corregir";
+            this.btnCorregirNombres.UseVisualStyleBackColor = true;
             // 
-            // label52
+            // label22
             // 
-            this.label52.AutoSize = true;
-            this.label52.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.Location = new System.Drawing.Point(278, 32);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(204, 28);
-            this.label52.TabIndex = 67;
-            this.label52.Text = "Datos Empleado";
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(25, 2);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(0, 19);
+            this.label22.TabIndex = 1;
             // 
-            // label53
+            // groupBox3
             // 
-            this.label53.AutoSize = true;
-            this.label53.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.Location = new System.Drawing.Point(412, 19);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(204, 28);
-            this.label53.TabIndex = 72;
-            this.label53.Text = "Datos Empleado";
+            this.groupBox3.Controls.Add(this.txtParametroActualizar);
+            this.groupBox3.Controls.Add(this.btnBuscarActualizar);
+            this.groupBox3.Controls.Add(this.label15);
+            this.groupBox3.Controls.Add(this.label20);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(3, 3);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Size = new System.Drawing.Size(1129, 87);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
             // 
-            // textBox24
+            // txtParametroActualizar
             // 
-            this.textBox24.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox24.Location = new System.Drawing.Point(405, 338);
-            this.textBox24.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.ReadOnly = true;
-            this.textBox24.Size = new System.Drawing.Size(220, 24);
-            this.textBox24.TabIndex = 69;
+            this.txtParametroActualizar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtParametroActualizar.Location = new System.Drawing.Point(380, 34);
+            this.txtParametroActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtParametroActualizar.Name = "txtParametroActualizar";
+            this.txtParametroActualizar.Size = new System.Drawing.Size(388, 24);
+            this.txtParametroActualizar.TabIndex = 5;
             // 
-            // textBox25
+            // btnBuscarActualizar
             // 
-            this.textBox25.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox25.Location = new System.Drawing.Point(405, 556);
-            this.textBox25.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.ReadOnly = true;
-            this.textBox25.Size = new System.Drawing.Size(220, 24);
-            this.textBox25.TabIndex = 68;
+            this.btnBuscarActualizar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarActualizar.Location = new System.Drawing.Point(808, 22);
+            this.btnBuscarActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBuscarActualizar.Name = "btnBuscarActualizar";
+            this.btnBuscarActualizar.Size = new System.Drawing.Size(127, 36);
+            this.btnBuscarActualizar.TabIndex = 3;
+            this.btnBuscarActualizar.Text = "Buscar";
+            this.btnBuscarActualizar.UseVisualStyleBackColor = true;
             // 
-            // groupBox4
+            // label15
             // 
-            this.groupBox4.Controls.Add(this.txtParametroDarDeBaja);
-            this.groupBox4.Controls.Add(this.btnBuscarDarDeBaja);
-            this.groupBox4.Controls.Add(this.label16);
-            this.groupBox4.Controls.Add(this.label17);
-            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(0, 0);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox4.Size = new System.Drawing.Size(1135, 87);
-            this.groupBox4.TabIndex = 3;
-            this.groupBox4.TabStop = false;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(20, 36);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(242, 19);
+            this.label15.TabIndex = 2;
+            this.label15.Text = "Número de Cédula de Identidad:";
             // 
-            // txtParametroDarDeBaja
+            // label20
             // 
-            this.txtParametroDarDeBaja.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtParametroDarDeBaja.Location = new System.Drawing.Point(365, 31);
-            this.txtParametroDarDeBaja.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtParametroDarDeBaja.Name = "txtParametroDarDeBaja";
-            this.txtParametroDarDeBaja.Size = new System.Drawing.Size(388, 24);
-            this.txtParametroDarDeBaja.TabIndex = 5;
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(20, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(150, 19);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "Consultar Empleado";
             // 
-            // btnBuscarDarDeBaja
+            // tabEliminar
             // 
-            this.btnBuscarDarDeBaja.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarDarDeBaja.Location = new System.Drawing.Point(808, 22);
-            this.btnBuscarDarDeBaja.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnBuscarDarDeBaja.Name = "btnBuscarDarDeBaja";
-            this.btnBuscarDarDeBaja.Size = new System.Drawing.Size(127, 36);
-            this.btnBuscarDarDeBaja.TabIndex = 3;
-            this.btnBuscarDarDeBaja.Text = "Buscar";
-            this.btnBuscarDarDeBaja.UseVisualStyleBackColor = true;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(20, 36);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(242, 19);
-            this.label16.TabIndex = 2;
-            this.label16.Text = "Número de Cédula de Identidad:";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(20, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(150, 19);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "Consultar Empleado";
+            this.tabEliminar.Controls.Add(this.groupBox6);
+            this.tabEliminar.Controls.Add(this.groupBox4);
+            this.tabEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabEliminar.Location = new System.Drawing.Point(4, 25);
+            this.tabEliminar.Name = "tabEliminar";
+            this.tabEliminar.Size = new System.Drawing.Size(1135, 664);
+            this.tabEliminar.TabIndex = 3;
+            this.tabEliminar.Text = "Dar de Baja Empleado";
+            this.tabEliminar.UseVisualStyleBackColor = true;
             // 
             // groupBox6
             // 
@@ -1406,33 +1337,6 @@
             this.groupBox6.Size = new System.Drawing.Size(1135, 577);
             this.groupBox6.TabIndex = 4;
             this.groupBox6.TabStop = false;
-            // 
-            // btnDarDeAlta
-            // 
-            this.btnDarDeAlta.Location = new System.Drawing.Point(889, 295);
-            this.btnDarDeAlta.Name = "btnDarDeAlta";
-            this.btnDarDeAlta.Size = new System.Drawing.Size(136, 54);
-            this.btnDarDeAlta.TabIndex = 29;
-            this.btnDarDeAlta.Text = "Dar de Alta";
-            this.btnDarDeAlta.UseVisualStyleBackColor = true;
-            // 
-            // bntDarDeBaja
-            // 
-            this.bntDarDeBaja.Location = new System.Drawing.Point(889, 227);
-            this.bntDarDeBaja.Name = "bntDarDeBaja";
-            this.bntDarDeBaja.Size = new System.Drawing.Size(136, 54);
-            this.bntDarDeBaja.TabIndex = 28;
-            this.bntDarDeBaja.Text = "Dar de Baja";
-            this.bntDarDeBaja.UseVisualStyleBackColor = true;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(25, 2);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(0, 19);
-            this.label34.TabIndex = 1;
             // 
             // textBox26
             // 
@@ -1684,6 +1588,89 @@
             this.textBox37.Size = new System.Drawing.Size(433, 24);
             this.textBox37.TabIndex = 70;
             // 
+            // btnDarDeAlta
+            // 
+            this.btnDarDeAlta.Location = new System.Drawing.Point(889, 295);
+            this.btnDarDeAlta.Name = "btnDarDeAlta";
+            this.btnDarDeAlta.Size = new System.Drawing.Size(136, 54);
+            this.btnDarDeAlta.TabIndex = 29;
+            this.btnDarDeAlta.Text = "Dar de Alta";
+            this.btnDarDeAlta.UseVisualStyleBackColor = true;
+            // 
+            // bntDarDeBaja
+            // 
+            this.bntDarDeBaja.Location = new System.Drawing.Point(889, 227);
+            this.bntDarDeBaja.Name = "bntDarDeBaja";
+            this.bntDarDeBaja.Size = new System.Drawing.Size(136, 54);
+            this.bntDarDeBaja.TabIndex = 28;
+            this.bntDarDeBaja.Text = "Dar de Baja";
+            this.bntDarDeBaja.UseVisualStyleBackColor = true;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(25, 2);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(0, 19);
+            this.label34.TabIndex = 1;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.txtParametroDarDeBaja);
+            this.groupBox4.Controls.Add(this.btnBuscarDarDeBaja);
+            this.groupBox4.Controls.Add(this.label16);
+            this.groupBox4.Controls.Add(this.label17);
+            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(0, 0);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Size = new System.Drawing.Size(1135, 87);
+            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabStop = false;
+            // 
+            // txtParametroDarDeBaja
+            // 
+            this.txtParametroDarDeBaja.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtParametroDarDeBaja.Location = new System.Drawing.Point(365, 31);
+            this.txtParametroDarDeBaja.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtParametroDarDeBaja.Name = "txtParametroDarDeBaja";
+            this.txtParametroDarDeBaja.Size = new System.Drawing.Size(388, 24);
+            this.txtParametroDarDeBaja.TabIndex = 5;
+            // 
+            // btnBuscarDarDeBaja
+            // 
+            this.btnBuscarDarDeBaja.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarDarDeBaja.Location = new System.Drawing.Point(808, 22);
+            this.btnBuscarDarDeBaja.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBuscarDarDeBaja.Name = "btnBuscarDarDeBaja";
+            this.btnBuscarDarDeBaja.Size = new System.Drawing.Size(127, 36);
+            this.btnBuscarDarDeBaja.TabIndex = 3;
+            this.btnBuscarDarDeBaja.Text = "Buscar";
+            this.btnBuscarDarDeBaja.UseVisualStyleBackColor = true;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(20, 36);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(242, 19);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "Número de Cédula de Identidad:";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(20, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(150, 19);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Consultar Empleado";
+            // 
             // frmEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1698,20 +1685,20 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabBuscar.ResumeLayout(false);
-            this.tabActualizar.ResumeLayout(false);
-            this.tabEliminar.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.tabActualizar.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.tabEliminar.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1721,18 +1708,16 @@
         private System.Windows.Forms.TabControl tabClientes;
         private System.Windows.Forms.TabPage tabRegistrar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpFechaIngreso;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtHSalida;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtHAlmuerzo;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtHEntrada;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSalarioRegistrar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCorreoRegistrar;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Button btnCancelar;
