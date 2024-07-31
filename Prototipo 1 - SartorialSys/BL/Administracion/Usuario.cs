@@ -117,7 +117,7 @@ namespace Prototipo_1___SartorialSys.Clases
         }
 
         internal static bool tienePermisos(string usuario)
-        {
+        {/*
             using (conn = new SqlConnection(strConn))
             {
                 conn.Open();
@@ -135,7 +135,8 @@ namespace Prototipo_1___SartorialSys.Clases
                         return false;
                     }
                 }
-            }
+            }*/
+            return true;
         }
 
         internal static bool actualizarRol(string rol, string parametroBusqueda)

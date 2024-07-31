@@ -50,6 +50,7 @@ namespace Prototipo_1___SartorialSys.Clases
 
         internal static decimal getIVA()
         {
+          /*
                 using (conn = new SqlConnection(strConn))
                 {
                     conn.Open();
@@ -61,7 +62,9 @@ namespace Prototipo_1___SartorialSys.Clases
                         return rdr.GetDecimal(0);
                     }
                 }
-            }
+            */
+            return 12;
+        }
 
         internal static string getParametro(string text)
         {

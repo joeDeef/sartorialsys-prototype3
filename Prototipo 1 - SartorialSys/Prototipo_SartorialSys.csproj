@@ -68,13 +68,50 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
-      <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.6.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.23.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.23.5.0\lib\net472\Oracle.ManagedDataAccess.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.8.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Formats.Asn1, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Formats.Asn1.8.0.1\lib\net462\System.Formats.Asn1.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.8.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=8.0.0.4, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.8.0.4\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -88,135 +125,136 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clases\Cliente.cs" />
-    <Compile Include="Clases\ConexionBaseDeDatos.cs" />
-    <Compile Include="Clases\Empleados.cs" />
-    <Compile Include="Clases\Inventario.cs" />
-    <Compile Include="Clases\Login.cs" />
-    <Compile Include="Clases\Mensajes.cs" />
-    <Compile Include="Clases\Parametros.cs" />
-    <Compile Include="Clases\Productos.cs" />
-    <Compile Include="Clases\Usuario.cs" />
-    <Compile Include="Clases\Validaciones.cs" />
-    <Compile Include="Clases\ValidarCedula.cs" />
-    <Compile Include="Clases\Ventas.cs" />
-    <Compile Include="Formularios\frmAgregarProducto.cs">
+    <Compile Include="BL\BD\ConexionBaseDeDatos.cs" />
+    <Compile Include="BL\BD\OracleDatabaseConnection.cs" />
+    <Compile Include="BL\Clientes\Cliente.cs" />
+    <Compile Include="BL\Empleados\Empleados.cs" />
+    <Compile Include="BL\Inventario\Inventario.cs" />
+    <Compile Include="BL\Administracion\Login.cs" />
+    <Compile Include="BL\Administracion\Mensajes.cs" />
+    <Compile Include="BL\Administracion\Parametros.cs" />
+    <Compile Include="BL\Productos\Productos.cs" />
+    <Compile Include="BL\Administracion\Usuario.cs" />
+    <Compile Include="BL\Administracion\Validaciones.cs" />
+    <Compile Include="BL\Administracion\ValidarCedula.cs" />
+    <Compile Include="BL\Facturacion\Ventas.cs" />
+    <Compile Include="UI\Facturacion\frmAgregarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\frmAgregarProducto.Designer.cs">
+    <Compile Include="UI\Facturacion\frmAgregarProducto.Designer.cs">
       <DependentUpon>frmAgregarProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\frmMenu.cs">
+    <Compile Include="UI\Administracion\frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\frmMenu.Designer.cs">
+    <Compile Include="UI\Administracion\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\frmLogin.cs">
+    <Compile Include="UI\Administracion\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\frmLogin.Designer.cs">
+    <Compile Include="UI\Administracion\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\frmInventario.cs">
+    <Compile Include="UI\Inventario\frmInventario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\frmInventario.Designer.cs">
+    <Compile Include="UI\Inventario\frmInventario.Designer.cs">
       <DependentUpon>frmInventario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\frmProductos.cs">
+    <Compile Include="UI\Productos\frmProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\frmProductos.Designer.cs">
+    <Compile Include="UI\Productos\frmProductos.Designer.cs">
       <DependentUpon>frmProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\frmProveedores.cs">
+    <Compile Include="UI\Proveedores\frmProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\frmProveedores.Designer.cs">
+    <Compile Include="UI\Proveedores\frmProveedores.Designer.cs">
       <DependentUpon>frmProveedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\frmPedidos.cs">
+    <Compile Include="UI\Pedidos\frmPedidos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\frmPedidos.Designer.cs">
+    <Compile Include="UI\Pedidos\frmPedidos.Designer.cs">
       <DependentUpon>frmPedidos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\frmClientes.cs">
+    <Compile Include="UI\Clientes\frmClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\frmClientes.Designer.cs">
+    <Compile Include="UI\Clientes\frmClientes.Designer.cs">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\frmEmpleados.cs">
+    <Compile Include="UI\Empleados\frmEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\frmEmpleados.Designer.cs">
+    <Compile Include="UI\Empleados\frmEmpleados.Designer.cs">
       <DependentUpon>frmEmpleados.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\frmVentas.cs">
+    <Compile Include="UI\Facturacion\frmVentas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\frmVentas.Designer.cs">
+    <Compile Include="UI\Facturacion\frmVentas.Designer.cs">
       <DependentUpon>frmVentas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\frmAdministracion.cs">
+    <Compile Include="UI\Administracion\frmAdministracion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\frmAdministracion.Designer.cs">
+    <Compile Include="UI\Administracion\frmAdministracion.Designer.cs">
       <DependentUpon>frmAdministracion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\frmAdmUsuario.cs">
+    <Compile Include="UI\Administracion\frmAdmUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\frmAdmUsuario.Designer.cs">
+    <Compile Include="UI\Administracion\frmAdmUsuario.Designer.cs">
       <DependentUpon>frmAdmUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\frmAdmParametros.cs">
+    <Compile Include="UI\Administracion\frmAdmParametros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\frmAdmParametros.Designer.cs">
+    <Compile Include="UI\Administracion\frmAdmParametros.Designer.cs">
       <DependentUpon>frmAdmParametros.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Formularios\frmAgregarProducto.resx">
+    <EmbeddedResource Include="UI\Facturacion\frmAgregarProducto.resx">
       <DependentUpon>frmAgregarProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmMenu.resx">
+    <EmbeddedResource Include="UI\Administracion\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmLogin.resx">
+    <EmbeddedResource Include="UI\Administracion\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmInventario.resx">
+    <EmbeddedResource Include="UI\Inventario\frmInventario.resx">
       <DependentUpon>frmInventario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmProductos.resx">
+    <EmbeddedResource Include="UI\Productos\frmProductos.resx">
       <DependentUpon>frmProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmProveedores.resx">
+    <EmbeddedResource Include="UI\Proveedores\frmProveedores.resx">
       <DependentUpon>frmProveedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmPedidos.resx">
+    <EmbeddedResource Include="UI\Pedidos\frmPedidos.resx">
       <DependentUpon>frmPedidos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmClientes.resx">
+    <EmbeddedResource Include="UI\Clientes\frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmEmpleados.resx">
+    <EmbeddedResource Include="UI\Empleados\frmEmpleados.resx">
       <DependentUpon>frmEmpleados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmVentas.resx">
+    <EmbeddedResource Include="UI\Facturacion\frmVentas.resx">
       <DependentUpon>frmVentas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmAdministracion.resx">
+    <EmbeddedResource Include="UI\Administracion\frmAdministracion.resx">
       <DependentUpon>frmAdministracion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmAdmUsuario.resx">
+    <EmbeddedResource Include="UI\Administracion\frmAdmUsuario.resx">
       <DependentUpon>frmAdmUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmAdmParametros.resx">
+    <EmbeddedResource Include="UI\Administracion\frmAdmParametros.resx">
       <DependentUpon>frmAdmParametros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -229,6 +267,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Oracle.ManagedDataAccess.Client.Configuration.Section.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

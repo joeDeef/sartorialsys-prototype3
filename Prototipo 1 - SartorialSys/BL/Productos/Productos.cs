@@ -16,7 +16,9 @@ namespace Prototipo_1___SartorialSys.Clases
         internal static string[] getColores()
         {
             int i = 0;
-            string[] colores = new string[4];
+            string[] colores = { "Rojo","Verde","Gris", "Negro" };
+            //string[] colores = new string[4];
+            /*
             using (conn = new SqlConnection(strConn))
             {
                 conn.Open();
@@ -31,13 +33,16 @@ namespace Prototipo_1___SartorialSys.Clases
                     }
                     return colores;
                 }
-            }
+            }*/
+            return colores;
         }
 
         internal static string[] getTallas()
         {
             int i = 0;
-            string[] tallas = new string[4];
+            string[] tallas = { "" ,"","",""};
+            //string[] tallas = new string[4];
+            /*
             using (conn = new SqlConnection(strConn))
             {
                 conn.Open();
@@ -52,7 +57,8 @@ namespace Prototipo_1___SartorialSys.Clases
                     }
                     return tallas;
                 }
-            }
+            }*/
+            return tallas;
         }
 
         internal static bool registrarProducto(string[] datos)

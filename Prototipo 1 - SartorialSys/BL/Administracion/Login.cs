@@ -28,7 +28,7 @@ namespace Prototipo_1___SartorialSys.Clases
         }
 
         internal static bool sonCorrectasLasCredenciales(string usuario, string contraseña)
-        {
+        {/*
             using (conn = new SqlConnection(strConn))
             {
                 conn.Open();
@@ -54,8 +54,12 @@ namespace Prototipo_1___SartorialSys.Clases
                         return false;
                     }
                 }
+            }*/
+            if(usuario == "admin" && contraseña == "123")
+            {
+                return true;
             }
-            return true;
+            return false;
         }
 
         private static bool estaActivo(SqlDataReader reader)
